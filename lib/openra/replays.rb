@@ -1,0 +1,7 @@
+require 'bindata'
+require 'pascal_string'
+require 'openra/replays/order'
+require 'openra/replays/order_list'
+require 'openra/replays/packet'
+require 'openra/replays/packet_list'
+require 'openra/replays/file'
