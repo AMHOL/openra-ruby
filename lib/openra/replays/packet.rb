@@ -6,13 +6,12 @@ module OpenRA
       uint32 :data_length
       string :data, read_length: :data_length
 
-      def order_list
-        return unless valid_order_list?
-        @order_list ||= OrderList.read(data)
-      end
-
       def orders
-        order_list.flat_map(&:orders)
+        return unless valid_order_list?
+
+        OrderList.read(data).orders.map do |order|
+          OrderDecorator.new(order, client)
+        end
       end
 
       def valid_order_list?

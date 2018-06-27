@@ -5,9 +5,7 @@ module OpenRA
       array :packets, type: :packet, read_until: :eof
 
       def orders
-        packets.select(&:valid_order_list?).flat_map do |packet|
-          packet.order_list.orders
-        end
+        packets.select(&:valid_order_list?).flat_map(&:orders)
       end
     end
   end

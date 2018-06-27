@@ -1,5 +1,5 @@
 class PascalString < BinData::Primitive
-  uint8 :len, value: -> { data.length }
+  big_integer :len, value: -> { data.length }
   string :data, read_length: :len
 
   def get

@@ -1,5 +1,7 @@
 require 'bindata'
+require 'big_integer'
 require 'pascal_string'
+require 'openra/replays/order_decorator'
 require 'openra/replays/order'
 require 'openra/replays/order_list'
 require 'openra/replays/packet'
