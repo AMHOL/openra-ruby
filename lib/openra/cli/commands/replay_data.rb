@@ -4,6 +4,15 @@ module Openra
   class CLI
     module Commands
       class ReplayData < Hanami::CLI::Command
+        ORDER_LATENCY_MAPPING = {
+          'slowest' => 2,
+          'slower' => 3,
+          'default' => 3,
+          'fast' => 4,
+          'faster' => 4,
+          'fastest' => 6
+        }.freeze
+
         desc 'Output replay data to stdout'
 
         argument :replay, required: true, desc: 'Path of the replay file to read data from'
@@ -75,7 +84,10 @@ module Openra
               when 'GlobalSettings'
                 next unless index.next == num_sync_info_orders
 
-                timestep = Integer(data['Timestep'])
+                timestep = Integer(data['Timestep']) * ORDER_LATENCY_MAPPING.fetch(
+                  data['Options']['gamespeed']['Value'],
+                  ORDER_LATENCY_MAPPING['default']
+                )
 
                 replay_data[:server_name] = data['ServerName']
                 replay_data[:game][:options] = {
