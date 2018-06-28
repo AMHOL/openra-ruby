@@ -75,7 +75,8 @@ module Openra
               when 'GlobalSettings'
                 next unless index.next == num_sync_info_orders
 
-                timestep = data['Timestep']
+                timestep = Integer(data['Timestep'])
+
                 replay_data[:server_name] = data['ServerName']
                 replay_data[:game][:options] = {
                   explored_map: data['Options']['explored']['Value'] == 'True',
@@ -103,8 +104,17 @@ module Openra
                 candidate[:index] == order.client_index.to_s
               end
 
+              current_time = order.frame * timestep
+              current_time_seconds = current_time / 1000
+              mm, ss = current_time_seconds.divmod(60)
+              hh, mm = mm.divmod(60)
+
               client[:build] << {
                 structure: order.target_string,
+                game_time: {
+                  formatted: '%02d:%02d:%02d' % [hh, mm, ss],
+                  msec: current_time
+                },
                 placement: {
                   x: order.target_x,
                   y: order.target_y

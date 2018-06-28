@@ -9,9 +9,17 @@ module Openra
       def orders
         return unless valid_order_list?
 
-        @orders ||= OrderList.read(data).orders.map do |order|
-          OrderDecorator.new(order, client_index)
+        order_list = OrderList.read(data)
+
+        @orders ||= order_list.orders.map do |order|
+          OrderDecorator.new(order, client_index, order_list.frame)
         end
+      end
+
+      def order_list
+        return unless valid_order_list?
+
+        @order_list ||= OrderList.read(data)
       end
 
       def valid_order_list?
