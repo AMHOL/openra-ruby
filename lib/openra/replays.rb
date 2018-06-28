@@ -1,3 +1,4 @@
+require 'date'
 require 'bindata'
 require 'big_integer'
 require 'pascal_string'

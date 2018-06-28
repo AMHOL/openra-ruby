@@ -32,14 +32,14 @@ module Openra
       end
 
       def start_time
-        @start_time ||= DateTime.strptime(
+        @start_time ||= ::DateTime.strptime(
           metadata['Root']['StartTimeUtc'],
           '%Y-%m-%d %H-%M-%S'
         ).to_time
       end
 
       def end_time
-        @end_time ||= DateTime.strptime(
+        @end_time ||= ::DateTime.strptime(
           metadata['Root']['EndTimeUtc'],
           '%Y-%m-%d %H-%M-%S'
         ).to_time

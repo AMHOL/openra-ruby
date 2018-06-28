@@ -22,7 +22,7 @@ module Openra
             mod: replay.mod,
             version: replay.version,
             map: {
-              name: replay.map_title,
+              name: utf8(replay.map_title),
               hash: replay.map_id
             },
             game: {
@@ -42,7 +42,7 @@ module Openra
 
               replay_data[:clients] << {
                 index: client['Index'],
-                name: client['Name'],
+                name: utf8(client['Name']),
                 preferred_color: client['PreferredColor'],
                 color: client['Color'],
                 faction: client['Faction'],
@@ -79,7 +79,7 @@ module Openra
 
               replay_data[:chat] << {
                 name: client[:name],
-                message: order.target
+                message: utf8(order.target)
               }
             end
           end
@@ -90,6 +90,12 @@ module Openra
           when 'pretty-json'
             puts JSON.pretty_generate(replay_data)
           end
+        end
+
+        private
+
+        def utf8(string)
+          string.force_encoding('UTF-8')
         end
       end
     end
