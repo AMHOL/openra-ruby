@@ -1,7 +1,12 @@
-# OpenRA Rubygem
+# Openra Rubygem
 
 ### Current state
 Early WIP, expermimental.
+
+### Installation
+```
+gem install openra
+```
 
 ### Example usage
 
