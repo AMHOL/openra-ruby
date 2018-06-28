@@ -10,7 +10,8 @@ Can read both standard and immediate orders, very early WIP
 # bundle install
 # bin/console
 replay_filename = '/path/to/replay.orarep'
-replay = OpenRA::Replays::File.new(replay_filename)
+replay = OpenRA::Replays::Replay.new(replay_filename)
+replay.metadata
 replay.orders
 # => [
 #   {

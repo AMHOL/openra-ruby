@@ -18,19 +18,21 @@ module OpenRA
         offset = -(metadata_marker.data_length + 4)
         metadata_fs.seek(offset, IO::SEEK_END)
 
-        @metadata ||= YAML.load(Metadata.read(metadata_fs).data.gsub(/\t/, '  '))
+        @metadata ||= Metadata.read(metadata_fs)
       end
 
-      def metadata_marker
-        @metadata_marker ||= MetadataMarker.read(fs)
-      end
 
       private
 
       attr_reader :filename
 
       def fs
-        ::File.open(filename, 'rb')
+        @fs ||= ::File.open(filename, 'rb')
+        @fs.tap(&:rewind)
+      end
+
+      def metadata_marker
+        @metadata_marker ||= MetadataMarker.read(fs)
       end
     end
   end

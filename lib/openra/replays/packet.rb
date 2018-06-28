@@ -2,7 +2,7 @@ module OpenRA
   module Replays
     class Packet < BinData::Record
       endian :little
-      uint32 :client
+      uint32 :client_index
       uint32 :data_length
       string :data, read_length: :data_length
 
@@ -10,7 +10,7 @@ module OpenRA
         return unless valid_order_list?
 
         @orders ||= OrderList.read(data).orders.map do |order|
-          OrderDecorator.new(order, client)
+          OrderDecorator.new(order, client_index)
         end
       end
 
