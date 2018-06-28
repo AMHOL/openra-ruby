@@ -1,7 +1,7 @@
-require 'yaml'
 require 'bindata'
 require 'big_integer'
 require 'pascal_string'
+require 'openra/yaml'
 require 'openra/replays/order_decorator'
 require 'openra/replays/order'
 require 'openra/replays/order_list'

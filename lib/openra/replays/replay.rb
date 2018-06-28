@@ -8,7 +8,7 @@ module OpenRA
       end
 
       def metadata
-        @metadata ||= YAML.load(file.metadata.data.gsub(/\t/, '  '))
+        @metadata ||= Openra::YAML.load(file.metadata.data)
       end
 
       def orders
@@ -16,27 +16,37 @@ module OpenRA
       end
 
       def mod
-        metadata['Root']['Mod']
+        @mod ||= metadata['Root']['Mod']
       end
 
       def version
-        metadata['Root']['Version']
+        @version ||= metadata['Root']['Version']
       end
 
       def map_id
-        metadata['Root']['MapUid']
+        @map_id ||= metadata['Root']['MapUid']
       end
 
       def map_title
-        metadata['Root']['MapTitle']
+        @map_title ||= metadata['Root']['MapTitle']
       end
 
       def start_time
-        DateTime.strptime(metadata['Root']['StartTimeUtc'], '%Y-%m-%d %H-%M-%S')
+        @start_time ||= DateTime.strptime(
+          metadata['Root']['StartTimeUtc'],
+          '%Y-%m-%d %H-%M-%S'
+        ).to_time
       end
 
       def end_time
-        DateTime.strptime(metadata['Root']['EndTimeUtc'], '%Y-%m-%d %H-%M-%S')
+        @end_time ||= DateTime.strptime(
+          metadata['Root']['EndTimeUtc'],
+          '%Y-%m-%d %H-%M-%S'
+        ).to_time
+      end
+
+      def duration
+        @duration ||= (end_time - start_time).to_i
       end
     end
   end
