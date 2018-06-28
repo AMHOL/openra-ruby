@@ -2,8 +2,8 @@ module OpenRA
   module Replays
     class Packet < BinData::Record
       endian :little
-      uint32 :client_index
-      uint32 :data_length
+      int32 :client_index
+      int32 :data_length
       string :data, read_length: :data_length
 
       def orders
