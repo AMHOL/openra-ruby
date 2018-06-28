@@ -9,15 +9,19 @@ module OpenRA
       def orders
         return unless valid_order_list?
 
-        OrderList.read(data).orders.map do |order|
+        @orders ||= OrderList.read(data).orders.map do |order|
           OrderDecorator.new(order, client)
         end
       end
 
       def valid_order_list?
-        !(data.bytesize < 5 ||
-          data.bytesize == 5 && data.bytes.last == 0xBF ||
-          data.bytesize >= 5 && data.bytes[4] == 0x65)
+        return @valid_order_list if defined?(@valid_order_list)
+
+        @valid_order_list = begin
+          !(data.bytesize < 5 ||
+            data.bytesize == 5 && data.bytes.last == 0xBF ||
+            data.bytesize >= 5 && data.bytes[4] == 0x65)
+        end
       end
     end
   end
