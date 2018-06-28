@@ -1,4 +1,4 @@
-module OpenRA
+module Openra
   module Replays
     class Order < BinData::Record
       HEX_FE = ?\xFE.force_encoding('ASCII-8BIT').freeze

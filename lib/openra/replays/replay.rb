@@ -1,10 +1,10 @@
-module OpenRA
+module Openra
   module Replays
     class Replay
       attr_reader :file
 
       def initialize(filename)
-        @file = OpenRA::Replays::File.new(filename)
+        @file = Openra::Replays::File.new(filename)
       end
 
       def metadata

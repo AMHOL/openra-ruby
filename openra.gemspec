@@ -3,7 +3,7 @@ require File.expand_path('../lib/openra/version', __FILE__)
 
 Gem::Specification.new do |spec|
   spec.name          = 'openra'
-  spec.version       = OpenRA::VERSION
+  spec.version       = Openra::VERSION
   spec.authors       = ['Andy Holland']
   spec.email         = ['andyholland1991@aol.com']
   spec.summary       = 'Openra Rubygem'

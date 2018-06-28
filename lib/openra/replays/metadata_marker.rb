@@ -1,4 +1,4 @@
-module OpenRA
+module Openra
   module Replays
     class MetadataMarker < BinData::Record
       endian :little
