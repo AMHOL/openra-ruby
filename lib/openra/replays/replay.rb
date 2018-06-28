@@ -32,11 +32,11 @@ module OpenRA
       end
 
       def start_time
-        Time.parse(metadata['Root']['StartTimeUtc'])
+        DateTime.strptime(metadata['Root']['StartTimeUtc'], '%Y-%m-%d %H-%M-%S')
       end
 
       def end_time
-        Time.parse(metadata['Root']['EndTimeUtc'])
+        DateTime.strptime(metadata['Root']['EndTimeUtc'], '%Y-%m-%d %H-%M-%S')
       end
     end
   end
