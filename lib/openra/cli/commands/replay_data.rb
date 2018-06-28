@@ -10,7 +10,7 @@ module Openra
         option :format, default: 'json', values: %w(json pretty-json), desc: 'Output format'
 
         def call(replay:, **options)
-          replay = OpenRA::Replays::Replay.new(replay)
+          replay = Openra::Replays::Replay.new(replay)
 
           client_index_mapping = {}
           players = replay.metadata.each_with_object([]) do |(key, value), arr|
@@ -34,29 +34,32 @@ module Openra
             chat: []
           }
 
+          # Get all clients
+          replay.orders.select { |order| order.command == 'SyncLobbyClients' }.each do |order|
+            clients = Openra::YAML.load(order.target)
+            clients.each_pair do |_, client|
+              next if client_index_mapping.include?(client['Index'])
+
+              replay_data[:clients] << {
+                index: client['Index'],
+                name: client['Name'],
+                preferred_color: client['PreferredColor'],
+                color: client['Color'],
+                faction: client['Faction'],
+                ip: client['IpAddress'],
+                team: client['Team'] == 0 ? nil : client['Team'],
+                is_bot: client['Bot'].nil? ? false : true,
+                is_admin: client['IsAdmin'] == 'True',
+                is_player: players.include?(client['Name']),
+                build: []
+              }
+
+              client_index_mapping[client['Index']] = client
+            end
+          end
+
           replay.orders.each do |order|
             case order.command
-            when 'SyncLobbyClients'
-              clients = Openra::YAML.load(order.target)
-              clients.each_pair do |_, client|
-                next if client_index_mapping.include?(client['Index'])
-
-                replay_data[:clients] << {
-                  index: client['Index'],
-                  name: client['Name'],
-                  preferred_color: client['PreferredColor'],
-                  color: client['Color'],
-                  faction: client['Faction'],
-                  ip: client['IpAddress'],
-                  team: client['Team'] == 0 ? nil : client['Team'],
-                  is_bot: client['Bot'].nil? ? false : true,
-                  is_admin: client['IsAdmin'] == 'True',
-                  is_player: players.include?(client['Name']),
-                  build: []
-                }
-
-                client_index_mapping[client['Index']] = client
-              end
             when 'PlaceBuilding'
               client = replay_data[:clients].find do |candidate|
                 candidate[:index] == order.client_index.to_s
