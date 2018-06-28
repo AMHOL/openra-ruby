@@ -12,49 +12,87 @@ module Openra
         def call(replay:, **options)
           replay = Openra::Replays::Replay.new(replay)
 
-          client_index_mapping = {}
           players = replay.metadata.each_with_object([]) do |(key, value), arr|
             next unless key.start_with?('Player')
-            arr << value['Name']
+            arr << value
+          end
+          player_indices = players.map { |player| player['ClientIndex'] }
+          player_teams = players.map { |player| player['Team'] }
+          team_alignment = player_teams.each_with_object({}) do |team, hash|
+            if team == 0
+              hash[SecureRandom.uuid] = 1
+            else
+              hash[team] ||= 0
+              hash[team] += 1
+            end
           end
 
           replay_data = {
             mod: replay.mod,
             version: replay.version,
+            server_name: nil,
             map: {
               name: utf8(replay.map_title),
               hash: replay.map_id
             },
             game: {
+              type: team_alignment.values.join('v'),
               start_time: replay.start_time,
               end_time: replay.end_time,
-              duration: replay.duration
+              duration: replay.duration,
+              options: {}
             },
             clients: [],
             chat: []
           }
 
-          # Get all clients
-          replay.orders.select { |order| order.command == 'SyncLobbyClients' }.each do |order|
-            clients = Openra::YAML.load(order.target)
-            clients.each_pair do |_, client|
-              next if client_index_mapping.include?(client['Index'])
+          timestep = nil
+          sync_info_orders = replay.orders.select do |order|
+            order.command == 'SyncInfo'
+          end
+          num_sync_info_orders = sync_info_orders.length
 
-              replay_data[:clients] << {
-                index: client['Index'],
-                name: utf8(client['Name']),
-                preferred_color: client['PreferredColor'],
-                color: client['Color'],
-                faction: client['Faction'],
-                ip: client['IpAddress'],
-                team: client['Team'] == 0 ? nil : client['Team'],
-                is_bot: client['Bot'].nil? ? false : true,
-                is_admin: client['IsAdmin'] == 'True',
-                is_player: players.include?(client['Name']),
-                build: []
-              }
+          sync_info_orders.each.with_index do |sync_info_order, index|
+            sync_info = Openra::YAML.load(sync_info_order.target)
 
-              client_index_mapping[client['Index']] = client
+            # Get all clients
+            sync_info.each_pair do |key, data|
+              case key
+              when /^Client@/
+                replay_data[:clients] << {
+                  index: data['Index'],
+                  name: utf8(data['Name']),
+                  preferred_color: data['PreferredColor'],
+                  color: data['Color'],
+                  faction: data['Faction'],
+                  ip: data['IpAddress'],
+                  team: data['Team'] == 0 ? nil : data['Team'],
+                  is_bot: data['Bot'].nil? ? false : true,
+                  is_admin: data['IsAdmin'] == 'True',
+                  is_player: player_indices.include?(data['Index']),
+                  build: []
+                }
+              when 'GlobalSettings'
+                next unless index.next == num_sync_info_orders
+
+                timestep = data['Timestep']
+                replay_data[:server_name] = data['ServerName']
+                replay_data[:game][:options] = {
+                  explored_map: data['Options']['explored']['Value'] == 'True',
+                  speed: data['Options']['gamespeed']['Value'],
+                  starting_cash: data['Options']['startingcash']['Value'],
+                  starting_units: data['Options']['startingunits']['Value'],
+                  fog_enabled: data['Options']['fog']['Value'] == 'True',
+                  cheats_enabled: data['Options']['cheats']['Value'] == 'True',
+                  kill_bounty_enabled: data['Options']['bounty']['Value'] == 'True',
+                  allow_undeploy: data['Options']['factundeploy']['Value'] == 'True',
+                  crated_enabled: data['Options']['crates']['Value'] == 'True',
+                  build_off_allies: data['Options']['allybuild']['Value'] == 'True',
+                  restrict_build_radius: data['Options']['buildradius']['Value'] == 'True',
+                  short_game: data['Options']['shortgame']['Value'] == 'True',
+                  techlevel: data['Options']['techlevel']['Value']
+                }
+              end
             end
           end
 
