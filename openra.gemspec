@@ -19,4 +19,5 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'hanami-cli', '0.2.0'
 
   spec.add_development_dependency 'bundler'
+  spec.add_development_dependency 'rake'
 end
