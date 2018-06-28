@@ -87,7 +87,7 @@ module Openra
                   cheats_enabled: data['Options']['cheats']['Value'] == 'True',
                   kill_bounty_enabled: data['Options']['bounty']['Value'] == 'True',
                   allow_undeploy: data['Options']['factundeploy']['Value'] == 'True',
-                  crated_enabled: data['Options']['crates']['Value'] == 'True',
+                  crates_enabled: data['Options']['crates']['Value'] == 'True',
                   build_off_allies: data['Options']['allybuild']['Value'] == 'True',
                   restrict_build_radius: data['Options']['buildradius']['Value'] == 'True',
                   short_game: data['Options']['shortgame']['Value'] == 'True',
