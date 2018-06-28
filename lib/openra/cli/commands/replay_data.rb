@@ -59,9 +59,8 @@ module Openra
           sync_info_orders = replay.orders.select do |order|
             order.command == 'SyncInfo'
           end
-          num_sync_info_orders = sync_info_orders.length
 
-          sync_info_orders.each.with_index do |sync_info_order, index|
+          sync_info_orders.reverse.each.with_index do |sync_info_order, index|
             sync_info = Openra::YAML.load(sync_info_order.target)
 
             # Get all clients
@@ -80,9 +79,9 @@ module Openra
                   is_admin: data['IsAdmin'] == 'True',
                   is_player: player_indices.include?(data['Index']),
                   build: []
-                }
+                } unless replay_data[:clients].any? { |client| client[:index] == data['Index'] }
               when 'GlobalSettings'
-                next unless index.next == num_sync_info_orders
+                next unless index.zero?
 
                 timestep = Integer(data['Timestep']) * ORDER_LATENCY_MAPPING.fetch(
                   data['Options']['gamespeed']['Value'],
