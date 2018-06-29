@@ -4,8 +4,15 @@
 Early WIP, expermimental.
 
 ### Installation
-```
+```sh
 gem install openra
+```
+
+NOTE: Requires Ruby ([Installation guide](https://www.ruby-lang.org/en/documentation/installation/))
+
+### Updating
+```sh
+gem update openra
 ```
 
 ### Example usage
