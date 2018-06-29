@@ -131,12 +131,29 @@ module Openra
                   y: order.target_y
                 }
               }
+            when 'Message'
+              replay_data[:chat] << {
+                channel: :server,
+                name: nil,
+                message: utf8(order.target)
+              }
             when 'Chat'
               client = replay_data[:clients].find do |candidate|
                 candidate[:index] == order.client_index.to_s
               end
 
               replay_data[:chat] << {
+                channel: :global,
+                name: client[:name],
+                message: utf8(order.target)
+              }
+            when 'TeamChat'
+              client = replay_data[:clients].find do |candidate|
+                candidate[:index] == order.client_index.to_s
+              end
+
+              replay_data[:chat] << {
+                channel: client[:team],
                 name: client[:name],
                 message: utf8(order.target)
               }
