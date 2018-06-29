@@ -69,23 +69,27 @@ module Openra
             sync_info.each_pair do |key, data|
               case key
               when /^Client@/
-                player = player_mapping.fetch(data['Index'], nil)
+                player = player_mapping.fetch(data['Index'], {})
 
                 replay_data[:clients] << {
                   index: data['Index'],
                   name: utf8(data['Name']),
                   preferred_color: data['PreferredColor'],
                   color: data['Color'],
+                  spawn: {
+                    random: player.fetch('IsRandomSpawnPoint', 'False') == 'True',
+                    point: player.fetch('SpawnPoint', nil)
+                  },
                   faction: {
                     chosen: data['Faction'].downcase,
                     actual: player_mapping.fetch(data['Index'], {}).fetch('FactionId', nil)
                   },
                   ip: data['IpAddress'],
-                  team: (player || {}).fetch('Team', '0').to_s == '0' ? nil : data['Team'],
+                  team: player.fetch('Team', '0').to_s == '0' ? nil : data['Team'],
                   is_bot: data['Bot'].nil? ? false : true,
                   is_admin: data['IsAdmin'] == 'True',
-                  is_player: !player.nil?,
-                  is_winner: (player || {}).fetch('Outcome', nil) == 'Won',
+                  is_player: !player.empty?,
+                  is_winner: player.fetch('Outcome', nil) == 'Won',
                   build: []
                 } unless replay_data[:clients].any? { |client| client[:index] == data['Index'] }
               when 'GlobalSettings'
