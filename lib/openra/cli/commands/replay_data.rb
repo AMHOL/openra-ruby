@@ -25,7 +25,9 @@ module Openra
             next unless key.start_with?('Player')
             arr << value
           end
-          player_indices = players.map { |player| player['ClientIndex'] }
+          player_mapping = players.each_with_object({}) do |player, mapping|
+            mapping[player['ClientIndex']] = player
+          end
           player_teams = players.map { |player| player['Team'] }
           team_alignment = player_teams.each_with_object({}) do |team, hash|
             if team == 0
@@ -77,7 +79,8 @@ module Openra
                   team: data['Team'].to_s == '0' ? nil : data['Team'],
                   is_bot: data['Bot'].nil? ? false : true,
                   is_admin: data['IsAdmin'] == 'True',
-                  is_player: player_indices.include?(data['Index']),
+                  is_player: player_mapping.fetch(data['Index'], false) != false,
+                  is_winner: player_mapping.fetch(data['Index'], {}).fetch('Outcome', nil) == 'Won',
                   build: []
                 } unless replay_data[:clients].any? { |client| client[:index] == data['Index'] }
               when 'GlobalSettings'
