@@ -1,5 +1,14 @@
 ## Unreleased
 
+## Added
+
+* [replay-data] Show chosen and actual faction ([AMHOL](https://github.com/AMHOL))
+* [replay-data] Add spawn point info
+
+## Fixed
+
+* [replay-data] Fetch team from replay metadata players hash ([AMHOL](https://github.com/AMHOL))
+
 [Compare v0.1.0...HEAD](https://github.com/AMHOL/openra-ruby/compare/v0.1.0...HEAD)
 
 ## v0.1.0
