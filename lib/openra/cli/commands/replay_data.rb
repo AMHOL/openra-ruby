@@ -74,7 +74,10 @@ module Openra
                   name: utf8(data['Name']),
                   preferred_color: data['PreferredColor'],
                   color: data['Color'],
-                  faction: data['Faction'],
+                  faction: {
+                    chosen: data['Faction'].downcase,
+                    actual: player_mapping.fetch(data['Index'], {}).fetch('FactionId', nil)
+                  },
                   ip: data['IpAddress'],
                   team: data['Team'].to_s == '0' ? nil : data['Team'],
                   is_bot: data['Bot'].nil? ? false : true,
