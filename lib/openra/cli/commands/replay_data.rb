@@ -69,6 +69,8 @@ module Openra
             sync_info.each_pair do |key, data|
               case key
               when /^Client@/
+                player = player_mapping.fetch(data['Index'], nil)
+
                 replay_data[:clients] << {
                   index: data['Index'],
                   name: utf8(data['Name']),
@@ -79,11 +81,11 @@ module Openra
                     actual: player_mapping.fetch(data['Index'], {}).fetch('FactionId', nil)
                   },
                   ip: data['IpAddress'],
-                  team: data['Team'].to_s == '0' ? nil : data['Team'],
+                  team: (player || {}).fetch('Team', '0').to_s == '0' ? nil : data['Team'],
                   is_bot: data['Bot'].nil? ? false : true,
                   is_admin: data['IsAdmin'] == 'True',
-                  is_player: player_mapping.fetch(data['Index'], false) != false,
-                  is_winner: player_mapping.fetch(data['Index'], {}).fetch('Outcome', nil) == 'Won',
+                  is_player: !player.nil?,
+                  is_winner: (player || {}).fetch('Outcome', nil) == 'Won',
                   build: []
                 } unless replay_data[:clients].any? { |client| client[:index] == data['Index'] }
               when 'GlobalSettings'
