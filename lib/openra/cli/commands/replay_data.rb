@@ -74,7 +74,7 @@ module Openra
                   color: data['Color'],
                   faction: data['Faction'],
                   ip: data['IpAddress'],
-                  team: data['Team'] == 0 ? nil : data['Team'],
+                  team: data['Team'].to_s == '0' ? nil : data['Team'],
                   is_bot: data['Bot'].nil? ? false : true,
                   is_admin: data['IsAdmin'] == 'True',
                   is_player: player_indices.include?(data['Index']),
