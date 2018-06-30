@@ -30,7 +30,7 @@ module Openra
           end
           player_teams = players.map { |player| player['Team'] }
           team_alignment = player_teams.each_with_object({}) do |team, hash|
-            if team == 0
+            if team.to_s == '0'
               hash[SecureRandom.uuid] = 1
             else
               hash[team] ||= 0
