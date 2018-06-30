@@ -1,11 +1,15 @@
 ## Unreleased
 
+[Compare v0.3.0...HEAD](https://github.com/AMHOL/openra-ruby/compare/v0.3.0...HEAD)
+
+## v0.3.0
+
 ## Fixed
 
 * [replay-data] Fix "type" output when no teams set ([AMHOL](https://github.com/AMHOL))
 * [replay-data] Fix error uninitialized constant Openra::CLI::Commands::ReplayData::SecureRandom ([AMHOL](https://github.com/AMHOL))
 
-[Compare v0.2.0...HEAD](https://github.com/AMHOL/openra-ruby/compare/v0.2.0...HEAD)
+[Compare v0.2.0...v0.3.0](https://github.com/AMHOL/openra-ruby/compare/v0.2.0...v0.3.0)
 
 ## v0.2.0
 
