@@ -1,147 +1,99 @@
-require 'json'
-require 'securerandom'
-
 module Openra
   class CLI
     module Commands
       class ReplayData < Hanami::CLI::Command
-        ORDER_LATENCY_MAPPING = {
-          'slowest' => 2,
-          'slower' => 3,
-          'default' => 3,
-          'fast' => 4,
-          'faster' => 4,
-          'fastest' => 6
+        FORMATTERS = {
+          'json' => Formatters::JSON.new,
+          'pretty-json' => Formatters::PrettyJSON.new,
+          'yaml' => Formatters::YAML.new,
         }.freeze
 
         desc 'Output replay data to stdout'
 
         argument :replay, required: true, desc: 'Path of the replay file to read data from'
-        option :format, default: 'json', values: %w(json pretty-json), desc: 'Output format'
+        option :format, default: 'json', values: %w(json pretty-json yaml), desc: 'Output format'
 
         def call(replay:, **options)
           replay = Openra::Replays::Replay.new(replay)
 
-          players = replay.metadata.each_with_object([]) do |(key, value), arr|
-            next unless key.start_with?('Player')
-            arr << value
-          end
-          player_mapping = players.each_with_object({}) do |player, mapping|
-            mapping[player['ClientIndex']] = player
-          end
-          player_teams = players.map { |player| player['Team'] }
-          team_alignment = player_teams.each_with_object({}) do |team, hash|
-            if team.to_s == '0'
-              hash[SecureRandom.uuid] = 1
-            else
-              hash[team] ||= 0
-              hash[team] += 1
-            end
-          end
-
           replay_data = {
-            mod: replay.mod,
-            version: replay.version,
-            server_name: nil,
+            mod: replay.metadata.mod,
+            version: replay.metadata.version,
+            server_name: utf8(replay.global_settings.server_name),
             map: {
-              name: utf8(replay.map_title),
-              hash: replay.map_id
+              name: utf8(replay.metadata.map_name),
+              hash: replay.metadata.map_hash
             },
             game: {
-              type: team_alignment.values.join('v'),
-              start_time: replay.start_time,
-              end_time: replay.end_time,
-              duration: replay.duration,
-              options: {}
+              type: replay.clients.each_with_object(Hash.new(0)) { |client, hash|
+                if client.team.nil?
+                  hash[SecureRandom.uuid] += 1
+                else
+                  hash[client.team] += 1
+                end
+              }.values.join('v'),
+              start_time: replay.metadata.start_time,
+              end_time: replay.metadata.end_time,
+              duration: time((replay.metadata.end_time - replay.metadata.start_time) * 1000),
+              options: {
+                explored_map: replay.game_options.explored_map_enabled.value,
+                speed: replay.game_options.game_speed.value,
+                starting_cash: replay.game_options.starting_cash.value,
+                starting_units: replay.game_options.starting_units.value,
+                fog_enabled: replay.game_options.fog_enabled.value,
+                cheats_enabled: replay.game_options.cheats_enabled.value,
+                kill_bounty_enabled: replay.game_options.bounties_enabled.value,
+                allow_undeploy: replay.game_options.conyard_undeploy_enabled.value,
+                crates_enabled: replay.game_options.crates_enabled.value,
+                build_off_allies: replay.game_options.build_off_allies_enabled.value,
+                restrict_build_radius: replay.game_options.restricted_build_radius_enabled.value,
+                short_game: replay.game_options.short_game_enabled.value,
+                techlevel: replay.game_options.tech_level.value
+              }
             },
-            clients: [],
+            clients: replay.clients.map { |client|
+              player = replay.player(client.index)
+
+              {
+                index: client.index,
+                name: utf8(client.name),
+                preferred_color: client.preferred_color,
+                color: client.preferred_color,
+                spawn: {
+                  random: player&.is_random_spawn,
+                  point: client.spawn_point
+                },
+                faction: {
+                  chosen: client.faction_name.downcase,
+                  actual: player&.faction_id
+                },
+                ip: client.ip,
+                team: player&.team,
+                is_bot: player&.is_bot || false,
+                is_admin: client.is_admin,
+                is_player: !player.nil?,
+                is_winner: player&.outcome == 'Won',
+                build: []
+              }
+            },
             chat: []
           }
 
-          timestep = nil
-          sync_info_orders = replay.orders.select do |order|
-            order.command == 'SyncInfo'
-          end
-
-          sync_info_orders.reverse.each.with_index do |sync_info_order, index|
-            sync_info = Openra::YAML.load(sync_info_order.target)
-
-            # Get all clients
-            sync_info.each_pair do |key, data|
-              case key
-              when /^Client@/
-                player = player_mapping.fetch(data['Index'], {})
-
-                replay_data[:clients] << {
-                  index: data['Index'],
-                  name: utf8(data['Name']),
-                  preferred_color: data['PreferredColor'],
-                  color: data['Color'],
-                  spawn: {
-                    random: player.fetch('IsRandomSpawnPoint', 'False') == 'True',
-                    point: player.fetch('SpawnPoint', nil)
-                  },
-                  faction: {
-                    chosen: data['Faction'].downcase,
-                    actual: player_mapping.fetch(data['Index'], {}).fetch('FactionId', nil)
-                  },
-                  ip: data['IpAddress'],
-                  team: player.fetch('Team', '0').to_s == '0' ? nil : data['Team'],
-                  is_bot: data['Bot'].nil? ? false : true,
-                  is_admin: data['IsAdmin'] == 'True',
-                  is_player: !player.empty?,
-                  is_winner: player.fetch('Outcome', nil) == 'Won',
-                  build: []
-                } unless replay_data[:clients].any? { |client| client[:index] == data['Index'] }
-              when 'GlobalSettings'
-                next unless index.zero?
-
-                timestep = Integer(data['Timestep']) * ORDER_LATENCY_MAPPING.fetch(
-                  data['Options']['gamespeed']['Value'],
-                  ORDER_LATENCY_MAPPING['default']
-                )
-
-                replay_data[:server_name] = data['ServerName']
-                replay_data[:game][:options] = {
-                  explored_map: data['Options']['explored']['Value'] == 'True',
-                  speed: data['Options']['gamespeed']['Value'],
-                  starting_cash: data['Options']['startingcash']['Value'],
-                  starting_units: data['Options']['startingunits']['Value'],
-                  fog_enabled: data['Options']['fog']['Value'] == 'True',
-                  cheats_enabled: data['Options']['cheats']['Value'] == 'True',
-                  kill_bounty_enabled: data['Options']['bounty']['Value'] == 'True',
-                  allow_undeploy: data['Options']['factundeploy']['Value'] == 'True',
-                  crates_enabled: data['Options']['crates']['Value'] == 'True',
-                  build_off_allies: data['Options']['allybuild']['Value'] == 'True',
-                  restrict_build_radius: data['Options']['buildradius']['Value'] == 'True',
-                  short_game: data['Options']['shortgame']['Value'] == 'True',
-                  techlevel: data['Options']['techlevel']['Value']
-                }
-              end
-            end
-          end
-
           replay.orders.each do |order|
+            client = replay.client(order.client_index.to_s)
+
             case order.command
             when 'PlaceBuilding'
-              client = replay_data[:clients].find do |candidate|
+              client_hash = replay_data[:clients].find do |candidate|
                 candidate[:index] == order.client_index.to_s
               end
 
-              current_time = order.frame * timestep
-              current_time_seconds = current_time / 1000
-              mm, ss = current_time_seconds.divmod(60)
-              hh, mm = mm.divmod(60)
-
-              client[:build] << {
-                structure: order.target_string,
-                game_time: {
-                  formatted: '%02d:%02d:%02d' % [hh, mm, ss],
-                  msec: current_time
-                },
+              client_hash[:build] << {
+                structure: utf8(order.target_string),
+                game_time: time(order.frame * replay.frametime_multiplier),
                 placement: {
-                  x: order.target_x,
-                  y: order.target_y
+                  x: order.target_x.to_i,
+                  y: order.target_y.to_i
                 }
               }
             when 'Message'
@@ -151,40 +103,38 @@ module Openra
                 message: utf8(order.target)
               }
             when 'Chat'
-              client = replay_data[:clients].find do |candidate|
-                candidate[:index] == order.client_index.to_s
-              end
-
               replay_data[:chat] << {
                 channel: :global,
-                name: client[:name],
+                name: client.name,
                 message: utf8(order.target)
               }
             when 'TeamChat'
-              client = replay_data[:clients].find do |candidate|
-                candidate[:index] == order.client_index.to_s
-              end
-
               replay_data[:chat] << {
-                channel: client[:team],
-                name: client[:name],
+                channel: client.team,
+                name: client.name,
                 message: utf8(order.target)
               }
             end
           end
 
-          case options[:format]
-          when 'json'
-            puts JSON.dump(replay_data)
-          when 'pretty-json'
-            puts JSON.pretty_generate(replay_data)
-          end
+          puts FORMATTERS.fetch(options[:format]).call(replay_data)
         end
 
         private
 
         def utf8(string)
-          string.force_encoding('UTF-8')
+          string.force_encoding('UTF-8').to_s
+        end
+
+        def time(msec)
+          sec = msec / 1000
+          mm, ss = sec.divmod(60)
+          hh, mm = mm.divmod(60)
+
+          {
+            formatted: '%02d:%02d:%02d' % [hh, mm, ss],
+            msec: msec
+          }
         end
       end
     end

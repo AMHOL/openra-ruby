@@ -1,5 +1,11 @@
+require 'securerandom'
+require 'yaml'
+require 'json'
 require 'hanami/cli'
-require 'openra'
+require 'openra/replays'
+require 'openra/cli/commands/replay_data/formatters'
+require 'openra/cli/commands/replay_data'
+require 'openra/cli/commands/version'
 require 'openra/cli/command_registry'
 
 module Openra

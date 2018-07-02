@@ -8,45 +8,57 @@ module Openra
       end
 
       def metadata
-        @metadata ||= Openra::YAML.load(file.metadata.data)
+        @metadata ||= Openra::Struct::Metadata.new(
+          Openra::YAML.load(file.metadata.data)
+        )
       end
 
       def orders
         @orders ||= file.orders
       end
 
-      def mod
-        @mod ||= metadata['Root']['Mod']
+      def players
+        metadata.players
       end
 
-      def version
-        @version ||= metadata['Root']['Version']
+      def player(index)
+        players.find do |candidate|
+          candidate.index == index
+        end
       end
 
-      def map_id
-        @map_id ||= metadata['Root']['MapUid']
+      def clients
+        sync_info.clients
       end
 
-      def map_title
-        @map_title ||= metadata['Root']['MapTitle']
+      def client(index)
+        clients.find do |candidate|
+          candidate.index == index
+        end
       end
 
-      def start_time
-        @start_time ||= ::DateTime.strptime(
-          metadata['Root']['StartTimeUtc'],
-          '%Y-%m-%d %H-%M-%S'
-        ).to_time
+      def global_settings
+        sync_info.global_settings
       end
 
-      def end_time
-        @end_time ||= ::DateTime.strptime(
-          metadata['Root']['EndTimeUtc'],
-          '%Y-%m-%d %H-%M-%S'
-        ).to_time
+      def frametime_multiplier
+        global_settings.frametime_multiplier
       end
 
-      def duration
-        @duration ||= (end_time - start_time).to_i
+      def game_options
+        global_settings.game_options
+      end
+
+      private
+
+      def sync_info
+        @sync_info ||= begin
+          order = orders.reverse.find do |order|
+            order.command == 'SyncInfo'
+          end
+
+          Openra::Struct::SyncInfo.new(Openra::YAML.load(order.target))
+        end
       end
     end
   end
