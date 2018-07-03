@@ -52,12 +52,23 @@ module Openra
       private
 
       def sync_info
-        @sync_info ||= begin
-          order = orders.reverse.find do |order|
-            order.command == 'SyncInfo'
+        return @sync_info if @sync_info
+
+        syncs = orders.reverse.each_with_object([]) do |order, arr|
+          next unless order.command == 'SyncInfo'
+
+          arr << Openra::Struct::SyncInfo.new(
+            Openra::YAML.load(order.target)
+          )
+        end
+
+        @sync_info = syncs.inject(syncs.shift) do |next_sync, sync|
+          next_sync.clients.each do |client|
+            next if sync.clients.map(&:index).include?(client.index)
+            sync.clients << client
           end
 
-          Openra::Struct::SyncInfo.new(Openra::YAML.load(order.target))
+          sync
         end
       end
     end
