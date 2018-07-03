@@ -133,7 +133,7 @@ module Openra
 
           {
             formatted: '%02d:%02d:%02d' % [hh, mm, ss],
-            msec: msec
+            msec: msec.to_i
           }
         end
       end
