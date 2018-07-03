@@ -1,5 +1,9 @@
 ## Unreleased
 
+[Compare v1.0.0...HEAD](https://github.com/AMHOL/openra-ruby/compare/v1.0.0...HEAD)
+
+## v1.0.0
+
 ## Added
 
 * [core] Clean up internals with structs and better abstractions ([AMHOL](https://github.com/AMHOL))
@@ -10,7 +14,7 @@
 
 * [replay-data] Removed duration (seconds) field from game output ([AMHOL](https://github.com/AMHOL))
 
-[Compare v0.3.0...HEAD](https://github.com/AMHOL/openra-ruby/compare/v0.3.0...HEAD)
+[Compare v0.3.0...v1.0.0](https://github.com/AMHOL/openra-ruby/compare/v0.3.0...v1.0.0)
 
 ## v0.3.0
 
