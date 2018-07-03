@@ -1,7 +1,5 @@
 # Openra Rubygem
 
-### Current state
-Early WIP, expermimental.
 
 ### Installation
 ```sh
@@ -18,5 +16,5 @@ gem update openra
 ### Example usage
 
 ```sh
-openra replay-data /payh/to/replay.orarep [--format json|pretty-json]
+openra replay-data /payh/to/replay.orarep [--format json|pretty-json|yaml]
 ```
