@@ -1,2 +1,2 @@
 require 'openra/version'
-require 'openra/replays'
+require 'openra/replays' # Replays requires everything else

@@ -1,6 +1,3 @@
-require 'openra/cli/commands/replay_data'
-require 'openra/cli/commands/version'
-
 module Openra
   class CLI
     class CommandRegistry
