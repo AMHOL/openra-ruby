@@ -11,7 +11,7 @@ module Openra
         attribute :ip, Types::Strict::String.meta(from: 'IpAddress')
         attribute :state, Types::Strict::String.meta(from: 'State')
         attribute :team, Types::Strict::String.meta(from: 'Team')
-        attribute :slot, Types::Strict::String.meta(from: 'Slot')
+        attribute :slot, Types::Strict::String.meta(from: 'Slot', omittable: true)
         attribute :bot_controller_index, Types::Strict::String.meta(
           from: 'BotControllerClientIndex'
         )
