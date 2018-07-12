@@ -1,5 +1,9 @@
 ## Unreleased
 
+## Fixed
+
+* [replay-data] Fixed the game "type" field (by updating it to use players rather than clients array) ([AMHOL](https://github.com/AMHOL))
+
 [Compare v1.0.0...HEAD](https://github.com/AMHOL/openra-ruby/compare/v1.0.0...HEAD)
 
 ## v1.0.0

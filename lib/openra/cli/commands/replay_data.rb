@@ -25,11 +25,11 @@ module Openra
               hash: replay.metadata.map_hash
             },
             game: {
-              type: replay.clients.each_with_object(Hash.new(0)) { |client, hash|
-                if client.team.nil?
+              type: replay.players.each_with_object(Hash.new(0)) { |player, hash|
+                if player.team.nil?
                   hash[SecureRandom.uuid] += 1
                 else
-                  hash[client.team] += 1
+                  hash[player.team] += 1
                 end
               }.values.join('v'),
               start_time: replay.metadata.start_time,
