@@ -1,5 +1,4 @@
 require 'securerandom'
-require 'ostruct'
 require 'yaml'
 require 'json'
 require 'hanami/cli'

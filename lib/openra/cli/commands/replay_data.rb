@@ -79,20 +79,18 @@ module Openra
             chat: []
           }
 
-          current_sync_info = OpenStruct.new(
-            clients: []
-          )
+          current_sync_clients = []
 
           replay.orders.each do |order|
-            client = current_sync_info.clients.find do |candidate|
+            client = current_sync_clients.find do |candidate|
               candidate.index == order.client_index.to_s
             end
 
             case order.command
-            when 'SyncInfo'
-              current_sync_info = Openra::Struct::SyncInfo.new(
+            when 'SyncLobbyClients'
+              current_sync_clients = Openra::Struct::SyncLobbyClients.new(
                 Openra::YAML.load(order.target)
-              )
+              ).clients
             when 'PlaceBuilding'
               client_hash = replay_data[:clients].find do |candidate|
                 candidate[:index] == order.client_index.to_s
