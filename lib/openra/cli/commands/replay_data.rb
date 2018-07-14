@@ -113,13 +113,13 @@ module Openra
             when 'Chat'
               replay_data[:chat] << {
                 channel: 'global',
-                name: client.name,
+                name: utf8(client.name),
                 message: utf8(order.target)
               }
             when 'TeamChat'
               replay_data[:chat] << {
                 channel: client.team,
-                name: client.name,
+                name: utf8(client.name),
                 message: utf8(order.target)
               }
             end
