@@ -1,15 +1,19 @@
 ## Unreleased
 
-## Fixed
+[Compare v1.3.0...HEAD](https://github.com/AMHOL/openra-ruby/compare/v1.3.0...HEAD)
+
+## v1.3.0
+
+### Fixed
 
 * [replay-data] Fix client IP by making it omittable ([AMHOL](https://github.com/AMHOL))
 * [replay-data] utf8 encode chat names ([AMHOL](https://github.com/AMHOL))
 
-[Compare v1.2.0...HEAD](https://github.com/AMHOL/openra-ruby/compare/v1.2.0...HEAD)
+[Compare v1.2.0...v1.3.0](https://github.com/AMHOL/openra-ruby/compare/v1.2.0...v1.3.0)
 
 ## v1.2.0
 
-## Fixed
+### Fixed
 
 * [replay-data] Use SyncLobbyClients to get chat names ([AMHOL](https://github.com/AMHOL))
 * [replay-data] Make client IP optional in client struct (fixes parsing replays with bots) ([AMHOL](https://github.com/AMHOL))
@@ -18,7 +22,7 @@
 
 ## v1.1.0
 
-## Fixed
+### Fixed
 
 * [replay-data] Make chat messages show name at time of message ([AMHOL](https://github.com/AMHOL))
 * [replay-data] Only include clients present at game start ([AMHOL](https://github.com/AMHOL))
@@ -27,7 +31,7 @@
 
 ## v1.0.1
 
-## Fixed
+### Fixed
 
 * [core] Add bundler as a runtime dependency (thanks to by dragunoff) ([AMHOL](https://github.com/AMHOL))
 * [replay-data] Fixed the game "type" field (by updating it to use players rather than clients array) ([AMHOL](https://github.com/AMHOL))
@@ -36,13 +40,13 @@
 
 ## v1.0.0
 
-## Added
+### Added
 
 * [core] Clean up internals with structs and better abstractions ([AMHOL](https://github.com/AMHOL))
 * [replay-data] Added duration struct to game output (formatted/msec) ([AMHOL](https://github.com/AMHOL))
 * [replay-data] Added support for YAML output format ([AMHOL](https://github.com/AMHOL))
 
-## Removed
+### Removed
 
 * [replay-data] Removed duration (seconds) field from game output ([AMHOL](https://github.com/AMHOL))
 
@@ -50,7 +54,7 @@
 
 ## v0.3.0
 
-## Fixed
+### Fixed
 
 * [replay-data] Fix "type" output when no teams set ([AMHOL](https://github.com/AMHOL))
 * [replay-data] Fix error uninitialized constant Openra::CLI::Commands::ReplayData::SecureRandom ([AMHOL](https://github.com/AMHOL))
@@ -59,12 +63,12 @@
 
 ## v0.2.0
 
-## Added
+### Added
 
 * [replay-data] Show chosen and actual faction ([AMHOL](https://github.com/AMHOL))
 * [replay-data] Add spawn point info
 
-## Fixed
+### Fixed
 
 * [replay-data] Fetch team from replay metadata players hash ([AMHOL](https://github.com/AMHOL))
 
@@ -72,12 +76,12 @@
 
 ## v0.1.0
 
-## Added
+### Added
 
 * Include server and team chat messages in replay data ([AMHOL](https://github.com/AMHOL))
 * Include is_winner replay data client output ([AMHOL](https://github.com/AMHOL))
 
-## Fixed
+### Fixed
 
 * Return `null` for client team in replay data when team is not set ([AMHOL](https://github.com/AMHOL))
 
