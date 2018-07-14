@@ -1,11 +1,15 @@
 ## Unreleased
 
+[Compare v1.1.0...HEAD](https://github.com/AMHOL/openra-ruby/compare/v1.1.0...HEAD)
+
+## v1.1.0
+
 ## Fixed
 
 * [replay-data] Make chat messages show name at time of message ([AMHOL](https://github.com/AMHOL))
 * [replay-data] Only include clients present at game start ([AMHOL](https://github.com/AMHOL))
 
-[Compare v1.0.1...HEAD](https://github.com/AMHOL/openra-ruby/compare/v1.0.1...HEAD)
+[Compare v1.0.1...v1.1.0](https://github.com/AMHOL/openra-ruby/compare/v1.0.1...v1.1.0)
 
 ## v1.0.1
 
