@@ -1,5 +1,10 @@
 ## Unreleased
 
+## Fixed
+
+* [replay-data] Make chat messages show name at time of message ([AMHOL](https://github.com/AMHOL))
+* [replay-data] Only include clients present at game start ([AMHOL](https://github.com/AMHOL))
+
 [Compare v1.0.1...HEAD](https://github.com/AMHOL/openra-ruby/compare/v1.0.1...HEAD)
 
 ## v1.0.1
