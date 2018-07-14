@@ -1,5 +1,10 @@
 ## Unreleased
 
+## Fixed
+
+[replay-data] Use SyncLobbyClients to get chat names ([AMHOL](https://github.com/AMHOL))
+[replay-data] Make client IP optional in client struct (fixes parsing replays with bots) ([AMHOL](https://github.com/AMHOL))
+
 [Compare v1.1.0...HEAD](https://github.com/AMHOL/openra-ruby/compare/v1.1.0...HEAD)
 
 ## v1.1.0
