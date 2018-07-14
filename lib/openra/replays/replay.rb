@@ -54,22 +54,13 @@ module Openra
       def sync_info
         return @sync_info if @sync_info
 
-        syncs = orders.reverse.each_with_object([]) do |order, arr|
-          next unless order.command == 'SyncInfo'
+        start_game_order = orders.find { |order| order[:command] == 'StartGame' }
+        start_game_index = orders.index(start_game_order)
+        start_game_sync_order = orders[start_game_index.pred]
 
-          arr << Openra::Struct::SyncInfo.new(
-            Openra::YAML.load(order.target)
-          )
-        end
-
-        @sync_info = syncs.inject(syncs.shift) do |next_sync, sync|
-          next_sync.clients.each do |client|
-            next if sync.clients.map(&:index).include?(client.index)
-            sync.clients << client
-          end
-
-          sync
-        end
+        @sync_info = Openra::Struct::SyncInfo.new(
+          Openra::YAML.load(start_game_sync_order.target)
+        )
       end
     end
   end
