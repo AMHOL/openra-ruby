@@ -1,13 +1,18 @@
 ## Unreleased
 
+## Fixed
+
+* [replay-data] Fix client IP by making it omittable ([AMHOL](https://github.com/AMHOL))
+* [replay-data] utf8 encode chat names ([AMHOL](https://github.com/AMHOL))
+
 [Compare v1.2.0...HEAD](https://github.com/AMHOL/openra-ruby/compare/v1.2.0...HEAD)
 
 ## v1.2.0
 
 ## Fixed
 
-[replay-data] Use SyncLobbyClients to get chat names ([AMHOL](https://github.com/AMHOL))
-[replay-data] Make client IP optional in client struct (fixes parsing replays with bots) ([AMHOL](https://github.com/AMHOL))
+* [replay-data] Use SyncLobbyClients to get chat names ([AMHOL](https://github.com/AMHOL))
+* [replay-data] Make client IP optional in client struct (fixes parsing replays with bots) ([AMHOL](https://github.com/AMHOL))
 
 [Compare v1.1.0...v1.2.0](https://github.com/AMHOL/openra-ruby/compare/v1.1.0...v1.2.0)
 
