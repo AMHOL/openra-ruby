@@ -32,8 +32,8 @@ module Openra
                   hash[player.team] += 1
                 end
               }.values.join('v'),
-              start_time: replay.metadata.start_time,
-              end_time: replay.metadata.end_time,
+              start_time: replay.metadata.start_time.iso8601,
+              end_time: replay.metadata.end_time.iso8601,
               duration: time((replay.metadata.end_time - replay.metadata.start_time) * 1000),
               options: {
                 explored_map: replay.game_options.explored_map_enabled.value,
