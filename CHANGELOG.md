@@ -1,5 +1,9 @@
 ## Unreleased
 
+### Fixed
+
+* [replay-data] Output timestamps in ISO8601 (thanks to [dragunoff](https://github.com/dragunoff)) ([AMHOL](https://github.com/AMHOL))
+
 [Compare v1.3.0...HEAD](https://github.com/AMHOL/openra-ruby/compare/v1.3.0...HEAD)
 
 ## v1.3.0
@@ -33,7 +37,7 @@
 
 ### Fixed
 
-* [core] Add bundler as a runtime dependency (thanks to by [dragunoff](https://github.com/dragunoff)) ([AMHOL](https://github.com/AMHOL))
+* [core] Add bundler as a runtime dependency (thanks to [dragunoff](https://github.com/dragunoff)) ([AMHOL](https://github.com/AMHOL))
 * [replay-data] Fixed the game "type" field (by updating it to use players rather than clients array) ([AMHOL](https://github.com/AMHOL))
 
 [Compare v1.0.0...v1.0.1](https://github.com/AMHOL/openra-ruby/compare/v1.0.0...v1.0.1)
