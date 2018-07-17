@@ -1,10 +1,14 @@
 ## Unreleased
 
+[Compare v1.4.0...HEAD](https://github.com/AMHOL/openra-ruby/compare/v1.4.0...HEAD)
+
+## v1.4.0
+
 ### Fixed
 
 * [replay-data] Output timestamps in ISO8601 (thanks to [dragunoff](https://github.com/dragunoff)) ([AMHOL](https://github.com/AMHOL))
 
-[Compare v1.3.0...HEAD](https://github.com/AMHOL/openra-ruby/compare/v1.3.0...HEAD)
+[Compare v1.3.0...v1.4.0](https://github.com/AMHOL/openra-ruby/compare/v1.3.0...v1.4.0)
 
 ## v1.3.0
 
