@@ -56,7 +56,10 @@ module Openra
 
         start_game_order = orders.find { |order| order[:command] == 'StartGame' }
         start_game_index = orders.index(start_game_order)
-        start_game_sync_order = orders[start_game_index.pred]
+        pre_game_orders = orders[0..start_game_index]
+        start_game_sync_order = pre_game_orders.reverse.find do |order|
+          order[:command] == 'SyncInfo'
+        end
 
         @sync_info = Openra::Struct::SyncInfo.new(
           Openra::YAML.load(start_game_sync_order.target)
