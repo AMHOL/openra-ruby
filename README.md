@@ -2,7 +2,12 @@
 
 Unofficial gem for [OpenRA](https://openra.net); a free, open-source real-time strategy game engine for early Westwood games such as Command & Conquer: Red Alert written in C#
 
-Currently the only operation implemented by this gem is to parse and extract data from replay files, if this is not what you're looking for, please see the [Other tools](#other-tools) section, perhaps what you need has already been implemented elsewhere.
+Currently this gem implements the following commands:
+
+* replay-data - parse and extract data from replay files
+* detect-production-macros - parse replay data and attempt to detect production macro usage by players
+
+If this is not what you're looking for, please see the [Other tools](#other-tools) section, perhaps what you need has already been implemented elsewhere.
 
 ### Installation
 ```sh
@@ -19,7 +24,8 @@ gem update openra
 ### Example usage
 
 ```sh
-openra replay-data /payh/to/replay.orarep [--format json|pretty-json|yaml]
+openra replay-data /path/to/replay.orarep [--format json|pretty-json|yaml]
+openra detect-production-macros /path/to/replay.orarep [--format json|pretty-json|yaml]
 ```
 
 ### Other tools

@@ -2,12 +2,6 @@ module Openra
   class CLI
     module Commands
       class ReplayData < Hanami::CLI::Command
-        FORMATTERS = {
-          'json' => Formatters::JSON.new,
-          'pretty-json' => Formatters::PrettyJSON.new,
-          'yaml' => Formatters::YAML.new,
-        }.freeze
-
         desc 'Output replay data to stdout'
 
         argument :replay, required: true, desc: 'Path of the replay file to read data from'
@@ -16,7 +10,7 @@ module Openra
         def call(replay:, **options)
           replay = Openra::Replays::Replay.new(replay)
 
-          replay_data = {
+          data = {
             mod: replay.metadata.mod,
             version: replay.metadata.version,
             server_name: utf8(replay.global_settings.server_name),
@@ -92,7 +86,7 @@ module Openra
                 Openra::YAML.load(order.target)
               ).clients
             when 'PlaceBuilding'
-              client_hash = replay_data[:clients].find do |candidate|
+              client_hash = data[:clients].find do |candidate|
                 candidate[:index] == order.client_index.to_s
               end
 
@@ -105,19 +99,19 @@ module Openra
                 }
               }
             when 'Message'
-              replay_data[:chat] << {
+              data[:chat] << {
                 channel: 'server',
                 name: nil,
                 message: utf8(order.target)
               }
             when 'Chat'
-              replay_data[:chat] << {
+              data[:chat] << {
                 channel: 'global',
                 name: utf8(client.name),
                 message: utf8(order.target)
               }
             when 'TeamChat'
-              replay_data[:chat] << {
+              data[:chat] << {
                 channel: client.team,
                 name: utf8(client.name),
                 message: utf8(order.target)
@@ -125,7 +119,7 @@ module Openra
             end
           end
 
-          puts FORMATTERS.fetch(options[:format]).call(replay_data)
+          puts FORMATTERS.fetch(options[:format]).call(data)
         end
 
         private
