@@ -1,5 +1,9 @@
 ## Unreleased
 
+[Compare v1.5.0...HEAD](https://github.com/AMHOL/openra-ruby/compare/v1.5.0...HEAD)
+
+## v1.5.0
+
 ### Added
 
 * [detect-production-macros] A new command to detect production macros ([AMHOL](https://github.com/AMHOL))
@@ -8,7 +12,7 @@
 
 * [core] Fix error when sync info does not exactly precede the start game order ([AMHOL](https://github.com/AMHOL))
 
-[Compare v1.4.0...HEAD](https://github.com/AMHOL/openra-ruby/compare/v1.4.0...HEAD)
+[Compare v1.4.0...v1.5.0](https://github.com/AMHOL/openra-ruby/compare/v1.4.0...v1.5.0)
 
 ## v1.4.0
 
