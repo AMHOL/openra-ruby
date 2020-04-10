@@ -16,7 +16,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_dependency 'bundler'
-  spec.add_dependency 'bindata', '2.4.3'
+  spec.add_dependency 'bindata'
   spec.add_dependency 'dry-transformer'
   spec.add_dependency 'dry-types'
   spec.add_dependency 'dry-struct'
