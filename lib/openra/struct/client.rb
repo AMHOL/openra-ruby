@@ -9,7 +9,7 @@ module Openra
         attribute :color, Types::Strict::String.meta(from: 'Color')
         attribute :faction_name, Types::Strict::String.meta(from: 'Faction')
         attribute :spawn_point, Types::Strict::String.meta(from: 'SpawnPoint')
-        attribute :name, Types::Strict::String.meta(from: 'Name')
+        attribute :name, Types::UTF8String.meta(from: 'Name')
         attribute :ip, Types::Strict::String.meta(from: 'IpAddress')
         attribute :state, Types::Strict::String.meta(from: 'State')
         attribute :team, Types::Strict::String.meta(from: 'Team')

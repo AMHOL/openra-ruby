@@ -40,7 +40,9 @@ module Openra
       uint32 :extra_data, onlyif: HAS_EXTRA_DATA
 
       def target
-        standard? ? standard_order_target : immediate_order_target
+        target = standard? ? standard_order_target : immediate_order_target
+
+        Types::UTF8String.(target)
       end
 
       def type

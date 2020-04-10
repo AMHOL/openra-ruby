@@ -13,9 +13,9 @@ module Openra
           data = {
             mod: replay.metadata.mod,
             version: replay.metadata.version,
-            server_name: utf8(replay.global_settings.server_name),
+            server_name: replay.global_settings.server_name,
             map: {
-              name: utf8(replay.metadata.map_name),
+              name: replay.metadata.map_name,
               hash: replay.metadata.map_hash
             },
             game: {
@@ -50,7 +50,7 @@ module Openra
 
               {
                 index: client.index,
-                name: utf8(client.name),
+                name: client.name,
                 preferred_color: client.preferred_color,
                 color: client.preferred_color,
                 spawn: {
@@ -104,13 +104,13 @@ module Openra
             when 'Chat'
               data[:chat] << {
                 channel: 'global',
-                name: utf8(client.name),
+                name: client.name,
                 message: utf8(order.target)
               }
             when 'TeamChat'
               data[:chat] << {
                 channel: client.team,
-                name: utf8(client.name),
+                name: client.name,
                 message: utf8(order.target)
               }
             end
