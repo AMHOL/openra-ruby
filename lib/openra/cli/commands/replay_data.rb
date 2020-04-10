@@ -1,7 +1,7 @@
 module Openra
   class CLI
     module Commands
-      class ReplayData < Hanami::CLI::Command
+      class ReplayData < Dry::CLI::Command
         desc 'Output replay data to stdout'
 
         argument :replay, required: true, desc: 'Path of the replay file to read data from'

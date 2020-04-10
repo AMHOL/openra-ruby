@@ -1,7 +1,7 @@
 require 'securerandom'
 require 'yaml'
 require 'json'
-require 'hanami/cli'
+require 'dry/cli'
 require 'openra/version'
 require 'openra/replays'
 require 'openra/cli/commands/formatters'
@@ -13,7 +13,7 @@ require 'openra/cli/command_registry'
 module Openra
   class CLI
     def call(*args)
-      Hanami::CLI.new(CommandRegistry).call(*args)
+      Dry::CLI.new(CommandRegistry).call(*args)
     end
   end
 end

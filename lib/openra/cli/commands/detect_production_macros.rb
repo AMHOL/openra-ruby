@@ -1,7 +1,7 @@
 module Openra
   class CLI
     module Commands
-      class DetectProductionMacros < Hanami::CLI::Command
+      class DetectProductionMacros < Dry::CLI::Command
         ARRAY_HASH = ->(hash, key) { hash[key] = [] }
 
         desc 'Detect whether players are using production macros'

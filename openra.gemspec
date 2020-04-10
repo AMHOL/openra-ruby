@@ -20,7 +20,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'dry-transformer'
   spec.add_dependency 'dry-types'
   spec.add_dependency 'dry-struct'
-  spec.add_dependency 'hanami-cli', '0.2.0'
+  spec.add_dependency 'dry-cli'
 
   spec.add_development_dependency 'rake'
   spec.add_development_dependency 'pry'

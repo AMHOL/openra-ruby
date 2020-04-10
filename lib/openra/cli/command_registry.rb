@@ -1,7 +1,7 @@
 module Openra
   class CLI
     class CommandRegistry
-      extend Hanami::CLI::Registry
+      extend Dry::CLI::Registry
 
       register 'replay-data', Commands::ReplayData
       register 'detect-production-macros', Commands::DetectProductionMacros

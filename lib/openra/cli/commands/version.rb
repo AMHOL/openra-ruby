@@ -1,7 +1,7 @@
 module Openra
   class CLI
     module Commands
-      class Version < Hanami::CLI::Command
+      class Version < Dry::CLI::Command
         desc 'Print current version number'
 
         def call(*)
