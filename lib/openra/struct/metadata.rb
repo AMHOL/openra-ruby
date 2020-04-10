@@ -1,7 +1,7 @@
 module Openra
   class Struct < Dry::Struct
     class Metadata < Openra::Struct
-      preprocessor(preprocessor.with(root: 'Root'))
+      preprocessor(preprocessor.with(**{ root: 'Root' }))
 
       define do
         attribute :mod, Types::Strict::String.meta(from: 'Mod')

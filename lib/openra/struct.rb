@@ -26,7 +26,7 @@ module Openra
       def define(&block)
         instance_eval(&block)
 
-        preprocessor(preprocessor.with(schema: schema))
+        preprocessor(preprocessor.with(**{ schema: schema }))
 
         preprocessor.finalize!
       end

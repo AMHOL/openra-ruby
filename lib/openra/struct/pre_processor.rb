@@ -16,7 +16,7 @@ module Openra
 
       def with(**new_config)
         raise AlreadyFinalizedError, 'transformer already finalized' if finalized?
-        self.class.new(config.merge(new_config))
+        self.class.new(**config.merge(new_config))
       end
 
       def finalize!
