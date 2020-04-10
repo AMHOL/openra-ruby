@@ -1,9 +1,9 @@
 module Openra
   class Struct < Dry::Struct
     module Functions
-      extend Transproc::Registry
+      extend Dry::Transformer::Registry
 
-      import Transproc::HashTransformations
+      import Dry::Transformer::HashTransformations
 
       def self.sequence(hash, prefix, into)
         keys = hash.keys.select { |key| key.start_with?(prefix + '@') }

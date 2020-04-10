@@ -22,23 +22,25 @@ module Openra
       def finalize!
         config = self.config
 
-        transformer_klass = Class.new(Transproc::Transformer[Functions])
+        transformer_klass = Class.new(Dry::Transformer::Pipe[Functions])
         transformer_klass.instance_eval do
-          unwrap(config[:root]) if config[:root]
+          define! do
+            unwrap(config[:root]) if config[:root]
 
-          if (schema = config[:schema])
-            schema.each_pair do |key, type|
-              if (sequence = type.meta[:sequence])
-                sequence(sequence, sequence)
-                rename_keys(sequence => key)
+            if (schema = config[:schema])
+              schema.each_pair do |key, type|
+                if (sequence = type.meta[:sequence])
+                  sequence(sequence, sequence)
+                  rename_keys(sequence => key)
+                end
               end
-            end
 
-            mapping = schema.each_with_object({}) do |(key, type), mapping|
-              mapping[type.meta[:from]] = key if type.meta[:from]
-            end
+              mapping = schema.each_with_object({}) do |(key, type), mapping|
+                mapping[type.meta[:from]] = key if type.meta[:from]
+              end
 
-            rename_keys(mapping)
+              rename_keys(mapping)
+            end
           end
         end
 

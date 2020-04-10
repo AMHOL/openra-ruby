@@ -17,7 +17,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'bundler'
   spec.add_dependency 'bindata', '2.4.3'
-  spec.add_dependency 'transproc', '1.0.2'
+  spec.add_dependency 'dry-transformer'
   spec.add_dependency 'dry-types', '0.13.2'
   spec.add_dependency 'dry-struct', '0.5.0'
   spec.add_dependency 'hanami-cli', '0.2.0'

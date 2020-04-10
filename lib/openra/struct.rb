@@ -1,4 +1,4 @@
-require 'transproc'
+require 'dry/transformer/all'
 require 'dry-struct'
 require 'openra/types'
 require 'openra/struct/functions'
