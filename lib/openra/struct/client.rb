@@ -3,8 +3,8 @@ module Openra
     class Client < Openra::Struct
       define do
         attribute :index, Types::Strict::String.meta(from: 'Index')
-        attribute :preferred_color, Types::Strict::String.meta(from: 'PreferredColor')
-        attribute :color, Types::Strict::String.meta(from: 'Color')
+        attribute :preferred_color, Types::Strict::String.meta(from: 'PreferredColor', omittable: true)
+        attribute :color, Types::Strict::String.meta(from: 'Color', omittable: true)
         attribute :faction_name, Types::Strict::String.meta(from: 'Faction')
         attribute :spawn_point, Types::Strict::String.meta(from: 'SpawnPoint')
         attribute :name, Types::Strict::String.meta(from: 'Name')

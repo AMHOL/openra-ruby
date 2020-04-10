@@ -12,6 +12,7 @@ module Openra
       TARGET_IS_FROZEN_ACTOR = -> { instance_exec(&HAS_TARGET) && target_type == 3 }
       TARGET_IS_CELL = -> { instance_exec(&TARGET_IS_TERRAIN) && (flags & 64) == 64 }
       TARGET_NOT_CELL = -> { instance_exec(&TARGET_IS_TERRAIN) && (flags & 64) != 64 }
+      HAS_SUBJECT = -> { instance_exec(&IS_STANDARD_ORDER) && (flags & 128) == 128 }
       HAS_TARGET_STRING = -> { instance_exec(&IS_STANDARD_ORDER) && (flags & 4) == 4 }
       HAS_EXTRA_LOCATION = -> { instance_exec(&IS_STANDARD_ORDER) && (flags & 16) == 16 }
       HAS_EXTRA_DATA = -> { instance_exec(&IS_STANDARD_ORDER) && (flags & 32) == 32 }
@@ -19,28 +20,28 @@ module Openra
       endian :little
       # Common
       string :order_type, read_length: 1
-      pascal_string :command
+      pascal_string :command # order in protocol
       # Immediate Order Data
-      pascal_string :target, onlyif: IS_IMMEDIATE_ORDER
+      pascal_string :immediate_order_target, onlyif: IS_IMMEDIATE_ORDER
       # Standard Order Data
-      uint32 :subject_id, onlyif: IS_STANDARD_ORDER
       uint8 :flags, onlyif: IS_STANDARD_ORDER
+      uint32 :subject_id, onlyif: HAS_SUBJECT
       uint8 :target_type, onlyif: HAS_TARGET
       uint32 :actor_id, onlyif: TARGET_IS_ACTOR
       uint32 :player_actor_id, onlyif: TARGET_IS_FROZEN_ACTOR
       uint32 :frozen_actor_id, onlyif: TARGET_IS_FROZEN_ACTOR
-      int32 :target_x, onlyif: TARGET_IS_CELL
-      int32 :target_y, onlyif: TARGET_IS_CELL
-      string :target_layer, read_length: 1, onlyif: TARGET_IS_CELL
-      int32 :target_sub_cell, onlyif: TARGET_IS_CELL
+      int32 :target_pos, onlyif: TARGET_IS_CELL
+      uint8 :target_sub_cell, onlyif: TARGET_IS_CELL
       int32 :pos_x, onlyif: TARGET_NOT_CELL
       int32 :pos_y, onlyif: TARGET_NOT_CELL
       int32 :pos_z, onlyif: TARGET_NOT_CELL
-      pascal_string :target_string, onlyif: HAS_TARGET_STRING
-      int32 :extra_pos_x, onlyif: HAS_EXTRA_LOCATION
-      int32 :extra_pos_y, onlyif: HAS_EXTRA_LOCATION
-      string :extra_pos_layer, read_length: 1, onlyif: HAS_EXTRA_LOCATION
+      pascal_string :standard_order_target, onlyif: HAS_TARGET_STRING
+      int32 :extra_pos, onlyif: HAS_EXTRA_LOCATION
       uint32 :extra_data, onlyif: HAS_EXTRA_DATA
+
+      def target
+        standard? ? standard_order_target : immediate_order_target
+      end
 
       def type
         case order_type

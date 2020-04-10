@@ -91,12 +91,9 @@ module Openra
               end
 
               client_hash[:build] << {
-                structure: utf8(order.target_string),
+                structure: utf8(order.target),
                 game_time: time(order.frame * replay.frametime_multiplier),
-                placement: {
-                  x: order.target_x.to_i,
-                  y: order.target_y.to_i
-                }
+                placement: order.target_pos.to_i
               }
             when 'Message'
               data[:chat] << {

@@ -17,7 +17,7 @@ module Openra
             case order.command
             when 'StartProduction'
               commands[order.client_index.to_s] << {
-                target: order.target_string.to_s,
+                target: order.target.to_s,
                 msec: order.frame * replay.frametime_multiplier
               }
             end

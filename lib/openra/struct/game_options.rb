@@ -12,9 +12,11 @@ module Openra
         attribute :build_off_allies_enabled, BooleanOption.meta(from: 'allybuild')
         attribute :restricted_build_radius_enabled, BooleanOption.meta(from: 'buildradius', omittable: true)
         attribute :short_game_enabled, BooleanOption.meta(from: 'shortgame')
+        attribute :reusable_engineers, BooleanOption.meta(from: 'reusable-engineers', omittable: true)
         attribute :tech_level, StringOption.meta(from: 'techlevel')
         attribute :game_speed, StringOption.meta(from: 'gamespeed')
         attribute :starting_units, StringOption.meta(from: 'startingunits')
+        attribute :separate_team_spawns, StringOption.meta(from: 'separateteamspawns', omittable: true)
       end
 
       def bounties_enabled
