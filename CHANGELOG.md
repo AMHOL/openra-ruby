@@ -1,6 +1,14 @@
 ## Unreleased
 
-[Compare v1.5.0...HEAD](https://github.com/AMHOL/openra-ruby/compare/v1.5.0...HEAD)
+[Compare v1.6.0...HEAD](https://github.com/AMHOL/openra-ruby/compare/v1.6.0...HEAD)
+
+## v1.6.0
+
+### Fixed
+
+* Updated to work with release-20200202 (current release) ([AMHOL](https://github.com/AMHOL))
+
+[Compare v1.5.0...HEAD](https://github.com/AMHOL/openra-ruby/compare/v1.5.0...v1.6.0)
 
 ## v1.5.0
 
