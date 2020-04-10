@@ -28,15 +28,15 @@ module Openra
             unwrap(config[:root]) if config[:root]
 
             if (schema = config[:schema])
-              schema.each_pair do |key, type|
-                if (sequence = type.meta[:sequence])
+              schema.keys.each do |key|
+                if (sequence = key.type.meta[:sequence])
                   sequence(sequence, sequence)
-                  rename_keys(sequence => key)
+                  rename_keys(sequence => key.name)
                 end
               end
 
-              mapping = schema.each_with_object({}) do |(key, type), mapping|
-                mapping[type.meta[:from]] = key if type.meta[:from]
+              mapping = schema.keys.each_with_object({}) do |key, mapping|
+                mapping[key.type.meta[:from]] = key.name if key.type.meta[:from]
               end
 
               rename_keys(mapping)

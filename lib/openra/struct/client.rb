@@ -1,17 +1,19 @@
 module Openra
   class Struct < Dry::Struct
     class Client < Openra::Struct
+      transform_types(&:omittable)
+
       define do
         attribute :index, Types::Strict::String.meta(from: 'Index')
-        attribute :preferred_color, Types::Strict::String.meta(from: 'PreferredColor', omittable: true)
-        attribute :color, Types::Strict::String.meta(from: 'Color', omittable: true)
+        attribute :preferred_color, Types::Strict::String.meta(from: 'PreferredColor')
+        attribute :color, Types::Strict::String.meta(from: 'Color')
         attribute :faction_name, Types::Strict::String.meta(from: 'Faction')
         attribute :spawn_point, Types::Strict::String.meta(from: 'SpawnPoint')
         attribute :name, Types::Strict::String.meta(from: 'Name')
-        attribute :ip, Types::Strict::String.meta(from: 'IpAddress', omittable: true)
+        attribute :ip, Types::Strict::String.meta(from: 'IpAddress')
         attribute :state, Types::Strict::String.meta(from: 'State')
         attribute :team, Types::Strict::String.meta(from: 'Team')
-        attribute :slot, Types::Strict::String.meta(from: 'Slot', omittable: true)
+        attribute :slot, Types::Strict::String.meta(from: 'Slot')
         attribute :bot_controller_index, Types::Strict::String.meta(
           from: 'BotControllerClientIndex'
         )
