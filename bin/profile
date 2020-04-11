@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+require 'stackprof'
+require 'openra-cli'
+
+Openra::CLI::CommandRegistry.before('replay-data detect-production-macros') do
+  StackProf.start(mode: :cpu, raw: true)
+end
+
+Openra::CLI::CommandRegistry.after('replay-data detect-production-macros') do
+  result = StackProf.stop
+  StackProf.results('./tmp/stackprof.dump')
+end
+
+Openra::CLI.new.call

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Openra
   class CLI
     module Commands
@@ -13,7 +15,7 @@ module Openra
           data = {
             mod: replay.metadata.mod,
             version: replay.metadata.version,
-            server_name: replay.global_settings.server_name,
+            server_name: nil,
             map: {
               name: replay.metadata.map_name,
               hash: replay.metadata.map_hash
@@ -29,58 +31,70 @@ module Openra
               start_time: replay.metadata.start_time.iso8601,
               end_time: replay.metadata.end_time.iso8601,
               duration: time((replay.metadata.end_time - replay.metadata.start_time) * 1000),
-              options: {
-                explored_map: replay.game_options.explored_map_enabled.value,
-                speed: replay.game_options.game_speed.value,
-                starting_cash: replay.game_options.starting_cash.value,
-                starting_units: replay.game_options.starting_units.value,
-                fog_enabled: replay.game_options.fog_enabled.value,
-                cheats_enabled: replay.game_options.cheats_enabled.value,
-                kill_bounty_enabled: replay.game_options.bounties_enabled.value,
-                allow_undeploy: replay.game_options.conyard_undeploy_enabled.value,
-                crates_enabled: replay.game_options.crates_enabled.value,
-                build_off_allies: replay.game_options.build_off_allies_enabled.value,
-                restrict_build_radius: replay.game_options.restricted_build_radius_enabled.value,
-                short_game: replay.game_options.short_game_enabled.value,
-                techlevel: replay.game_options.tech_level.value
-              }
+              options: nil
             },
-            clients: replay.clients.map { |client|
-              player = replay.player(client.index)
-
-              {
-                index: client.index,
-                name: client.name,
-                preferred_color: client.preferred_color,
-                color: client.preferred_color,
-                spawn: {
-                  random: player&.is_random_spawn,
-                  point: client.spawn_point
-                },
-                faction: {
-                  chosen: client.faction_name.downcase,
-                  actual: player&.faction_id
-                },
-                ip: client.ip,
-                team: player&.team,
-                is_bot: player&.is_bot || false,
-                is_admin: client.is_admin,
-                is_player: !player.nil?,
-                is_winner: player&.outcome == 'Won',
-                build: []
-              }
-            },
+            clients: [],
             chat: []
           }
 
+          game_started = false
           current_sync_clients = []
+          sync_info = nil
 
-          replay.orders.each do |order|
+          replay.each_order do |order|
             client = current_sync_clients.find do |candidate|
               candidate.index == order.client_index.to_s
             end
 
             case order.command
+            when 'StartGame'
+              game_started = true
+
+              data[:clients] = sync_info.clients.map do |client|
+                player = replay.player(client.index)
+
+                {
+                  index: client.index,
+                  name: client.name,
+                  preferred_color: client.preferred_color,
+                  color: client.color,
+                  spawn: {
+                    random: player&.is_random_spawn,
+                    point: client.spawn_point
+                  },
+                  faction: {
+                    chosen: client.faction_name.downcase,
+                    actual: player&.faction_id
+                  },
+                  ip: client.ip,
+                  team: player&.team,
+                  is_bot: player&.is_bot || false,
+                  is_admin: client.is_admin,
+                  is_player: !player.nil?,
+                  is_winner: player&.outcome == 'Won',
+                  build: []
+                }
+              end
+
+              data[:game][:options] = {
+                explored_map: sync_info.global_settings.game_options.explored_map_enabled.value,
+                speed: sync_info.global_settings.game_options.game_speed.value,
+                starting_cash: sync_info.global_settings.game_options.starting_cash.value,
+                starting_units: sync_info.global_settings.game_options.starting_units.value,
+                fog_enabled: sync_info.global_settings.game_options.fog_enabled.value,
+                cheats_enabled: sync_info.global_settings.game_options.cheats_enabled.value,
+                kill_bounty_enabled: sync_info.global_settings.game_options.bounties_enabled.value,
+                allow_undeploy: sync_info.global_settings.game_options.conyard_undeploy_enabled.value,
+                crates_enabled: sync_info.global_settings.game_options.crates_enabled.value,
+                build_off_allies: sync_info.global_settings.game_options.build_off_allies_enabled.value,
+                restrict_build_radius: sync_info.global_settings.game_options.restricted_build_radius_enabled.value,
+                short_game: sync_info.global_settings.game_options.short_game_enabled.value,
+                techlevel: sync_info.global_settings.game_options.tech_level.value
+              }
+            when 'SyncInfo'
+              sync_info = Openra::Struct::SyncInfo.new(
+                Openra::YAML.load(order.target)
+              ) unless game_started
             when 'SyncLobbyClients'
               current_sync_clients = Openra::Struct::SyncLobbyClients.new(
                 Openra::YAML.load(order.target)
@@ -91,39 +105,37 @@ module Openra
               end
 
               client_hash[:build] << {
-                structure: utf8(order.target),
-                game_time: time(order.frame * replay.frametime_multiplier),
+                structure: order.target,
+                game_time: time(order.frame * sync_info.global_settings.frametime_multiplier),
                 placement: order.target_pos.to_i
               }
             when 'Message'
               data[:chat] << {
                 channel: 'server',
                 name: nil,
-                message: utf8(order.target)
+                message: order.target
               }
             when 'Chat'
               data[:chat] << {
                 channel: 'global',
                 name: client.name,
-                message: utf8(order.target)
+                message: order.target
               }
             when 'TeamChat'
               data[:chat] << {
                 channel: client.team,
                 name: client.name,
-                message: utf8(order.target)
+                message: order.target
               }
             end
           end
+
+          data[:server_name] = sync_info.global_settings.server_name
 
           puts FORMATTERS.fetch(options[:format]).call(data)
         end
 
         private
-
-        def utf8(string)
-          string.force_encoding('UTF-8').to_s
-        end
 
         def time(msec)
           sec = msec / 1000

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class BigInteger < BinData::BasePrimitive
   def value_to_binary_string(value)
     value = value.abs

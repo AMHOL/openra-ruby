@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 module Openra
   module Replays
     class Order < BinData::Record
-      HEX_FE = ?\xFE.force_encoding('ASCII-8BIT').freeze
-      HEX_FF = ?\xFF.force_encoding('ASCII-8BIT').freeze
+      HEX_FE = ?\xFE.dup.force_encoding('ASCII-8BIT').freeze
+      HEX_FF = ?\xFF.dup.force_encoding('ASCII-8BIT').freeze
       # NEED TO LEARN HOW TO READ FLAGS AND TARGET TYPE
       IS_STANDARD_ORDER = -> { order_type == HEX_FF }
       IS_IMMEDIATE_ORDER = -> { order_type == HEX_FE }

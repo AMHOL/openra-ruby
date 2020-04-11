@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Openra
   class CLI
     module Commands
@@ -12,13 +14,20 @@ module Openra
         def call(replay:, **options)
           replay = Openra::Replays::Replay.new(replay)
           commands = Hash.new(&ARRAY_HASH)
+          sync_info = nil
 
-          replay.orders.each do |order|
+          replay.each_order do |order|
             case order.command
+            when 'StartGame'
+              game_started = true
+            when 'SyncInfo'
+              sync_info = Openra::Struct::SyncInfo.new(
+                Openra::YAML.load(order.target)
+              ) unless game_started
             when 'StartProduction'
               commands[order.client_index.to_s] << {
                 target: order.target,
-                msec: order.frame * replay.frametime_multiplier
+                msec: order.frame * sync_info.global_settings.frametime_multiplier
               }
             end
           end
@@ -58,7 +67,9 @@ module Openra
 
         def detect_sequences(player_commands)
           sequences = []
-          groups = player_commands.each_with_object(Hash.new(&ARRAY_HASH)).with_index do |(command, hash), index|
+          groups = player_commands.each_with_object(
+            Hash.new(&ARRAY_HASH)
+          ).with_index do |(command, hash), index|
             hash[command[:delay]] << command.merge(index: index)
           end
 

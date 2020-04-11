@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Openra
   module Replays
     class OrderDecorator < SimpleDelegator

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Openra
   module Replays
     class Packet < BinData::Record
@@ -7,9 +9,7 @@ module Openra
       string :data, read_length: :data_length
 
       def orders
-        return unless valid_order_list?
-
-        order_list = OrderList.read(data)
+        return [] unless valid_order_list?
 
         @orders ||= order_list.orders.map do |order|
           OrderDecorator.new(order, client_index, order_list.frame)

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Openra
   class Struct < Dry::Struct
     class GameOptions < Openra::Struct

@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+require 'memory_profiler'
+require 'openra-cli'
+
+Openra::CLI::CommandRegistry.before('replay-data detect-production-macros') do
+  MemoryProfiler.start
+end
+
+Openra::CLI::CommandRegistry.after('replay-data detect-production-macros') do
+  MemoryProfiler.stop.pretty_print(to_file: File.expand_path('./tmp/allocations.txt'))
+end
+
+Openra::CLI.new.call

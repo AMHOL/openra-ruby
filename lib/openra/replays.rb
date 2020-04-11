@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'date'
 require 'bindata'
 require 'bindata/big_integer'
@@ -8,7 +10,6 @@ require 'openra/replays/order_decorator'
 require 'openra/replays/order'
 require 'openra/replays/order_list'
 require 'openra/replays/packet'
-require 'openra/replays/packet_list'
 require 'openra/replays/metadata_marker'
 require 'openra/replays/metadata'
 require 'openra/replays/file'

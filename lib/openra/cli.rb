@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'securerandom'
 require 'yaml'
 require 'json'
@@ -12,8 +14,8 @@ require 'openra/cli/command_registry'
 
 module Openra
   class CLI
-    def call(*args)
-      Dry::CLI.new(CommandRegistry).call(*args)
+    def call(*args, **kwargs, &block)
+      Dry::CLI.new(CommandRegistry).call(*args, **kwargs, &block)
     end
   end
 end

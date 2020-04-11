@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class PascalString < BinData::Primitive
   big_integer :len, value: -> { data.length }
   string :data, read_length: :len

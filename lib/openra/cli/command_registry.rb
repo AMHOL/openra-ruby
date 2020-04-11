@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Openra
   class CLI
     class CommandRegistry
