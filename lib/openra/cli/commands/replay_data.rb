@@ -74,7 +74,7 @@ module Openra
                   is_player: !player.nil?,
                   is_winner: player&.outcome == 'Won',
                   build: [],
-                  support_powers: support_powers.values.product([0]).to_h
+                  support_powers: []
                 }
               end
 
@@ -107,7 +107,12 @@ module Openra
                 candidate[:index] == order.client_index.to_s
               end
 
-              client_hash[:support_powers][key] += 1
+              client_hash[:support_powers] << {
+                type: key,
+                game_time: time(order.frame * sync_info.global_settings.frametime_multiplier),
+                placement: order.target_pos.to_i,
+                extra_placement: order.extra_pos.to_i
+              }
             when 'PlaceBuilding'
               client_hash = data[:clients].find do |candidate|
                 candidate[:index] == order.client_index.to_s
