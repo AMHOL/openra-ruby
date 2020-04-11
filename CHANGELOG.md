@@ -1,6 +1,14 @@
 ## Unreleased
 
-[Compare v1.8.0...HEAD](https://github.com/AMHOL/openra-ruby/compare/v1.8.0...HEAD)
+[Compare v1.8.1...HEAD](https://github.com/AMHOL/openra-ruby/compare/v1.8.1...HEAD)
+
+## v1.8.1
+
+### Updates
+
+* [replay-data] Update support powers to include game time and target positions
+
+[Compare v1.8.0...v1.8.1](https://github.com/AMHOL/openra-ruby/compare/v1.8.0...v1.8.1)
 
 ## v1.8.0
 
