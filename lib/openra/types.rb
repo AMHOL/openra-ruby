@@ -11,7 +11,7 @@ module Openra
     end
 
     UTF8String = Types::String.constructor do |input|
-      input.force_encoding('UTF-8').to_s
+      input.force_encoding('UTF-8')
     end
   end
 end

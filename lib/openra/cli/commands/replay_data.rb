@@ -11,6 +11,7 @@ module Openra
 
         def call(replay:, **options)
           replay = Openra::Replays::Replay.new(replay)
+          support_powers = SUPPORT_POWERS.fetch(replay.metadata.mod, {})
 
           data = {
             mod: replay.metadata.mod,
@@ -72,7 +73,8 @@ module Openra
                   is_admin: client.is_admin,
                   is_player: !player.nil?,
                   is_winner: player&.outcome == 'Won',
-                  build: []
+                  build: [],
+                  support_powers: support_powers.values.product([0]).to_h
                 }
               end
 
@@ -99,6 +101,13 @@ module Openra
               current_sync_clients = Openra::Struct::SyncLobbyClients.new(
                 Openra::YAML.load(order.target)
               ).clients
+            when *support_powers.keys
+              key = support_powers.fetch(order.command.force_encoding('UTF-8'))
+              client_hash = data[:clients].find do |candidate|
+                candidate[:index] == order.client_index.to_s
+              end
+
+              client_hash[:support_powers][key] += 1
             when 'PlaceBuilding'
               client_hash = data[:clients].find do |candidate|
                 candidate[:index] == order.client_index.to_s
