@@ -1,6 +1,14 @@
 ## Unreleased
 
-[Compare v1.6.0...HEAD](https://github.com/AMHOL/openra-ruby/compare/v1.6.0...HEAD)
+[Compare v1.7.0...HEAD](https://github.com/AMHOL/openra-ruby/compare/v1.7.0...HEAD)
+
+## v1.7.0
+
+### Improvements
+
+* Decreased memory usage by streaming orders with iterator ([AMHOL](https://github.com/AMHOL))
+
+[Compare v1.6.0...v1.7.0](https://github.com/AMHOL/openra-ruby/compare/v1.6.0...v1.7.0)
 
 ## v1.6.0
 
