@@ -61,6 +61,7 @@ module Openra
                   index: client.index,
                   player_index: player_index,
                   name: utf8(client.name),
+                  fingerprint: client.fingerprint,
                   preferred_color: client.preferred_color,
                   color: client.color,
                   spawn: {

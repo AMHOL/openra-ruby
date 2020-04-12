@@ -12,6 +12,7 @@ module Openra
         attribute :faction_name, Types::Strict::String.meta(from: 'Faction')
         attribute :spawn_point, Types::Strict::String.meta(from: 'SpawnPoint')
         attribute :name, Types::Strict::String.meta(from: 'Name')
+        attribute :fingerprint, Types::Strict::String.meta(from: 'Fingerprint')
         attribute :ip, Types::Strict::String.meta(from: 'IpAddress')
         attribute :state, Types::Strict::String.meta(from: 'State')
         attribute :team, Types::Strict::String.meta(from: 'Team')

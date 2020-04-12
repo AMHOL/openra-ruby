@@ -3,8 +3,12 @@
 class Fixtures
   attr_reader :files
 
+  def self.output_filename_for(file, format)
+    file.sub('/input/', '/output/').sub('.orarep', ".#{format}")
+  end
+
   def self.output_for(file, format)
-    File.read(file.sub('/input/', '/output/').sub('.orarep', ".#{format}"))
+    File.read(output_filename_for(file, format))
   end
 
   def self.mod_for(file)
@@ -16,7 +20,7 @@ class Fixtures
   end
 
   def initialize(path)
-    @files = Dir[SPEC_ROOT.join('fixtures', path)]
+    @files = Dir[Pathname(__FILE__).dirname.join('../', 'fixtures', path)]
   end
 
   def each(&block)

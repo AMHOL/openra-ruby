@@ -30,3 +30,7 @@ end
 Dir[root.join('shared/**/*.rb').to_s].each do |f|
   require f
 end
+
+RSpec.configure do |config|
+  config.include(RSpec::Support::Helpers)
+end
