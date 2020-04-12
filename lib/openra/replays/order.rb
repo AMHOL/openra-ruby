@@ -32,13 +32,13 @@ module Openra
       uint32 :actor_id, onlyif: TARGET_IS_ACTOR
       uint32 :player_actor_id, onlyif: TARGET_IS_FROZEN_ACTOR
       uint32 :frozen_actor_id, onlyif: TARGET_IS_FROZEN_ACTOR
-      int32 :target_pos, onlyif: TARGET_IS_CELL
+      int32 :target_cell, onlyif: TARGET_IS_CELL
       uint8 :target_sub_cell, onlyif: TARGET_IS_CELL
       int32 :pos_x, onlyif: TARGET_NOT_CELL
       int32 :pos_y, onlyif: TARGET_NOT_CELL
       int32 :pos_z, onlyif: TARGET_NOT_CELL
       pascal_string :standard_order_target, onlyif: HAS_TARGET_STRING
-      int32 :extra_pos, onlyif: HAS_EXTRA_LOCATION
+      int32 :extra_cell, onlyif: HAS_EXTRA_LOCATION
       uint32 :extra_data, onlyif: HAS_EXTRA_DATA
 
       def target

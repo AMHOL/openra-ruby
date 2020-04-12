@@ -58,7 +58,11 @@
             "formatted": "00:00:03",
             "msec": 3560
           },
-          "placement": 78652672
+          "placement": {
+            "x": 75,
+            "y": 37,
+            "layer": 0
+          }
         },
         {
           "structure": "eye",
@@ -66,7 +70,11 @@
             "formatted": "00:00:04",
             "msec": 4120
           },
-          "placement": 75506944
+          "placement": {
+            "x": 72,
+            "y": 37,
+            "layer": 0
+          }
         },
         {
           "structure": "weap",
@@ -74,7 +82,11 @@
             "formatted": "00:00:04",
             "msec": 4600
           },
-          "placement": 77602816
+          "placement": {
+            "x": 74,
+            "y": 32,
+            "layer": 0
+          }
         },
         {
           "structure": "fact.nod",
@@ -82,7 +94,11 @@
             "formatted": "00:00:06",
             "msec": 6520
           },
-          "placement": 72363520
+          "placement": {
+            "x": 69,
+            "y": 46,
+            "layer": 0
+          }
         },
         {
           "structure": "tmpl",
@@ -90,7 +106,11 @@
             "formatted": "00:00:07",
             "msec": 7640
           },
-          "placement": 82846720
+          "placement": {
+            "x": 79,
+            "y": 36,
+            "layer": 0
+          }
         },
         {
           "structure": "hq",
@@ -98,7 +118,11 @@
             "formatted": "00:00:08",
             "msec": 8400
           },
-          "placement": 80752384
+          "placement": {
+            "x": 77,
+            "y": 47,
+            "layer": 0
+          }
         },
         {
           "structure": "hand",
@@ -106,7 +130,11 @@
             "formatted": "00:00:13",
             "msec": 13040
           },
-          "placement": 72361216
+          "placement": {
+            "x": 69,
+            "y": 37,
+            "layer": 0
+          }
         }
       ],
       "support_powers": [
@@ -116,8 +144,12 @@
             "formatted": "00:00:10",
             "msec": 10480
           },
-          "placement": 14691072,
-          "extra_placement": 0
+          "placement": {
+            "x": 14,
+            "y": 43,
+            "layer": 0
+          },
+          "extra_placement": null
         },
         {
           "type": "airstrike",
@@ -125,8 +157,12 @@
             "formatted": "00:00:11",
             "msec": 11040
           },
-          "placement": 11544832,
-          "extra_placement": 0
+          "placement": {
+            "x": 11,
+            "y": 41,
+            "layer": 0
+          },
+          "extra_placement": null
         },
         {
           "type": "nuke",
@@ -134,8 +170,12 @@
             "formatted": "00:00:11",
             "msec": 11560
           },
-          "placement": 11544832,
-          "extra_placement": 0
+          "placement": {
+            "x": 11,
+            "y": 41,
+            "layer": 0
+          },
+          "extra_placement": null
         }
       ]
     },
@@ -166,7 +206,11 @@
             "formatted": "00:00:04",
             "msec": 4600
           },
-          "placement": 13642240
+          "placement": {
+            "x": 13,
+            "y": 42,
+            "layer": 0
+          }
         },
         {
           "structure": "nuke",
@@ -174,7 +218,11 @@
             "formatted": "00:00:13",
             "msec": 13480
           },
-          "placement": 14690048
+          "placement": {
+            "x": 14,
+            "y": 39,
+            "layer": 0
+          }
         }
       ],
       "support_powers": [

@@ -7,6 +7,16 @@ module Openra
         string.force_encoding('UTF-8')
       end
 
+      def cell(pos)
+        return if pos.zero?
+
+        {
+          x: pos >> 20,
+          y: ((pos >> 4) & 0xFFF0) >> 4,
+          layer: pos & 0xFF
+        }
+      end
+
       def time(msec)
         sec = msec / 1000
         mm, ss = sec.divmod(60)

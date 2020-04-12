@@ -58,7 +58,11 @@
             "formatted": "00:00:03",
             "msec": 3040
           },
-          "placement": 68165632
+          "placement": {
+            "x": 65,
+            "y": 32,
+            "layer": 0
+          }
         },
         {
           "structure": "mslo",
@@ -66,7 +70,11 @@
             "formatted": "00:00:04",
             "msec": 4000
           },
-          "placement": 70265088
+          "placement": {
+            "x": 67,
+            "y": 41,
+            "layer": 0
+          }
         },
         {
           "structure": "pdox",
@@ -74,7 +82,11 @@
             "formatted": "00:00:04",
             "msec": 4720
           },
-          "placement": 67119360
+          "placement": {
+            "x": 64,
+            "y": 41,
+            "layer": 0
+          }
         },
         {
           "structure": "iron",
@@ -82,7 +94,11 @@
             "formatted": "00:00:05",
             "msec": 5160
           },
-          "placement": 62925056
+          "placement": {
+            "x": 60,
+            "y": 41,
+            "layer": 0
+          }
         },
         {
           "structure": "mslo",
@@ -90,7 +106,11 @@
             "formatted": "00:00:05",
             "msec": 5600
           },
-          "placement": 61875456
+          "placement": {
+            "x": 59,
+            "y": 37,
+            "layer": 0
+          }
         },
         {
           "structure": "weap",
@@ -98,7 +118,11 @@
             "formatted": "00:00:06",
             "msec": 6320
           },
-          "placement": 62922752
+          "placement": {
+            "x": 60,
+            "y": 32,
+            "layer": 0
+          }
         },
         {
           "structure": "tent",
@@ -106,7 +130,11 @@
             "formatted": "00:00:12",
             "msec": 12240
           },
-          "placement": 65022976
+          "placement": {
+            "x": 62,
+            "y": 44,
+            "layer": 0
+          }
         }
       ],
       "support_powers": [
@@ -116,8 +144,12 @@
             "formatted": "00:00:08",
             "msec": 8520
           },
-          "placement": 63971840,
-          "extra_placement": 0
+          "placement": {
+            "x": 61,
+            "y": 34,
+            "layer": 0
+          },
+          "extra_placement": null
         },
         {
           "type": "nuke",
@@ -125,8 +157,12 @@
             "formatted": "00:00:10",
             "msec": 10400
           },
-          "placement": 28325120,
-          "extra_placement": 0
+          "placement": {
+            "x": 27,
+            "y": 53,
+            "layer": 0
+          },
+          "extra_placement": null
         }
       ]
     },
@@ -157,7 +193,11 @@
             "formatted": "00:00:04",
             "msec": 4520
           },
-          "placement": 25178880
+          "placement": {
+            "x": 24,
+            "y": 51,
+            "layer": 0
+          }
         },
         {
           "structure": "powr",
@@ -165,7 +205,11 @@
             "formatted": "00:00:04",
             "msec": 4560
           },
-          "placement": 25179392
+          "placement": {
+            "x": 24,
+            "y": 53,
+            "layer": 0
+          }
         }
       ],
       "support_powers": [
