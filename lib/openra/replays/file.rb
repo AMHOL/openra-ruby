@@ -16,9 +16,11 @@ module Openra
         template = Packet.new(fields: Packet.fields)
 
         loop do
-          template.new.read(file).orders.each(&block)
-        rescue EOFError, IOError
-          break
+          begin
+            template.new.read(file).orders.each(&block)
+          rescue EOFError, IOError
+            break
+          end
         end
       end
 
