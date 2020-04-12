@@ -1,6 +1,16 @@
 ## Unreleased
 
-[Compare v2.0.0...HEAD](https://github.com/AMHOL/openra-ruby/compare/v2.0.0...HEAD)
+[Compare v2.1.0...HEAD](https://github.com/AMHOL/openra-ruby/compare/v2.1.0...HEAD)
+
+## v2.1.0
+
+### Added
+
+* [replay-data] Add client fingerprint to output ([AMHOL](https://github.com/AMHOL))
+* [replay-data] Restored placement outputs to x, y, layers hash
+* [replay-data] Added support for bot replays
+
+[Compare v2.0.0...v2.1.0](https://github.com/AMHOL/openra-ruby/compare/v2.0.0...v2.1.0)
 
 ## v2.0.0
 
