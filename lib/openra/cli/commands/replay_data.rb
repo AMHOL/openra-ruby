@@ -114,8 +114,8 @@ module Openra
               client_hash[:support_powers] << {
                 type: key,
                 game_time: time(order.frame * sync_info.global_settings.frametime_multiplier),
-                placement: order.target_pos.to_i,
-                extra_placement: order.extra_pos.to_i
+                placement: cell(order.target_cell.to_i),
+                extra_placement: cell(order.extra_cell.to_i),
               }
             when 'PlaceBuilding'
               # subject_id stores the player index here
@@ -127,7 +127,7 @@ module Openra
               client_hash[:build] << {
                 structure: utf8(order.target),
                 game_time: time(order.frame * sync_info.global_settings.frametime_multiplier),
-                placement: order.target_pos.to_i
+                placement: cell(order.target_cell.to_i)
               }
             when 'Message'
               data[:chat] << {
