@@ -4,7 +4,7 @@ module Openra
   class CLI
     module Utils
       def utf8(string)
-        string.force_encoding('UTF-8').to_s
+        string.force_encoding('UTF-8')
       end
 
       def time(msec)
