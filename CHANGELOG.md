@@ -1,12 +1,20 @@
 ## Unreleased
 
-[Compare v1.8.1...HEAD](https://github.com/AMHOL/openra-ruby/compare/v1.8.1...HEAD)
+[Compare v1.8.2...HEAD](https://github.com/AMHOL/openra-ruby/compare/v1.8.2...HEAD)
+
+## v1.8.2
+
+### Fixes
+
+* [core] Fix encoding issues again ([AMHOL](https://github.com/AMHOL))
+
+[Compare v1.8.1...v1.8.2](https://github.com/AMHOL/openra-ruby/compare/v1.8.1...v1.8.2)
 
 ## v1.8.1
 
 ### Updates
 
-* [replay-data] Update support powers to include game time and target positions
+* [replay-data] Update support powers to include game time and target positions ([AMHOL](https://github.com/AMHOL))
 
 [Compare v1.8.0...v1.8.1](https://github.com/AMHOL/openra-ruby/compare/v1.8.0...v1.8.1)
 
@@ -14,7 +22,7 @@
 
 ### Added
 
-* [replay-data] Add support_powers with usage counts to output
+* [replay-data] Add support_powers with usage counts to output ([AMHOL](https://github.com/AMHOL))
 
 [Compare v1.7.0...v1.8.0](https://github.com/AMHOL/openra-ruby/compare/v1.7.0...v1.8.0)
 
