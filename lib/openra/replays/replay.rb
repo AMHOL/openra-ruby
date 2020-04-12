@@ -25,7 +25,7 @@ module Openra
 
       def player(index)
         players.find do |candidate|
-          candidate.index == index
+          candidate.client_index == index
         end
       end
     end

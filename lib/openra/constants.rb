@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 module Openra
+  FIRST_PLAYER_INDEX = 3
+
   SUPPORT_POWERS = {
     'ra' => {
       'SovietSpyPlane' => :spy_plane,

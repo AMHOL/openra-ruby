@@ -28,6 +28,7 @@ game:
     techlevel: unrestricted
 clients:
 - index: '0'
+  player_index: 3
   name: opǝ͢nɹ͢ɐ͢͢
   preferred_color: F50606
   color: F50606
@@ -59,11 +60,6 @@ clients:
       formatted: '00:00:04'
       msec: 4600
     placement: 77602816
-  - structure: nuke
-    game_time:
-      formatted: '00:00:04'
-      msec: 4600
-    placement: 13642240
   - structure: fact.nod
     game_time:
       formatted: '00:00:06'
@@ -84,11 +80,6 @@ clients:
       formatted: '00:00:13'
       msec: 13040
     placement: 72361216
-  - structure: nuke
-    game_time:
-      formatted: '00:00:13'
-      msec: 13480
-    placement: 14690048
   support_powers:
   - type: :ion_cannon
     game_time:
@@ -109,6 +100,7 @@ clients:
     placement: 11544832
     extra_placement: 0
 - index: '1'
+  player_index: 4
   name: Cabal
   preferred_color: F5B2DB
   color: F5B2DB
@@ -124,7 +116,17 @@ clients:
   is_admin: false
   is_player: true
   is_winner: false
-  build: []
+  build:
+  - structure: nuke
+    game_time:
+      formatted: '00:00:04'
+      msec: 4600
+    placement: 13642240
+  - structure: nuke
+    game_time:
+      formatted: '00:00:13'
+      msec: 13480
+    placement: 14690048
   support_powers: []
 chat:
 - channel: server
