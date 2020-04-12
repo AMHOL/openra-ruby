@@ -55,9 +55,11 @@ module Openra
 
               data[:clients] = sync_info.clients.map do |client|
                 player = replay.player(client.index)
+                player_index = replay.players.index(player) + FIRST_PLAYER_INDEX if player
 
                 {
                   index: client.index,
+                  player_index: player_index,
                   name: utf8(client.name),
                   preferred_color: client.preferred_color,
                   color: client.color,
@@ -116,8 +118,10 @@ module Openra
                 extra_placement: order.extra_pos.to_i
               }
             when 'PlaceBuilding'
+              # subject_id stores the player index here
+              # as bot commands are issued by the host client
               client_hash = data[:clients].find do |candidate|
-                candidate[:index] == order.client_index.to_s
+                candidate[:player_index] == order.subject_id
               end
 
               client_hash[:build] << {
