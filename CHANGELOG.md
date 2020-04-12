@@ -1,6 +1,14 @@
 ## Unreleased
 
-[Compare v1.8.2...HEAD](https://github.com/AMHOL/openra-ruby/compare/v1.8.2...HEAD)
+[Compare v2.0.0...HEAD](https://github.com/AMHOL/openra-ruby/compare/v2.0.0...HEAD)
+
+## v2.0.0
+
+### Removed
+
+* [detect-production-macros] Remove command because it's garbage ([AMHOL](https://github.com/AMHOL))
+
+[Compare v1.8.2...v2.0.0](https://github.com/AMHOL/openra-ruby/compare/v1.8.2...v2.0.0)
 
 ## v1.8.2
 
