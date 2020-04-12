@@ -34,7 +34,7 @@ module Openra
       end
 
       def frametime_multiplier
-        timestep * order_latency
+        timestep * 3
       end
     end
   end

@@ -56,8 +56,8 @@
         {
           "structure": "powr",
           "game_time": {
-            "formatted": "00:00:03",
-            "msec": 3040
+            "formatted": "00:00:09",
+            "msec": 9000
           },
           "placement": {
             "x": 65,
@@ -68,8 +68,8 @@
         {
           "structure": "mslo",
           "game_time": {
-            "formatted": "00:00:04",
-            "msec": 4000
+            "formatted": "00:00:11",
+            "msec": 11880
           },
           "placement": {
             "x": 67,
@@ -80,8 +80,8 @@
         {
           "structure": "pdox",
           "game_time": {
-            "formatted": "00:00:04",
-            "msec": 4720
+            "formatted": "00:00:14",
+            "msec": 14040
           },
           "placement": {
             "x": 64,
@@ -92,8 +92,8 @@
         {
           "structure": "iron",
           "game_time": {
-            "formatted": "00:00:05",
-            "msec": 5160
+            "formatted": "00:00:15",
+            "msec": 15360
           },
           "placement": {
             "x": 60,
@@ -104,8 +104,8 @@
         {
           "structure": "mslo",
           "game_time": {
-            "formatted": "00:00:05",
-            "msec": 5600
+            "formatted": "00:00:16",
+            "msec": 16680
           },
           "placement": {
             "x": 59,
@@ -116,8 +116,8 @@
         {
           "structure": "weap",
           "game_time": {
-            "formatted": "00:00:06",
-            "msec": 6320
+            "formatted": "00:00:18",
+            "msec": 18840
           },
           "placement": {
             "x": 60,
@@ -128,8 +128,8 @@
         {
           "structure": "tent",
           "game_time": {
-            "formatted": "00:00:12",
-            "msec": 12240
+            "formatted": "00:00:36",
+            "msec": 36600
           },
           "placement": {
             "x": 62,
@@ -142,8 +142,8 @@
         {
           "type": "iron_curtain",
           "game_time": {
-            "formatted": "00:00:08",
-            "msec": 8520
+            "formatted": "00:00:25",
+            "msec": 25440
           },
           "placement": {
             "x": 61,
@@ -155,8 +155,8 @@
         {
           "type": "nuke",
           "game_time": {
-            "formatted": "00:00:10",
-            "msec": 10400
+            "formatted": "00:00:31",
+            "msec": 31080
           },
           "placement": {
             "x": 27,
@@ -192,8 +192,8 @@
         {
           "structure": "powr",
           "game_time": {
-            "formatted": "00:00:04",
-            "msec": 4520
+            "formatted": "00:00:13",
+            "msec": 13440
           },
           "placement": {
             "x": 24,
@@ -204,8 +204,8 @@
         {
           "structure": "powr",
           "game_time": {
-            "formatted": "00:00:04",
-            "msec": 4560
+            "formatted": "00:00:13",
+            "msec": 13560
           },
           "placement": {
             "x": 24,
