@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
 module Openra
-  VERSION = '1.8.2'.freeze
+  VERSION = '2.0.0'.freeze
 end
