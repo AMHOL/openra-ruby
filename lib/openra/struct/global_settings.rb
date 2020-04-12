@@ -6,7 +6,7 @@ module Openra
       transform_types(&:omittable)
 
       define do
-        attribute :server_name, Types::UTF8String.meta(from: 'ServerName')
+        attribute :server_name, Types::Strict::String.meta(from: 'ServerName')
         attribute :map_hash, Types::Strict::String.meta(from: 'Map')
         attribute :timestep, Types::Params::Integer.meta(from: 'Timestep')
         attribute :order_latency, Types::Params::Integer.meta(

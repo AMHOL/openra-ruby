@@ -26,7 +26,7 @@ module Openra
               ) unless game_started
             when 'StartProduction'
               commands[order.client_index.to_s] << {
-                target: order.target,
+                target: utf8(order.target),
                 msec: order.frame * sync_info.global_settings.frametime_multiplier
               }
             end
@@ -40,7 +40,7 @@ module Openra
 
               {
                 index: player.index,
-                name: player.name,
+                name: utf8(player.name),
                 team: player.team,
                 outcome: player.outcome,
                 production_stats: production_stats,

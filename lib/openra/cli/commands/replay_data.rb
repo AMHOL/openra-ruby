@@ -4,6 +4,8 @@ module Openra
   class CLI
     module Commands
       class ReplayData < Dry::CLI::Command
+        include CLI::Utils
+
         desc 'Output replay data to stdout'
 
         argument :replay, required: true, desc: 'Path of the replay file to read data from'
@@ -18,7 +20,7 @@ module Openra
             version: replay.metadata.version,
             server_name: nil,
             map: {
-              name: replay.metadata.map_name,
+              name: utf8(replay.metadata.map_name),
               hash: replay.metadata.map_hash
             },
             game: {
@@ -56,7 +58,7 @@ module Openra
 
                 {
                   index: client.index,
-                  name: client.name,
+                  name: utf8(client.name),
                   preferred_color: client.preferred_color,
                   color: client.color,
                   spawn: {
@@ -102,7 +104,7 @@ module Openra
                 Openra::YAML.load(order.target)
               ).clients
             when *support_powers.keys
-              key = support_powers.fetch(order.command.force_encoding('UTF-8'))
+              key = support_powers.fetch(utf8(order.command))
               client_hash = data[:clients].find do |candidate|
                 candidate[:index] == order.client_index.to_s
               end
@@ -119,7 +121,7 @@ module Openra
               end
 
               client_hash[:build] << {
-                structure: order.target,
+                structure: utf8(order.target),
                 game_time: time(order.frame * sync_info.global_settings.frametime_multiplier),
                 placement: order.target_pos.to_i
               }
@@ -127,39 +129,26 @@ module Openra
               data[:chat] << {
                 channel: 'server',
                 name: nil,
-                message: order.target
+                message: utf8(order.target)
               }
             when 'Chat'
               data[:chat] << {
                 channel: 'global',
-                name: client.name,
-                message: order.target
+                name: utf8(client.name),
+                message: utf8(order.target)
               }
             when 'TeamChat'
               data[:chat] << {
                 channel: client.team,
-                name: client.name,
-                message: order.target
+                name: utf8(client.name),
+                message: utf8(order.target)
               }
             end
           end
 
-          data[:server_name] = sync_info.global_settings.server_name
+          data[:server_name] = utf8(sync_info.global_settings.server_name)
 
           puts FORMATTERS.fetch(options[:format]).call(data)
-        end
-
-        private
-
-        def time(msec)
-          sec = msec / 1000
-          mm, ss = sec.divmod(60)
-          hh, mm = mm.divmod(60)
-
-          {
-            formatted: '%02d:%02d:%02d' % [hh, mm, ss],
-            msec: msec.to_i
-          }
         end
       end
     end
