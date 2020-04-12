@@ -31,7 +31,3 @@ module RSpec
     end
   end
 end
-
-RSpec.configure do |config|
-  config.include(RSpec::Support::Helpers)
-end
