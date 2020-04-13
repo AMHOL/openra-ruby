@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Openra
-  class YAML
+  class MiniYAML
     MATCHER = /(?<indentation>\t+)?(?<key>[^\:]+)?\:?\s?(?<value>.+)?/.freeze
 
     def self.load(yaml_string)

@@ -11,7 +11,7 @@ module Openra
 
       def metadata
         @metadata ||= Openra::Struct::Metadata.new(
-          Openra::YAML.load(file.metadata.data)
+          Openra::MiniYAML.load(file.metadata.data)
         )
       end
 

@@ -100,11 +100,11 @@ module Openra
               }
             when 'SyncInfo'
               sync_info = Openra::Struct::SyncInfo.new(
-                Openra::YAML.load(order.target)
+                Openra::MiniYAML.load(order.target)
               ) unless game_started
             when 'SyncLobbyClients'
               current_sync_clients = Openra::Struct::SyncLobbyClients.new(
-                Openra::YAML.load(order.target)
+                Openra::MiniYAML.load(order.target)
               ).clients
             when *support_powers.keys
               key = support_powers.fetch(utf8(order.command))
