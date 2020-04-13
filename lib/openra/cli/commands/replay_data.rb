@@ -114,7 +114,7 @@ module Openra
 
               client_hash[:support_powers] << {
                 type: key,
-                game_time: time(order.frame * sync_info.global_settings.frametime_multiplier),
+                game_time: time(order.frame.pred * sync_info.global_settings.frametime_multiplier),
                 placement: cell(order.target_cell.to_i),
                 extra_placement: cell(order.extra_cell.to_i),
               }
@@ -127,7 +127,7 @@ module Openra
 
               client_hash[:build] << {
                 structure: utf8(order.target),
-                game_time: time(order.frame * sync_info.global_settings.frametime_multiplier),
+                game_time: time(order.frame.pred * sync_info.global_settings.frametime_multiplier),
                 placement: cell(order.target_cell.to_i)
               }
             when 'Message'

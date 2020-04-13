@@ -48,56 +48,56 @@ clients:
   build:
   - structure: nuke
     game_time:
-      formatted: '00:00:03'
-      msec: 3560
+      formatted: '00:00:10'
+      msec: 10560
     placement:
       x: 75
       y: 37
       layer: 0
   - structure: eye
     game_time:
-      formatted: '00:00:04'
-      msec: 4120
+      formatted: '00:00:12'
+      msec: 12240
     placement:
       x: 72
       y: 37
       layer: 0
   - structure: weap
     game_time:
-      formatted: '00:00:04'
-      msec: 4600
+      formatted: '00:00:13'
+      msec: 13680
     placement:
       x: 74
       y: 32
       layer: 0
   - structure: fact.nod
     game_time:
-      formatted: '00:00:06'
-      msec: 6520
+      formatted: '00:00:19'
+      msec: 19440
     placement:
       x: 69
       y: 46
       layer: 0
   - structure: tmpl
     game_time:
-      formatted: '00:00:07'
-      msec: 7640
+      formatted: '00:00:22'
+      msec: 22800
     placement:
       x: 79
       y: 36
       layer: 0
   - structure: hq
     game_time:
-      formatted: '00:00:08'
-      msec: 8400
+      formatted: '00:00:25'
+      msec: 25080
     placement:
       x: 77
       y: 47
       layer: 0
   - structure: hand
     game_time:
-      formatted: '00:00:13'
-      msec: 13040
+      formatted: '00:00:39'
+      msec: 39000
     placement:
       x: 69
       y: 37
@@ -105,8 +105,8 @@ clients:
   support_powers:
   - type: :ion_cannon
     game_time:
-      formatted: '00:00:10'
-      msec: 10480
+      formatted: '00:00:31'
+      msec: 31320
     placement:
       x: 14
       y: 43
@@ -114,8 +114,8 @@ clients:
     extra_placement: 
   - type: :airstrike
     game_time:
-      formatted: '00:00:11'
-      msec: 11040
+      formatted: '00:00:33'
+      msec: 33000
     placement:
       x: 11
       y: 41
@@ -123,8 +123,8 @@ clients:
     extra_placement: 
   - type: :nuke
     game_time:
-      formatted: '00:00:11'
-      msec: 11560
+      formatted: '00:00:34'
+      msec: 34560
     placement:
       x: 11
       y: 41
@@ -151,16 +151,16 @@ clients:
   build:
   - structure: nuke
     game_time:
-      formatted: '00:00:04'
-      msec: 4600
+      formatted: '00:00:13'
+      msec: 13680
     placement:
       x: 13
       y: 42
       layer: 0
   - structure: nuke
     game_time:
-      formatted: '00:00:13'
-      msec: 13480
+      formatted: '00:00:40'
+      msec: 40320
     placement:
       x: 14
       y: 39
