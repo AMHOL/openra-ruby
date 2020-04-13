@@ -25,14 +25,14 @@ module Openra
       end
 
       def metadata
+        # https://github.com/OpenRA/OpenRA/blob/23b3c237b7071fd308c4664b0b6c5d719c0f3c74/OpenRA.Game/FileFormats/ReplayMetadata.cs#L96
         @metadata ||= begin
-          metadata_fs = file.tap(&:rewind)
-          offset = -(metadata_marker.data_length + 4)
-          metadata_fs.seek(offset, IO::SEEK_END)
-          Metadata.read(metadata_fs)
+          io = file.tap(&:rewind)
+          metadata_offset = -(metadata_marker.data_length + 4)
+          io.seek(metadata_offset, IO::SEEK_END)
+          Metadata.read(io)
         end
       end
-
 
       private
 

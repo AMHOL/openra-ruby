@@ -2,6 +2,7 @@
 
 module Openra
   module Replays
+    # https://github.com/OpenRA/OpenRA/blob/bleed/OpenRA.Game/Network/Order.cs
     class Order < BinData::Record
       HEX_FE = ?\xFE.dup.force_encoding('ASCII-8BIT').freeze
       HEX_FF = ?\xFF.dup.force_encoding('ASCII-8BIT').freeze

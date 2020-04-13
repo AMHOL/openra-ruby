@@ -7,6 +7,7 @@ module Openra
         string.force_encoding('UTF-8')
       end
 
+      # https://github.com/OpenRA/OpenRA/blob/bleed/OpenRA.Game/CPos.cs#L24
       def cell(pos)
         return if pos.zero?
 
