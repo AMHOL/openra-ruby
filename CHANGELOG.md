@@ -1,6 +1,14 @@
 ## Unreleased
 
-[Compare v2.1.0...HEAD](https://github.com/AMHOL/openra-ruby/compare/v2.1.0...HEAD)
+[Compare v2.2.0...HEAD](https://github.com/AMHOL/openra-ruby/compare/v2.2.0...HEAD)
+
+## v2.2.0
+
+### Fixed
+
+* [replay-data] Fixed timing calculations ([AMHOL](https://github.com/AMHOL))
+
+[Compare v2.1.0...v2.2.0](https://github.com/AMHOL/openra-ruby/compare/v2.1.0...v2.2.0)
 
 ## v2.1.0
 
