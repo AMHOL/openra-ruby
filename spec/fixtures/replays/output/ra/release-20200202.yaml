@@ -112,6 +112,18 @@ clients:
       y: 34
       layer: 0
     extra_placement: 
+  - type: :chronoshift
+    game_time:
+      formatted: '00:00:29'
+      msec: 29760
+    placement:
+      x: 7
+      y: 60
+      layer: 0
+    extra_placement:
+      x: 61
+      y: 34
+      layer: 0
   - type: :nuke
     game_time:
       formatted: '00:00:31'

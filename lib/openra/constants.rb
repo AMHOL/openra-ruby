@@ -20,6 +20,7 @@ module Openra
       'SovietParatroopers' => :paratroopers,
       'UkraineParabombs' => :parabombs,
       'Chronoshift' => :chronoshift,
+      'AdvancedChronoshift' => :chronoshift,
       'NukePowerInfoOrder' => :nuke,
       'GrantExternalConditionPowerInfoOrder' => :iron_curtain
     },
