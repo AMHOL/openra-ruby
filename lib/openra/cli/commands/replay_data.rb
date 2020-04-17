@@ -40,9 +40,8 @@ module Openra
             chat: []
           }
 
-          game_started = false
           current_sync_clients = []
-          sync_info = nil
+          current_sync_info = nil
 
           replay.each_order do |order|
             client = current_sync_clients.find do |candidate|
@@ -51,9 +50,7 @@ module Openra
 
             case order.command
             when 'StartGame'
-              game_started = true
-
-              data[:clients] = sync_info.clients.map do |client|
+              data[:clients] = current_sync_info.clients.map do |client|
                 player = replay.player(client.index)
                 player_index = replay.players.index(player) + FIRST_PLAYER_INDEX if player
 
@@ -84,24 +81,25 @@ module Openra
               end
 
               data[:game][:options] = {
-                explored_map: sync_info.global_settings.game_options.explored_map_enabled.value,
-                speed: sync_info.global_settings.game_options.game_speed.value,
-                starting_cash: sync_info.global_settings.game_options.starting_cash.value,
-                starting_units: sync_info.global_settings.game_options.starting_units.value,
-                fog_enabled: sync_info.global_settings.game_options.fog_enabled.value,
-                cheats_enabled: sync_info.global_settings.game_options.cheats_enabled.value,
-                kill_bounty_enabled: sync_info.global_settings.game_options.bounties_enabled.value,
-                allow_undeploy: sync_info.global_settings.game_options.conyard_undeploy_enabled.value,
-                crates_enabled: sync_info.global_settings.game_options.crates_enabled.value,
-                build_off_allies: sync_info.global_settings.game_options.build_off_allies_enabled.value,
-                restrict_build_radius: sync_info.global_settings.game_options.restricted_build_radius_enabled.value,
-                short_game: sync_info.global_settings.game_options.short_game_enabled.value,
-                techlevel: sync_info.global_settings.game_options.tech_level.value
+                explored_map: current_sync_info.global_settings.game_options.explored_map_enabled.value,
+                speed: current_sync_info.global_settings.game_options.game_speed.value,
+                starting_cash: current_sync_info.global_settings.game_options.starting_cash.value,
+                starting_units: current_sync_info.global_settings.game_options.starting_units.value,
+                fog_enabled: current_sync_info.global_settings.game_options.fog_enabled.value,
+                cheats_enabled: current_sync_info.global_settings.game_options.cheats_enabled.value,
+                kill_bounty_enabled: current_sync_info.global_settings.game_options.bounties_enabled.value,
+                allow_undeploy: current_sync_info.global_settings.game_options.conyard_undeploy_enabled.value,
+                crates_enabled: current_sync_info.global_settings.game_options.crates_enabled.value,
+                build_off_allies: current_sync_info.global_settings.game_options.build_off_allies_enabled.value,
+                restrict_build_radius: current_sync_info.global_settings.game_options.restricted_build_radius_enabled.value,
+                short_game: current_sync_info.global_settings.game_options.short_game_enabled.value,
+                techlevel: current_sync_info.global_settings.game_options.tech_level.value
               }
             when 'SyncInfo'
-              sync_info = Openra::Struct::SyncInfo.new(
+              current_sync_info = Openra::Struct::SyncInfo.new(
                 Openra::MiniYAML.load(order.target)
-              ) unless game_started
+              )
+              current_sync_clients = current_sync_info.clients
             when 'SyncLobbyClients'
               current_sync_clients = Openra::Struct::SyncLobbyClients.new(
                 Openra::MiniYAML.load(order.target)
@@ -114,7 +112,7 @@ module Openra
 
               client_hash[:support_powers] << {
                 type: key,
-                game_time: time(order.frame.pred * sync_info.global_settings.frametime_multiplier),
+                game_time: time(order.frame.pred * current_sync_info.global_settings.frametime_multiplier),
                 placement: cell(order.target_cell.to_i),
                 extra_placement: cell(order.extra_cell.to_i),
               }
@@ -127,7 +125,7 @@ module Openra
 
               client_hash[:build] << {
                 structure: utf8(order.target),
-                game_time: time(order.frame.pred * sync_info.global_settings.frametime_multiplier),
+                game_time: time(order.frame.pred * current_sync_info.global_settings.frametime_multiplier),
                 placement: cell(order.target_cell.to_i)
               }
             when 'Message'
@@ -151,7 +149,7 @@ module Openra
             end
           end
 
-          data[:server_name] = utf8(sync_info.global_settings.server_name)
+          data[:server_name] = utf8(current_sync_info.global_settings.server_name)
 
           puts FORMATTERS.fetch(options[:format]).call(data)
         end
