@@ -1,5 +1,7 @@
 ## Unreleased
 
+* [metadata] Add metadata command ([AMHOL](https://github.com/AMHOL))
+
 [Compare v2.2.0...HEAD](https://github.com/AMHOL/openra-ruby/compare/v2.2.0...HEAD)
 
 ## v2.2.0
