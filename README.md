@@ -25,7 +25,7 @@ gem update openra
 
 ```sh
 openra replay-data /path/to/replay.orarep [--format json|pretty-json|yaml]
-openra detect-production-macros /path/to/replay.orarep [--format json|pretty-json|yaml]
+openra metadata /path/to/replay.orarep [--format json|pretty-json|yaml]
 ```
 
 ### Other tools

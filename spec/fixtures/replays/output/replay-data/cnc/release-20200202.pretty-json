@@ -1,18 +1,18 @@
 {
-  "mod": "ra",
+  "mod": "cnc",
   "version": "release-20200202",
   "server_name": "Skirmish Game",
   "map": {
-    "name": "Ysmir",
-    "hash": "e926fd650fe12ef270f306f733230a207ef52b56"
+    "name": "The New Mandarins",
+    "hash": "033f847a8eedacd34cac6ad7a98305daca101193"
   },
   "game": {
     "type": "1v1",
-    "start_time": "2020-04-12T11:12:55+00:00",
-    "end_time": "2020-04-12T11:13:49+00:00",
+    "start_time": "2020-04-12T11:18:07+00:00",
+    "end_time": "2020-04-12T11:19:05+00:00",
     "duration": {
-      "formatted": "00:00:54",
-      "msec": 54000
+      "formatted": "00:00:58",
+      "msec": 58000
     },
     "options": {
       "explored_map": true,
@@ -43,8 +43,9 @@
         "point": "0"
       },
       "faction": {
+        "random": true,
         "chosen": "random",
-        "actual": "france"
+        "actual": "gdi"
       },
       "ip": "127.0.0.1",
       "team": null,
@@ -52,63 +53,28 @@
       "is_admin": true,
       "is_player": true,
       "is_winner": true,
+      "outcome_time": "2020-04-12T11:18:59+00:00",
       "build": [
         {
-          "structure": "powr",
+          "structure": "nuke",
           "game_time": {
-            "formatted": "00:00:09",
-            "msec": 9000
+            "formatted": "00:00:10",
+            "msec": 10560
           },
           "placement": {
-            "x": 65,
-            "y": 32,
+            "x": 75,
+            "y": 37,
             "layer": 0
           }
         },
         {
-          "structure": "mslo",
+          "structure": "eye",
           "game_time": {
-            "formatted": "00:00:11",
-            "msec": 11880
+            "formatted": "00:00:12",
+            "msec": 12240
           },
           "placement": {
-            "x": 67,
-            "y": 41,
-            "layer": 0
-          }
-        },
-        {
-          "structure": "pdox",
-          "game_time": {
-            "formatted": "00:00:14",
-            "msec": 14040
-          },
-          "placement": {
-            "x": 64,
-            "y": 41,
-            "layer": 0
-          }
-        },
-        {
-          "structure": "iron",
-          "game_time": {
-            "formatted": "00:00:15",
-            "msec": 15360
-          },
-          "placement": {
-            "x": 60,
-            "y": 41,
-            "layer": 0
-          }
-        },
-        {
-          "structure": "mslo",
-          "game_time": {
-            "formatted": "00:00:16",
-            "msec": 16680
-          },
-          "placement": {
-            "x": 59,
+            "x": 72,
             "y": 37,
             "layer": 0
           }
@@ -116,68 +82,100 @@
         {
           "structure": "weap",
           "game_time": {
-            "formatted": "00:00:18",
-            "msec": 18840
+            "formatted": "00:00:13",
+            "msec": 13680
           },
           "placement": {
-            "x": 60,
+            "x": 74,
             "y": 32,
             "layer": 0
           }
         },
         {
-          "structure": "tent",
+          "structure": "fact.nod",
           "game_time": {
-            "formatted": "00:00:36",
-            "msec": 36600
+            "formatted": "00:00:19",
+            "msec": 19440
           },
           "placement": {
-            "x": 62,
-            "y": 44,
+            "x": 69,
+            "y": 46,
+            "layer": 0
+          }
+        },
+        {
+          "structure": "tmpl",
+          "game_time": {
+            "formatted": "00:00:22",
+            "msec": 22800
+          },
+          "placement": {
+            "x": 79,
+            "y": 36,
+            "layer": 0
+          }
+        },
+        {
+          "structure": "hq",
+          "game_time": {
+            "formatted": "00:00:25",
+            "msec": 25080
+          },
+          "placement": {
+            "x": 77,
+            "y": 47,
+            "layer": 0
+          }
+        },
+        {
+          "structure": "hand",
+          "game_time": {
+            "formatted": "00:00:39",
+            "msec": 39000
+          },
+          "placement": {
+            "x": 69,
+            "y": 37,
             "layer": 0
           }
         }
       ],
       "support_powers": [
         {
-          "type": "iron_curtain",
+          "type": "ion_cannon",
           "game_time": {
-            "formatted": "00:00:25",
-            "msec": 25440
+            "formatted": "00:00:31",
+            "msec": 31320
           },
           "placement": {
-            "x": 61,
-            "y": 34,
+            "x": 14,
+            "y": 43,
             "layer": 0
           },
           "extra_placement": null
         },
         {
-          "type": "chronoshift",
+          "type": "airstrike",
           "game_time": {
-            "formatted": "00:00:29",
-            "msec": 29760
+            "formatted": "00:00:33",
+            "msec": 33000
           },
           "placement": {
-            "x": 7,
-            "y": 60,
+            "x": 11,
+            "y": 41,
             "layer": 0
           },
-          "extra_placement": {
-            "x": 61,
-            "y": 34,
-            "layer": 0
-          }
+          "extra_placement": null
         },
         {
           "type": "nuke",
           "game_time": {
-            "formatted": "00:00:31",
-            "msec": 31080
+            "formatted": "00:00:34",
+            "msec": 34560
           },
           "placement": {
-            "x": 27,
-            "y": 53,
+            "x": 11,
+            "y": 41,
             "layer": 0
           },
           "extra_placement": null
@@ -187,17 +185,18 @@
     {
       "index": "1",
       "player_index": 4,
-      "name": "Rush AI",
+      "name": "Cabal",
       "fingerprint": null,
-      "preferred_color": "2F86F2",
-      "color": "2F86F2",
+      "preferred_color": "F5B2DB",
+      "color": "F5B2DB",
       "spawn": {
         "random": true,
         "point": "0"
       },
       "faction": {
+        "random": true,
         "chosen": "random",
-        "actual": "ukraine"
+        "actual": "gdi"
       },
       "ip": null,
       "team": null,
@@ -205,28 +204,29 @@
       "is_admin": false,
       "is_player": true,
       "is_winner": false,
+      "outcome_time": "2020-04-12T11:18:59+00:00",
       "build": [
         {
-          "structure": "powr",
+          "structure": "nuke",
           "game_time": {
             "formatted": "00:00:13",
-            "msec": 13440
+            "msec": 13680
           },
           "placement": {
-            "x": 24,
-            "y": 51,
+            "x": 13,
+            "y": 42,
             "layer": 0
           }
         },
         {
-          "structure": "powr",
+          "structure": "nuke",
           "game_time": {
-            "formatted": "00:00:13",
-            "msec": 13560
+            "formatted": "00:00:40",
+            "msec": 40320
           },
           "placement": {
-            "x": 24,
-            "y": 53,
+            "x": 14,
+            "y": 39,
             "layer": 0
           }
         }
@@ -240,17 +240,17 @@
     {
       "channel": "server",
       "name": null,
+      "message": "opǝ͢nɹ͢ɐ͢͢ changed the map to The New Mandarins."
+    },
+    {
+      "channel": "server",
+      "name": null,
       "message": "opǝ͢nɹ͢ɐ͢͢ enabled Explored Map."
     },
     {
       "channel": "server",
       "name": null,
-      "message": "opǝ͢nɹ͢ɐ͢͢ enabled Reusable Engineers."
-    },
-    {
-      "channel": "server",
-      "name": null,
-      "message": "opǝ͢nɹ͢ɐ͢͢ enabled Kill Bounties."
+      "message": "opǝ͢nɹ͢ɐ͢͢ changed Starting Units to MCV Only."
     },
     {
       "channel": "server",
