@@ -1,5 +1,9 @@
 ## Unreleased
 
+[Compare v2.3.0...HEAD](https://github.com/AMHOL/openra-ruby/compare/v2.3.0...HEAD)
+
+## v2.3.0
+
 ### Added
 
 * [replay-data] Add AdvancedChronoshift to Openra::SUPPORT_POWERS ([AMHOL](https://github.com/AMHOL))
@@ -9,7 +13,7 @@
 
 *  [replay-data] Store clients from SyncInfo command and keep syncing after game start ([AMHOL](https://github.com/AMHOL))
 
-[Compare v2.2.0...HEAD](https://github.com/AMHOL/openra-ruby/compare/v2.2.0...HEAD)
+[Compare v2.2.0...v2.3.0](https://github.com/AMHOL/openra-ruby/compare/v2.2.0...v2.3.0)
 
 ## v2.2.0
 
