@@ -66,6 +66,7 @@ module Openra
                     point: client.spawn_point
                   },
                   faction: {
+                    random: player&.is_random_faction,
                     chosen: client.faction_name.downcase,
                     actual: player&.faction_id
                   },
@@ -75,6 +76,7 @@ module Openra
                   is_admin: client.is_admin,
                   is_player: !player.nil?,
                   is_winner: player&.outcome == 'Won',
+                  outcome_time: player.outcome_time.iso8601,
                   build: [],
                   support_powers: []
                 }

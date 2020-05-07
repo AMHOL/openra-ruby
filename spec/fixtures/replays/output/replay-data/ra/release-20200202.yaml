@@ -37,6 +37,7 @@ clients:
     random: true
     point: '0'
   faction:
+    random: true
     chosen: random
     actual: france
   ip: 127.0.0.1
@@ -45,6 +46,7 @@ clients:
   is_admin: true
   is_player: true
   is_winner: true
+  outcome_time: '2020-04-12T11:13:43+00:00'
   build:
   - structure: powr
     game_time:
@@ -143,6 +145,7 @@ clients:
     random: true
     point: '0'
   faction:
+    random: true
     chosen: random
     actual: ukraine
   ip: 
@@ -151,6 +154,7 @@ clients:
   is_admin: false
   is_player: true
   is_winner: false
+  outcome_time: '2020-04-12T11:13:43+00:00'
   build:
   - structure: powr
     game_time:

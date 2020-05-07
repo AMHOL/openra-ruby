@@ -3,12 +3,12 @@
 class Fixtures
   attr_reader :files
 
-  def self.output_filename_for(file, format)
-    file.sub('/input/', '/output/').sub('.orarep', ".#{format}")
+  def self.output_filename_for(file, command, format)
+    file.sub('/input/', "/output/#{command}/").sub('.orarep', ".#{format}")
   end
 
-  def self.output_for(file, format)
-    File.read(output_filename_for(file, format))
+  def self.output_for(file, command, format)
+    File.read(output_filename_for(file, command, format))
   end
 
   def self.mod_for(file)
