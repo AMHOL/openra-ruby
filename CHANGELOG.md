@@ -1,6 +1,12 @@
 ## Unreleased
 
-[Compare v2.3.0...HEAD](https://github.com/AMHOL/openra-ruby/compare/v2.3.0...HEAD)
+[Compare v2.3.1...HEAD](https://github.com/AMHOL/openra-ruby/compare/v2.3.0...HEAD)
+
+## v2.3.1
+
+* [replay-data] Fixed error when parsing replays with spectators ([AMHOL](https://github.com/AMHOL))
+
+[Compare v2.3.0...v2.3.1](https://github.com/AMHOL/openra-ruby/compare/v2.3.0...v2.3.1)
 
 ## v2.3.0
 
