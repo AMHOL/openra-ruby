@@ -76,7 +76,7 @@ module Openra
                   is_admin: client.is_admin,
                   is_player: !player.nil?,
                   is_winner: player&.outcome == 'Won',
-                  outcome_time: player.outcome_time.iso8601,
+                  outcome_time: player&.outcome_time&.iso8601,
                   build: [],
                   support_powers: []
                 }
