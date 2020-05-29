@@ -1,10 +1,16 @@
 ## Unreleased
 
-[Compare v3.0.0...HEAD](https://github.com/AMHOL/openra-ruby/compare/v3.0.0...HEAD)
+[Compare v3.0.1...HEAD](https://github.com/AMHOL/openra-ruby/compare/v3.0.0...HEAD)
+
+## v3.0.1
+
+* [maint] Added openra-commands file to load stand-alone commands ([AMHOL](https://github.com/AMHOL))
+
+[Compare v3.0.0...v3.0.1](https://github.com/AMHOL/openra-ruby/compare/v3.0.0...v3.0.1)
 
 ## v3.0.0
 
-* [replay-metadata] Rename metadata command to replay-metadata ([AMHOL](https://github.com/AMHOL))
+* [replay-metadata] Renamed metadata command to replay-metadata ([AMHOL](https://github.com/AMHOL))
 
 [Compare v2.3.1...v3.0.0](https://github.com/AMHOL/openra-ruby/compare/v2.3.0...v3.0.0)
 
