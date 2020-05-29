@@ -1,12 +1,9 @@
 # frozen_string_literal: true
 
-require 'securerandom'
 require 'yaml'
 require 'json'
 require 'dry/cli'
 require 'openra/version'
-require 'openra/constants'
-require 'openra/replays'
 require 'openra/commands'
 require 'openra/cli/formatters'
 require 'openra/cli/commands/replay_data'
