@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 require 'dry/transformer/all'
-require 'dry-struct'
 require 'openra/types'
+require 'dry-struct'
 require 'openra/struct/functions'
 require 'openra/struct/pre_processor'
 

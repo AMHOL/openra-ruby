@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Openra
-  class CLI
+  module Commands
     module Utils
       def utf8(string)
         string.force_encoding('UTF-8')
