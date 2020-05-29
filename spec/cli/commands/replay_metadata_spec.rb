@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-RSpec.describe 'Openra::CLI::Commands::Metadata' do
-  let(:command) { 'metadata' }
+RSpec.describe 'Openra::CLI::Commands::ReplayMetadata' do
+  let(:command) { 'replay-metadata' }
 
   %w(json pretty-json yaml).each do |format|
     Fixtures.new('replays/input/**/*.orarep').each do |file|

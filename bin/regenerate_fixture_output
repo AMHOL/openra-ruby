@@ -9,7 +9,7 @@ include RSpec::Support::Helpers
 
 %w(json pretty-json yaml).each do |format|
   Fixtures.new('replays/input/**/*.orarep').each do |file|
-    %w(replay-data metadata).each do |command|
+    %w(replay-data replay-metadata).each do |command|
       output_filename = Fixtures.output_filename_for(file, command, format)
       output = capture_output {
         Openra::CLI.new.call(

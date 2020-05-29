@@ -3,7 +3,7 @@
 module Openra
   class CLI
     module Commands
-      class Metadata < Dry::CLI::Command
+      class ReplayMetadata < Dry::CLI::Command
         include CLI::Utils
 
         desc 'Output replay metadata to stdout'

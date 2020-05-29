@@ -5,8 +5,8 @@ module Openra
     class CommandRegistry
       extend Dry::CLI::Registry
 
-      register 'metadata', Commands::Metadata
       register 'replay-data', Commands::ReplayData
+      register 'replay-metadata', Commands::ReplayMetadata
       register 'version', Commands::Version
     end
   end
