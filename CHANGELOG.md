@@ -1,9 +1,13 @@
 ## Unreleased
 
+[Compare v4.0.0...HEAD](https://github.com/AMHOL/openra-ruby/compare/v3.0.0...HEAD)
+
+## v4.0.0
+
 * [maint] Support playtest-20201213 - drops support for all older clients
 * [core] Generate file hash in replay-data and replay-metadata commands
 
-[Compare v3.0.1...HEAD](https://github.com/AMHOL/openra-ruby/compare/v3.0.0...HEAD)
+[Compare v3.0.1...v4.0.0](https://github.com/AMHOL/openra-ruby/compare/v3.0.1...v4.0.0)
 
 ## v3.0.1
 
