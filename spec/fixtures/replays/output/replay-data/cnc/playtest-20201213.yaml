@@ -1,21 +1,21 @@
 ---
 mod: cnc
-version: release-20200503
+version: playtest-20201213
 server_name: Skirmish Game
 map:
-  name: '16:9'
-  hash: dbce6538cdfe130e0f7a350a63510ea41f4b1a12
+  name: Tiberium Rift
+  hash: 14ee1a6ebc74ee92ee5e1235cf63f0c2fefb6b0f
 game:
   type: 1v1
-  start_time: '2020-05-07T15:02:04+00:00'
-  end_time: '2020-05-07T15:03:03+00:00'
+  start_time: '2021-01-05T11:17:59+00:00'
+  end_time: '2021-01-05T11:18:59+00:00'
   duration:
-    formatted: '00:00:59'
-    msec: 59000
+    formatted: '00:01:00'
+    msec: 60000
   options:
     explored_map: true
     speed: default
-    starting_cash: 5000
+    starting_cash: 7500
     starting_units: none
     fog_enabled: true
     cheats_enabled: true
@@ -46,116 +46,114 @@ clients:
   is_admin: true
   is_player: true
   is_winner: true
-  outcome_time: '2020-05-07T15:02:57+00:00'
+  outcome_time: '2021-01-05T11:18:52+00:00'
   build:
   - structure: nuke
     game_time:
-      formatted: '00:00:09'
-      msec: 9840
+      formatted: '00:00:03'
+      msec: 3720
     placement:
-      x: 80
-      y: 23
+      x: 76
+      y: 50
       layer: 0
-  - structure: eye
+  - structure: proc
     game_time:
-      formatted: '00:00:11'
-      msec: 11040
+      formatted: '00:00:05'
+      msec: 5400
     placement:
-      x: 83
-      y: 19
+      x: 82
+      y: 42
+      layer: 0
+  - structure: weap
+    game_time:
+      formatted: '00:00:07'
+      msec: 7080
+    placement:
+      x: 74
+      y: 44
       layer: 0
   - structure: fact.nod
     game_time:
-      formatted: '00:00:14'
-      msec: 14760
+      formatted: '00:00:09'
+      msec: 9240
+    placement:
+      x: 70
+      y: 50
+      layer: 0
+  - structure: nuke
+    game_time:
+      formatted: '00:00:13'
+      msec: 13320
     placement:
       x: 80
-      y: 14
+      y: 51
+      layer: 0
+  - structure: fact.gdi
+    game_time:
+      formatted: '00:00:15'
+      msec: 15120
+    placement:
+      x: 69
+      y: 43
       layer: 0
   - structure: tmpl
     game_time:
-      formatted: '00:00:18'
-      msec: 18960
+      formatted: '00:00:19'
+      msec: 19440
     placement:
       x: 72
-      y: 15
+      y: 39
+      layer: 0
+  - structure: eye
+    game_time:
+      formatted: '00:00:25'
+      msec: 25200
+    placement:
+      x: 65
+      y: 39
       layer: 0
   - structure: hq
     game_time:
-      formatted: '00:00:21'
-      msec: 21120
+      formatted: '00:00:28'
+      msec: 28320
     placement:
-      x: 87
-      y: 19
+      x: 64
+      y: 45
       layer: 0
-  - structure: pyle
-    game_time:
-      formatted: '00:00:26'
-      msec: 26520
-    placement:
-      x: 75
-      y: 24
-      layer: 0
-  - structure: weap
+  support_powers:
+  - type: :airstrike
     game_time:
       formatted: '00:00:33'
       msec: 33120
     placement:
-      x: 78
-      y: 28
+      x: 20
+      y: 20
       layer: 0
-  support_powers:
+    extra_placement: 
   - type: :nuke
     game_time:
-      formatted: '00:00:36'
-      msec: 36240
+      formatted: '00:00:35'
+      msec: 35520
     placement:
-      x: 23
-      y: 35
+      x: 21
+      y: 16
       layer: 0
     extra_placement: 
   - type: :ion_cannon
     game_time:
-      formatted: '00:00:37'
-      msec: 37800
+      formatted: '00:00:51'
+      msec: 51840
     placement:
-      x: 25
-      y: 32
-      layer: 0
-    extra_placement: 
-  - type: :airstrike
-    game_time:
-      formatted: '00:00:39'
-      msec: 39840
-    placement:
-      x: 19
-      y: 37
-      layer: 0
-    extra_placement: 
-  - type: :airstrike
-    game_time:
-      formatted: '00:00:43'
-      msec: 43680
-    placement:
-      x: 20
-      y: 37
-      layer: 0
-    extra_placement: 
-  - type: :airstrike
-    game_time:
-      formatted: '00:00:47'
-      msec: 47640
-    placement:
-      x: 49
-      y: 29
+      x: 21
+      y: 11
       layer: 0
     extra_placement: 
 - index: '1'
   player_index: 4
   name: Cabal
   fingerprint: 
-  preferred_color: 12B572
-  color: 12B572
+  preferred_color: '502048'
+  color: '502048'
   spawn:
     random: true
     point: '0'
@@ -169,35 +167,32 @@ clients:
   is_admin: false
   is_player: true
   is_winner: false
-  outcome_time: '2020-05-07T15:02:57+00:00'
+  outcome_time: '2021-01-05T11:18:52+00:00'
   build:
   - structure: nuke
     game_time:
-      formatted: '00:00:13'
-      msec: 13680
+      formatted: '00:00:17'
+      msec: 17640
     placement:
-      x: 25
-      y: 31
+      x: 20
+      y: 19
       layer: 0
   - structure: nuke
     game_time:
-      formatted: '00:00:46'
-      msec: 46920
+      formatted: '00:00:50'
+      msec: 50040
     placement:
-      x: 18
-      y: 41
+      x: 20
+      y: 10
       layer: 0
   support_powers: []
 chat:
 - channel: server
   name: 
-  message: opǝ͢nɹ͢ɐ͢͢ changed the map to 16:9.
-- channel: server
-  name: 
   message: opǝ͢nɹ͢ɐ͢͢ enabled Explored Map.
 - channel: server
   name: 
-  message: opǝ͢nɹ͢ɐ͢͢ changed Starting Units to MCV Only.
+  message: opǝ͢nɹ͢ɐ͢͢ enabled Debug Menu.
 - channel: server
   name: 
-  message: opǝ͢nɹ͢ɐ͢͢ enabled Debug Menu.
+  message: opǝ͢nɹ͢ɐ͢͢ enabled Stealth Deliveries.
