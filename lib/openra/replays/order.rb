@@ -9,16 +9,19 @@ module Openra
 
       IS_STANDARD_ORDER = -> { order_type == HEX_FF }
       IS_IMMEDIATE_ORDER = -> { order_type == HEX_FE }
-      HAS_TARGET = -> { instance_exec(&IS_STANDARD_ORDER) && (flags & 1) == 1 }
+      HAS_TARGET = -> { instance_exec(&IS_STANDARD_ORDER) && (flags & 0x01) == 0x01 }
+      HAS_EXTRA_ACTORS = -> { instance_exec(&IS_STANDARD_ORDER) && (flags & 0x02) == 0x02 }
       TARGET_IS_ACTOR = -> { instance_exec(&HAS_TARGET) && target_type == 1 }
       TARGET_IS_TERRAIN = -> { instance_exec(&HAS_TARGET) && target_type == 2 }
       TARGET_IS_FROZEN_ACTOR = -> { instance_exec(&HAS_TARGET) && target_type == 3 }
-      TARGET_IS_CELL = -> { instance_exec(&TARGET_IS_TERRAIN) && (flags & 64) == 64 }
-      TARGET_NOT_CELL = -> { instance_exec(&TARGET_IS_TERRAIN) && (flags & 64) != 64 }
-      HAS_SUBJECT = -> { instance_exec(&IS_STANDARD_ORDER) && (flags & 128) == 128 }
-      HAS_TARGET_STRING = -> { instance_exec(&IS_STANDARD_ORDER) && (flags & 4) == 4 }
-      HAS_EXTRA_LOCATION = -> { instance_exec(&IS_STANDARD_ORDER) && (flags & 16) == 16 }
-      HAS_EXTRA_DATA = -> { instance_exec(&IS_STANDARD_ORDER) && (flags & 32) == 32 }
+      TARGET_IS_CELL = -> { instance_exec(&TARGET_IS_TERRAIN) && (flags & 0x40) == 0x40 }
+      TARGET_NOT_CELL = -> { instance_exec(&TARGET_IS_TERRAIN) && (flags & 0x40) != 0x40 }
+      HAS_SUBJECT = -> { instance_exec(&IS_STANDARD_ORDER) && (flags & 0x80) == 0x80 }
+      HAS_TARGET_STRING = -> { instance_exec(&IS_STANDARD_ORDER) && (flags & 0x04) == 0x04 }
+      HAS_EXTRA_LOCATION = -> { instance_exec(&IS_STANDARD_ORDER) && (flags & 0x10) == 0x10 }
+      HAS_EXTRA_DATA = -> { instance_exec(&IS_STANDARD_ORDER) && (flags & 0x20) == 0x20 }
+      # IS_QUEUED = -> { instance_exec(&IS_STANDARD_ORDER) && (flags & 0x08) == 0x08 }
+      IS_GROUPED = -> { instance_exec(&IS_STANDARD_ORDER) && (flags & 0x100) == 0x100 }
 
       endian :little
       # Common
@@ -27,7 +30,7 @@ module Openra
       # Immediate Order Data
       pascal_string :immediate_order_target, onlyif: IS_IMMEDIATE_ORDER
       # Standard Order Data
-      uint16 :flags, onlyif: IS_STANDARD_ORDER
+      int16 :flags, onlyif: IS_STANDARD_ORDER
       uint32 :subject_id, onlyif: HAS_SUBJECT
       uint8 :target_type, onlyif: HAS_TARGET
       uint32 :actor_id, onlyif: TARGET_IS_ACTOR
@@ -39,8 +42,12 @@ module Openra
       int32 :pos_y, onlyif: TARGET_NOT_CELL
       int32 :pos_z, onlyif: TARGET_NOT_CELL
       pascal_string :standard_order_target, onlyif: HAS_TARGET_STRING
+      int32 :extra_actors_count, onlyif: HAS_EXTRA_ACTORS
+      array :extra_actor_ids, type: :uint32, initial_length: :extra_actors_count, onlyif: HAS_EXTRA_ACTORS
       int32 :extra_cell, onlyif: HAS_EXTRA_LOCATION
       uint32 :extra_data, onlyif: HAS_EXTRA_DATA
+      int32 :grouped_actors_count, onlyif: IS_GROUPED
+      array :grouped_actor_ids, type: :uint32, initial_length: :grouped_actors_count, onlyif: IS_GROUPED
 
       def target
         standard? ? standard_order_target : immediate_order_target

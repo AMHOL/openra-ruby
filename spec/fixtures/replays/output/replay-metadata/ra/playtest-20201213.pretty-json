@@ -2,21 +2,21 @@
   "mod": "ra",
   "version": "playtest-20201213",
   "map": {
-    "name": "Annihilate[RAGL-X]",
-    "hash": "36dbe51a4bf91151f0026a926273c1d9afba7da9"
+    "name": "Amsterdamned[RAGL-X]",
+    "hash": "8645302ecd8fa29899a85d5c65b8c8486f5630b7"
   },
   "game": {
     "type": "1v1",
-    "start_time": "2021-01-05T11:14:55+00:00",
-    "end_time": "2021-01-05T11:16:03+00:00",
+    "start_time": "2021-01-05T13:14:16+00:00",
+    "end_time": "2021-01-05T13:15:42+00:00",
     "duration": {
-      "formatted": "00:01:08",
-      "msec": 68000
+      "formatted": "00:01:26",
+      "msec": 86000
     }
   },
   "players": [
     {
-      "player_index": "0",
+      "player_index": "141",
       "name": "opǝ͢nɹ͢ɐ͢͢",
       "fingerprint": null,
       "color": "F80606",
@@ -31,27 +31,27 @@
       },
       "team": null,
       "is_bot": false,
-      "is_winner": true,
-      "outcome_time": "2021-01-05T11:15:57+00:00"
+      "is_winner": false,
+      "outcome_time": "2021-01-05T13:15:28+00:00"
     },
     {
-      "player_index": "1",
-      "name": "Rush AI",
+      "player_index": "144",
+      "name": "opǝ͢nɹ͢ɐ͢͢",
       "fingerprint": null,
-      "color": "CEF7B2",
+      "color": "4719F8",
       "spawn": {
         "random": true,
         "point": "2"
       },
       "faction": {
         "random": true,
-        "chosen": "russia",
-        "actual": "russia"
+        "chosen": "ukraine",
+        "actual": "ukraine"
       },
       "team": null,
-      "is_bot": true,
-      "is_winner": false,
-      "outcome_time": "2021-01-05T11:15:57+00:00"
+      "is_bot": false,
+      "is_winner": true,
+      "outcome_time": "2021-01-05T13:15:28+00:00"
     }
   ]
 }

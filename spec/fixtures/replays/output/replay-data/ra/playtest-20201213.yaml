@@ -1,17 +1,17 @@
 ---
 mod: ra
 version: playtest-20201213
-server_name: Skirmish Game
+server_name: "|Abarrat's Abode - North America 1PT"
 map:
-  name: Annihilate[RAGL-X]
-  hash: 36dbe51a4bf91151f0026a926273c1d9afba7da9
+  name: Amsterdamned[RAGL-X]
+  hash: 8645302ecd8fa29899a85d5c65b8c8486f5630b7
 game:
   type: 1v1
-  start_time: '2021-01-05T11:14:55+00:00'
-  end_time: '2021-01-05T11:16:03+00:00'
+  start_time: '2021-01-05T13:14:16+00:00'
+  end_time: '2021-01-05T13:15:42+00:00'
   duration:
-    formatted: '00:01:08'
-    msec: 68000
+    formatted: '00:01:26'
+    msec: 86000
   options:
     explored_map: true
     speed: default
@@ -21,13 +21,13 @@ game:
     cheats_enabled: true
     kill_bounty_enabled: true
     allow_undeploy: true
-    crates_enabled: true
+    crates_enabled: false
     build_off_allies: true
     restrict_build_radius: true
     short_game: true
     techlevel: unrestricted
 clients:
-- index: '0'
+- index: '141'
   player_index: 3
   name: opǝ͢nɹ͢ɐ͢͢
   fingerprint: 
@@ -45,187 +45,83 @@ clients:
   is_bot: false
   is_admin: true
   is_player: true
-  is_winner: true
-  outcome_time: '2021-01-05T11:15:57+00:00'
-  build:
-  - structure: powr
-    game_time:
-      formatted: '00:00:03'
-      msec: 3720
-    placement:
-      x: 23
-      y: 72
-      layer: 0
-  - structure: afld.ukraine
-    game_time:
-      formatted: '00:00:05'
-      msec: 5400
-    placement:
-      x: 24
-      y: 68
-      layer: 0
-  - structure: mslo
-    game_time:
-      formatted: '00:00:07'
-      msec: 7200
-    placement:
-      x: 24
-      y: 66
-      layer: 0
-  - structure: iron
-    game_time:
-      formatted: '00:00:08'
-      msec: 8400
-    placement:
-      x: 20
-      y: 64
-      layer: 0
-  - structure: pdox
-    game_time:
-      formatted: '00:00:09'
-      msec: 9960
-    placement:
-      x: 15
-      y: 62
-      layer: 0
-  - structure: weap
-    game_time:
-      formatted: '00:00:17'
-      msec: 17520
-    placement:
-      x: 21
-      y: 59
-      layer: 0
-  support_powers:
-  - type: :iron_curtain
-    game_time:
-      formatted: '00:00:14'
-      msec: 14280
-    placement:
-      x: 19
-      y: 69
-      layer: 0
-    extra_placement: 
-  - type: :chronoshift
-    game_time:
-      formatted: '00:00:21'
-      msec: 21960
-    placement:
-      x: 64
-      y: 72
-      layer: 0
-    extra_placement:
-      x: 22
-      y: 61
-      layer: 0
-  - type: :chronoshift
-    game_time:
-      formatted: '00:00:26'
-      msec: 26640
-    placement:
-      x: 26
-      y: 52
-      layer: 0
-    extra_placement:
-      x: 64
-      y: 73
-      layer: 0
-  - type: :parabombs
-    game_time:
-      formatted: '00:00:29'
-      msec: 29760
-    placement:
-      x: 79
-      y: 29
-      layer: 0
-    extra_placement: 
-  - type: :paratroopers
-    game_time:
-      formatted: '00:00:32'
-      msec: 32520
-    placement:
-      x: 4
-      y: 48
-      layer: 0
-    extra_placement: 
-  - type: :spy_plane
-    game_time:
-      formatted: '00:00:34'
-      msec: 34440
-    placement:
-      x: 74
-      y: 16
-      layer: 0
-    extra_placement: 
-  - type: :nuke
-    game_time:
-      formatted: '00:00:36'
-      msec: 36360
-    placement:
-      x: 74
-      y: 25
-      layer: 0
-    extra_placement: 
-  - type: :parabombs
-    game_time:
-      formatted: '00:00:55'
-      msec: 55800
-    placement:
-      x: 79
-      y: 28
-      layer: 0
-    extra_placement: 
-  - type: :chronoshift
-    game_time:
-      formatted: '00:00:59'
-      msec: 59400
-    placement:
-      x: 63
-      y: 18
-      layer: 0
-    extra_placement:
-      x: 85
-      y: 28
-      layer: 0
-- index: '1'
+  is_winner: false
+  outcome_time: '2021-01-05T13:15:28+00:00'
+  build: []
+  support_powers: []
+- index: '144'
   player_index: 4
-  name: Rush AI
+  name: opǝ͢nɹ͢ɐ͢͢
   fingerprint: 
-  preferred_color: CEF7B2
-  color: CEF7B2
+  preferred_color: 4719F8
+  color: 4719F8
   spawn:
     random: true
     point: '0'
   faction:
     random: true
     chosen: random
-    actual: russia
+    actual: ukraine
   ip: 
   team: 
-  is_bot: true
+  is_bot: false
   is_admin: false
   is_player: true
-  is_winner: false
-  outcome_time: '2021-01-05T11:15:57+00:00'
+  is_winner: true
+  outcome_time: '2021-01-05T13:15:28+00:00'
   build:
   - structure: powr
+    game_time:
+      formatted: '00:00:04'
+      msec: 4680
+    placement:
+      x: 22
+      y: 12
+      layer: 0
+  - structure: atek
+    game_time:
+      formatted: '00:00:07'
+      msec: 7320
+    placement:
+      x: 25
+      y: 9
+      layer: 0
+  - structure: weap
+    game_time:
+      formatted: '00:00:11'
+      msec: 11040
+    placement:
+      x: 17
+      y: 10
+      layer: 0
+  - structure: tent
     game_time:
       formatted: '00:00:12'
       msec: 12840
     placement:
-      x: 71
-      y: 22
-      layer: 0
-  - structure: proc
-    game_time:
-      formatted: '00:00:47'
-      msec: 47280
-    placement:
-      x: 77
-      y: 27
+      x: 13
+      y: 15
       layer: 0
   support_powers: []
 chat:
+- channel: server
+  name: 
+  message: |+
+    Abarrat's Abode - Unsupported Server
+    Let Commanders play
+
+- channel: server
+  name: 
+  message: This server requires at least two human players to start a match.
+- channel: server
+  name: 
+  message: opǝ͢nɹ͢ɐ͢͢ changed the map to Amsterdamned[RAGL-X].
+- channel: server
+  name: 
+  message: This map contains custom rules. Game experience may change.
+- channel: server
+  name: 
+  message: This server requires at least two human players to start a match.
 - channel: server
   name: 
   message: "*** RAGL Season X *** \n \nThis map features: \n- ERCC refinery 2.1 by
@@ -236,13 +132,16 @@ chat:
     from 7 to 10 \n \nSee ragl.org for more information."
 - channel: server
   name: 
-  message: This map contains custom rules. Game experience may change.
+  message: opǝ͢nɹ͢ɐ͢͢ enabled Explored Map.
 - channel: server
   name: 
-  message: opǝ͢nɹ͢ɐ͢͢ enabled Explored Map.
+  message: opǝ͢nɹ͢ɐ͢͢ disabled Crates.
+- channel: server
+  name: 
+  message: opǝ͢nɹ͢ɐ͢͢ enabled Kill Bounties.
 - channel: server
   name: 
   message: opǝ͢nɹ͢ɐ͢͢ enabled Debug Menu.
 - channel: server
   name: 
-  message: opǝ͢nɹ͢ɐ͢͢ enabled Kill Bounties.
+  message: opǝ͢nɹ͢ɐ͢͢ enabled Reusable Engineers.
