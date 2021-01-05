@@ -9,6 +9,10 @@ module Openra
         @file = Openra::Replays::File.new(filename)
       end
 
+      def file_hash
+        file.generate_hash
+      end
+
       def metadata
         @metadata ||= Openra::Struct::Metadata.new(
           Openra::MiniYAML.load(file.metadata.data)

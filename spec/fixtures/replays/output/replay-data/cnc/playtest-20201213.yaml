@@ -2,6 +2,8 @@
 mod: cnc
 version: playtest-20201213
 server_name: EU Official (Playtest) 1
+file:
+  hash: 46881f872f60806846e1a2ada730948ab0616ecf4c61e0c61b460089750667a6
 map:
   name: African Gambit[TDGL2+]
   hash: 5e92f2f8441909418709b8ca0edb703a690de0e5
