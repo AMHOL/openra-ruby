@@ -6,7 +6,7 @@ module Openra
     class Order < BinData::Record
       HEX_FE = ?\xFE.dup.force_encoding('ASCII-8BIT').freeze
       HEX_FF = ?\xFF.dup.force_encoding('ASCII-8BIT').freeze
-      # NEED TO LEARN HOW TO READ FLAGS AND TARGET TYPE
+
       IS_STANDARD_ORDER = -> { order_type == HEX_FF }
       IS_IMMEDIATE_ORDER = -> { order_type == HEX_FE }
       HAS_TARGET = -> { instance_exec(&IS_STANDARD_ORDER) && (flags & 1) == 1 }
@@ -27,7 +27,7 @@ module Openra
       # Immediate Order Data
       pascal_string :immediate_order_target, onlyif: IS_IMMEDIATE_ORDER
       # Standard Order Data
-      uint8 :flags, onlyif: IS_STANDARD_ORDER
+      uint16 :flags, onlyif: IS_STANDARD_ORDER
       uint32 :subject_id, onlyif: HAS_SUBJECT
       uint8 :target_type, onlyif: HAS_TARGET
       uint32 :actor_id, onlyif: TARGET_IS_ACTOR

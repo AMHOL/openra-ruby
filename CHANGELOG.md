@@ -1,5 +1,7 @@
 ## Unreleased
 
+* [maint] Support playtest-20201213 - drops support for all older clients
+
 [Compare v3.0.1...HEAD](https://github.com/AMHOL/openra-ruby/compare/v3.0.0...HEAD)
 
 ## v3.0.1
