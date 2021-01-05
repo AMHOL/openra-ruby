@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'date'
+require 'digest'
 require 'bindata'
 require 'bindata/big_integer'
 require 'bindata/pascal_string'

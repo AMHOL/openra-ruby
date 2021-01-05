@@ -1,6 +1,7 @@
 ## Unreleased
 
 * [maint] Support playtest-20201213 - drops support for all older clients
+* [core] Generate file hash in replay-data and replay-metadata commands
 
 [Compare v3.0.1...HEAD](https://github.com/AMHOL/openra-ruby/compare/v3.0.0...HEAD)
 

@@ -1,6 +1,8 @@
 ---
 mod: ra
 version: playtest-20201213
+file:
+  hash: f5d474fe22199aa3ad2d43afbc91fc8fa9b670f81e60297101f83496cefd99fd
 map:
   name: Amsterdamned[RAGL-X]
   hash: 8645302ecd8fa29899a85d5c65b8c8486f5630b7

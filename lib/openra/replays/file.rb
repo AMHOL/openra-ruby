@@ -24,6 +24,10 @@ module Openra
         end
       end
 
+      def generate_hash
+        Digest::SHA256.hexdigest(file.read)
+      end
+
       def metadata
         # https://github.com/OpenRA/OpenRA/blob/23b3c237b7071fd308c4664b0b6c5d719c0f3c74/OpenRA.Game/FileFormats/ReplayMetadata.cs#L96
         @metadata ||= begin

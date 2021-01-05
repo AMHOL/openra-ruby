@@ -12,6 +12,9 @@ module Openra
           {
             mod: replay.metadata.mod,
             version: replay.metadata.version,
+            file: {
+              hash: replay.file_hash
+            },
             map: {
               name: utf8(replay.metadata.map_name),
               hash: replay.metadata.map_hash
