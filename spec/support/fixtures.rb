@@ -12,7 +12,7 @@ class Fixtures
   end
 
   def self.mod_for(file)
-    file.include?('ra') ? 'ra' : 'cnc'
+    File.dirname(file).split('/').last
   end
 
   def self.release_for(file)
