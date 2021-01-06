@@ -1,21 +1,35 @@
 ## Unreleased
 
-[Compare v4.0.0...HEAD](https://github.com/AMHOL/openra-ruby/compare/v3.0.0...HEAD)
+[Compare v4.0.1...HEAD](https://github.com/AMHOL/openra-ruby/compare/v4.0.1...HEAD)
+
+## v4.0.1
+
+### Fixed
+
+* [maint] Ignore empty SyncLobbyClients orders ([AMHOL](https://github.com/AMHOL))
+
+[Compare v4.0.0...v4.0.1](https://github.com/AMHOL/openra-ruby/compare/v4.0.0...v4.0.1)
 
 ## v4.0.0
 
-* [maint] Support playtest-20201213 - drops support for all older clients
-* [core] Generate file hash in replay-data and replay-metadata commands
+### Added
+
+* [maint] Support playtest-20201213 - drops support for all older clients ([AMHOL](https://github.com/AMHOL))
+* [core] Generate file hash in replay-data and replay-metadata commands ([AMHOL](https://github.com/AMHOL))
 
 [Compare v3.0.1...v4.0.0](https://github.com/AMHOL/openra-ruby/compare/v3.0.1...v4.0.0)
 
 ## v3.0.1
+
+### Added
 
 * [maint] Added openra-commands file to load stand-alone commands ([AMHOL](https://github.com/AMHOL))
 
 [Compare v3.0.0...v3.0.1](https://github.com/AMHOL/openra-ruby/compare/v3.0.0...v3.0.1)
 
 ## v3.0.0
+
+### Added
 
 * [replay-metadata] Renamed metadata command to replay-metadata ([AMHOL](https://github.com/AMHOL))
 
