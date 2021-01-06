@@ -101,6 +101,8 @@ module Openra
               )
               current_sync_clients = current_sync_info.clients
             when 'SyncLobbyClients'
+              next if order.target == "\n"
+
               current_sync_clients = Openra::Struct::SyncLobbyClients.new(
                 Openra::MiniYAML.load(order.target)
               ).clients

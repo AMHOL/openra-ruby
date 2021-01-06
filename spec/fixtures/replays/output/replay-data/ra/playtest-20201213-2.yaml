@@ -1,0 +1,1617 @@
+---
+mod: ra
+version: playtest-20201213
+server_name: "|oraladder.net| Competitive 1v1 Ladder Server 4"
+file:
+  hash: 52dc8808edd36e835cb3ff2b3897818ab659e8077f9980e98f773ebb3e9b5167
+map:
+  name: Annihilate[RAGL-X]
+  hash: 36dbe51a4bf91151f0026a926273c1d9afba7da9
+game:
+  type: 1v1
+  start_time: '2021-01-06T12:38:56+00:00'
+  end_time: '2021-01-06T12:51:41+00:00'
+  duration:
+    formatted: '00:12:45'
+    msec: 765000
+  options:
+    explored_map: true
+    speed: default
+    starting_cash: 5000
+    starting_units: none
+    fog_enabled: true
+    cheats_enabled: false
+    kill_bounty_enabled: true
+    allow_undeploy: true
+    crates_enabled: false
+    build_off_allies: true
+    restrict_build_radius: true
+    short_game: true
+    techlevel: unrestricted
+clients:
+- index: '238'
+  player_index: 
+  name: Pinkthoth
+  fingerprint: 8019d66c8513fa4810d66f6599718f6a3473532d
+  preferred_color: F860A3
+  color: FFFFFF
+  spawn:
+    random: 
+    point: '0'
+  faction:
+    random: 
+    chosen: random
+    actual: 
+  ip: 
+  team: 
+  is_bot: false
+  is_admin: false
+  is_player: false
+  is_winner: false
+  outcome_time: 
+  build: []
+  support_powers: []
+- index: '241'
+  player_index: 
+  name: TwitchtheKaution
+  fingerprint: 906806df8d937c4c26bf4160ef3c47cc76798898
+  preferred_color: E4F2A9
+  color: FFFFFF
+  spawn:
+    random: 
+    point: '0'
+  faction:
+    random: 
+    chosen: random
+    actual: 
+  ip: 
+  team: 
+  is_bot: false
+  is_admin: true
+  is_player: false
+  is_winner: false
+  outcome_time: 
+  build: []
+  support_powers: []
+- index: '249'
+  player_index: 4
+  name: Will of the...
+  fingerprint: 192c21cb4ae2cccf9523d5234fccabe741341aee
+  preferred_color: '080139'
+  color: '080139'
+  spawn:
+    random: true
+    point: '0'
+  faction:
+    random: true
+    chosen: random
+    actual: france
+  ip: 
+  team: 
+  is_bot: false
+  is_admin: false
+  is_player: true
+  is_winner: true
+  outcome_time: '2021-01-06T12:49:46+00:00'
+  build:
+  - structure: powr
+    game_time:
+      formatted: '00:00:10'
+      msec: 10080
+    placement:
+      x: 76
+      y: 20
+      layer: 0
+  - structure: tent
+    game_time:
+      formatted: '00:00:23'
+      msec: 23640
+    placement:
+      x: 70
+      y: 28
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:01:01'
+      msec: 61920
+    placement:
+      x: 78
+      y: 17
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:01:39'
+      msec: 99600
+    placement:
+      x: 66
+      y: 27
+      layer: 0
+  - structure: powr
+    game_time:
+      formatted: '00:01:48'
+      msec: 108840
+    placement:
+      x: 78
+      y: 23
+      layer: 0
+  - structure: weap
+    game_time:
+      formatted: '00:02:39'
+      msec: 159720
+    placement:
+      x: 77
+      y: 14
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:03:24'
+      msec: 204960
+    placement:
+      x: 81
+      y: 21
+      layer: 0
+  - structure: fix
+    game_time:
+      formatted: '00:03:57'
+      msec: 237360
+    placement:
+      x: 72
+      y: 30
+      layer: 0
+  - structure: tent
+    game_time:
+      formatted: '00:04:22'
+      msec: 262200
+    placement:
+      x: 70
+      y: 33
+      layer: 0
+  - structure: powr
+    game_time:
+      formatted: '00:04:31'
+      msec: 271320
+    placement:
+      x: 67
+      y: 36
+      layer: 0
+  - structure: tent
+    game_time:
+      formatted: '00:04:47'
+      msec: 287400
+    placement:
+      x: 65
+      y: 37
+      layer: 0
+  - structure: tent
+    game_time:
+      formatted: '00:05:05'
+      msec: 305280
+    placement:
+      x: 64
+      y: 33
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:05:44'
+      msec: 344160
+    placement:
+      x: 35
+      y: 16
+      layer: 0
+  - structure: tent
+    game_time:
+      formatted: '00:05:55'
+      msec: 355560
+    placement:
+      x: 73
+      y: 46
+      layer: 0
+  - structure: powr
+    game_time:
+      formatted: '00:06:03'
+      msec: 363720
+    placement:
+      x: 66
+      y: 51
+      layer: 0
+  - structure: pbox
+    game_time:
+      formatted: '00:06:05'
+      msec: 365280
+    placement:
+      x: 64
+      y: 53
+      layer: 0
+  - structure: tent
+    game_time:
+      formatted: '00:06:15'
+      msec: 375960
+    placement:
+      x: 65
+      y: 55
+      layer: 0
+  - structure: hbox
+    game_time:
+      formatted: '00:06:23'
+      msec: 383520
+    placement:
+      x: 63
+      y: 58
+      layer: 0
+  - structure: tent
+    game_time:
+      formatted: '00:06:29'
+      msec: 389880
+    placement:
+      x: 62
+      y: 55
+      layer: 0
+  - structure: powr
+    game_time:
+      formatted: '00:06:59'
+      msec: 419040
+    placement:
+      x: 66
+      y: 59
+      layer: 0
+  - structure: gun
+    game_time:
+      formatted: '00:06:59'
+      msec: 419760
+    placement:
+      x: 64
+      y: 61
+      layer: 0
+  - structure: tent
+    game_time:
+      formatted: '00:07:11'
+      msec: 431880
+    placement:
+      x: 69
+      y: 58
+      layer: 0
+  - structure: hbox
+    game_time:
+      formatted: '00:07:31'
+      msec: 451080
+    placement:
+      x: 32
+      y: 20
+      layer: 0
+  - structure: pbox
+    game_time:
+      formatted: '00:07:46'
+      msec: 466920
+    placement:
+      x: 32
+      y: 19
+      layer: 0
+  - structure: weap
+    game_time:
+      formatted: '00:07:55'
+      msec: 475080
+    placement:
+      x: 35
+      y: 13
+      layer: 0
+  - structure: powr
+    game_time:
+      formatted: '00:08:13'
+      msec: 493680
+    placement:
+      x: 31
+      y: 16
+      layer: 0
+  - structure: pbox
+    game_time:
+      formatted: '00:08:26'
+      msec: 506520
+    placement:
+      x: 29
+      y: 19
+      layer: 0
+  - structure: dome
+    game_time:
+      formatted: '00:08:47'
+      msec: 527760
+    placement:
+      x: 28
+      y: 15
+      layer: 0
+  - structure: apwr
+    game_time:
+      formatted: '00:09:01'
+      msec: 541920
+    placement:
+      x: 31
+      y: 10
+      layer: 0
+  - structure: hpad
+    game_time:
+      formatted: '00:09:21'
+      msec: 561600
+    placement:
+      x: 67
+      y: 44
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:10:15'
+      msec: 615720
+    placement:
+      x: 68
+      y: 51
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:10:47'
+      msec: 647280
+    placement:
+      x: 28
+      y: 12
+      layer: 0
+  support_powers: []
+- index: '255'
+  player_index: 3
+  name: bµg
+  fingerprint: '049aedf7ad0e1b3819eff72376da64e5bd83a32e'
+  preferred_color: B9B886
+  color: B9B886
+  spawn:
+    random: true
+    point: '0'
+  faction:
+    random: true
+    chosen: random
+    actual: ukraine
+  ip: 
+  team: 
+  is_bot: false
+  is_admin: false
+  is_player: true
+  is_winner: false
+  outcome_time: '2021-01-06T12:49:46+00:00'
+  build:
+  - structure: powr
+    game_time:
+      formatted: '00:00:09'
+      msec: 9120
+    placement:
+      x: 15
+      y: 71
+      layer: 0
+  - structure: powr
+    game_time:
+      formatted: '00:00:09'
+      msec: 9240
+    placement:
+      x: 15
+      y: 71
+      layer: 0
+  - structure: barr
+    game_time:
+      formatted: '00:00:22'
+      msec: 22200
+    placement:
+      x: 22
+      y: 63
+      layer: 0
+  - structure: barr
+    game_time:
+      formatted: '00:00:22'
+      msec: 22320
+    placement:
+      x: 22
+      y: 63
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:00:57'
+      msec: 57600
+    placement:
+      x: 25
+      y: 64
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:01:33'
+      msec: 93840
+    placement:
+      x: 12
+      y: 70
+      layer: 0
+  - structure: powr
+    game_time:
+      formatted: '00:01:43'
+      msec: 103080
+    placement:
+      x: 15
+      y: 65
+      layer: 0
+  - structure: weap
+    game_time:
+      formatted: '00:02:33'
+      msec: 153120
+    placement:
+      x: 11
+      y: 64
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:03:09'
+      msec: 189000
+    placement:
+      x: 13
+      y: 74
+      layer: 0
+  - structure: fix
+    game_time:
+      formatted: '00:03:43'
+      msec: 223320
+    placement:
+      x: 18
+      y: 71
+      layer: 0
+  - structure: barr
+    game_time:
+      formatted: '00:03:58'
+      msec: 238200
+    placement:
+      x: 8
+      y: 61
+      layer: 0
+  - structure: powr
+    game_time:
+      formatted: '00:04:20'
+      msec: 260640
+    placement:
+      x: 18
+      y: 61
+      layer: 0
+  - structure: barr
+    game_time:
+      formatted: '00:04:53'
+      msec: 293520
+    placement:
+      x: 23
+      y: 68
+      layer: 0
+  - structure: powr
+    game_time:
+      formatted: '00:05:05'
+      msec: 305160
+    placement:
+      x: 24
+      y: 71
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:05:42'
+      msec: 342360
+    placement:
+      x: 56
+      y: 75
+      layer: 0
+  - structure: ftur
+    game_time:
+      formatted: '00:05:45'
+      msec: 345840
+    placement:
+      x: 17
+      y: 71
+      layer: 0
+  - structure: barr
+    game_time:
+      formatted: '00:06:10'
+      msec: 370200
+    placement:
+      x: 60
+      y: 71
+      layer: 0
+  - structure: barr
+    game_time:
+      formatted: '00:06:27'
+      msec: 387360
+    placement:
+      x: 23
+      y: 43
+      layer: 0
+  - structure: powr
+    game_time:
+      formatted: '00:06:50'
+      msec: 410760
+    placement:
+      x: 59
+      y: 67
+      layer: 0
+  - structure: ftur
+    game_time:
+      formatted: '00:06:51'
+      msec: 411240
+    placement:
+      x: 60
+      y: 66
+      layer: 0
+  - structure: ftur
+    game_time:
+      formatted: '00:07:10'
+      msec: 430560
+    placement:
+      x: 25
+      y: 41
+      layer: 0
+  - structure: ftur
+    game_time:
+      formatted: '00:07:31'
+      msec: 451920
+    placement:
+      x: 25
+      y: 43
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:07:40'
+      msec: 460560
+    placement:
+      x: 78
+      y: 76
+      layer: 0
+  - structure: barr
+    game_time:
+      formatted: '00:08:05'
+      msec: 485640
+    placement:
+      x: 25
+      y: 45
+      layer: 0
+  - structure: barr
+    game_time:
+      formatted: '00:08:17'
+      msec: 497040
+    placement:
+      x: 80
+      y: 72
+      layer: 0
+  - structure: ftur
+    game_time:
+      formatted: '00:08:21'
+      msec: 501480
+    placement:
+      x: 24
+      y: 50
+      layer: 0
+  - structure: powr
+    game_time:
+      formatted: '00:08:36'
+      msec: 516720
+    placement:
+      x: 26
+      y: 39
+      layer: 0
+  - structure: weap
+    game_time:
+      formatted: '00:09:23'
+      msec: 563400
+    placement:
+      x: 28
+      y: 40
+      layer: 0
+  - structure: ftur
+    game_time:
+      formatted: '00:09:33'
+      msec: 573720
+    placement:
+      x: 26
+      y: 38
+      layer: 0
+  - structure: ftur
+    game_time:
+      formatted: '00:09:50'
+      msec: 590880
+    placement:
+      x: 19
+      y: 45
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:10:13'
+      msec: 613560
+    placement:
+      x: 25
+      y: 36
+      layer: 0
+  support_powers: []
+chat:
+- channel: server
+  name: 
+  message: Master server communication established.
+- channel: server
+  name: 
+  message: Pinkthoth has joined the game.
+- channel: server
+  name: 
+  message: Saucisson d'Âne has joined the game.
+- channel: server
+  name: 
+  message: Saucisson d'Âne has disconnected.
+- channel: server
+  name: 
+  message: Pinkthoth has disconnected.
+- channel: server
+  name: 
+  message: Pinkthoth has joined the game.
+- channel: server
+  name: 
+  message: Pinkthoth has disconnected.
+- channel: server
+  name: 
+  message: Pinkthoth has joined the game.
+- channel: server
+  name: 
+  message: TwitchtheKaution has joined the game.
+- channel: global
+  name: TwitchtheKaution
+  message: oh
+- channel: global
+  name: TwitchtheKaution
+  message: he is here
+- channel: global
+  name: Pinkthoth
+  message: Hi
+- channel: global
+  name: TwitchtheKaution
+  message: hey
+- channel: global
+  name: Pinkthoth
+  message: How's it going?
+- channel: global
+  name: TwitchtheKaution
+  message: good good
+- channel: global
+  name: TwitchtheKaution
+  message: how bout yourself
+- channel: global
+  name: Pinkthoth
+  message: Just preparing for tomorrow when I have to get back to work
+- channel: global
+  name: TwitchtheKaution
+  message: ">.<"
+- channel: global
+  name: TwitchtheKaution
+  message: i had to do the same last sunday
+- channel: global
+  name: Pinkthoth
+  message: Yep
+- channel: global
+  name: TwitchtheKaution
+  message: the worst
+- channel: global
+  name: Pinkthoth
+  message: Indeed
+- channel: global
+  name: TwitchtheKaution
+  message: well
+- channel: global
+  name: TwitchtheKaution
+  message: hopefully i can brighten your day with my stream tonight
+- channel: global
+  name: Pinkthoth
+  message: ":D"
+- channel: global
+  name: TwitchtheKaution
+  message: even tho its going to be TD
+- channel: global
+  name: Pinkthoth
+  message: Streaming RA?
+- channel: global
+  name: TwitchtheKaution
+  message: i expect you to watch
+- channel: global
+  name: TwitchtheKaution
+  message: thers a surprise
+- channel: global
+  name: TwitchtheKaution
+  message: ":)"
+- channel: global
+  name: Pinkthoth
+  message: Hmmm
+- channel: global
+  name: TwitchtheKaution
+  message: you'' love it
+- channel: global
+  name: TwitchtheKaution
+  message: i know you will
+- channel: global
+  name: Pinkthoth
+  message: Interesting
+- channel: global
+  name: Pinkthoth
+  message: Now I'm intrigued
+- channel: global
+  name: TwitchtheKaution
+  message: hehe
+- channel: global
+  name: TwitchtheKaution
+  message: you're not even going to care that its TD
+- channel: global
+  name: TwitchtheKaution
+  message: hehehe
+- channel: global
+  name: TwitchtheKaution
+  message: i had to keep my mouth shut for 2 weeks
+- channel: global
+  name: Pinkthoth
+  message: Mysterious, now I'll have to watch
+- channel: global
+  name: TwitchtheKaution
+  message: before i was allowed to reveal
+- channel: global
+  name: TwitchtheKaution
+  message: that dsay has finally come
+- channel: global
+  name: Pinkthoth
+  message: Hmm
+- channel: global
+  name: Pinkthoth
+  message: ERCC for TD?
+- channel: global
+  name: TwitchtheKaution
+  message: even better
+- channel: server
+  name: 
+  message: GDave has joined the game.
+- channel: global
+  name: TwitchtheKaution
+  message: hey gaydave
+- channel: global
+  name: TwitchtheKaution
+  message: "<3"
+- channel: global
+  name: GDave
+  message: hey ManicMiner
+- channel: global
+  name: TwitchtheKaution
+  message: xD
+- channel: global
+  name: TwitchtheKaution
+  message: GDave
+- channel: global
+  name: TwitchtheKaution
+  message: be sure to watch stream today
+- channel: global
+  name: GDave
+  message: omg
+- channel: global
+  name: GDave
+  message: is it happening?
+- channel: global
+  name: TwitchtheKaution
+  message: no for real
+- channel: global
+  name: TwitchtheKaution
+  message: mindblowing stuff is going to happenj
+- channel: global
+  name: GDave
+  message: o.O
+- channel: global
+  name: GDave
+  message: time?
+- channel: global
+  name: TwitchtheKaution
+  message: im not allowed to tell you what it is for at least 2 weeks
+- channel: global
+  name: TwitchtheKaution
+  message: 6PM UTC as usual
+- channel: global
+  name: Pinkthoth
+  message: Mindblowing, huh?
+- channel: global
+  name: TwitchtheKaution
+  message: maybe a bit sooner
+- channel: global
+  name: TwitchtheKaution
+  message: 'yes'
+- channel: global
+  name: GDave
+  message: month-long stream?
+- channel: global
+  name: Pinkthoth
+  message: lol
+- channel: global
+  name: TwitchtheKaution
+  message: even better
+- channel: global
+  name: Pinkthoth
+  message: Beard growing stream?
+- channel: global
+  name: TwitchtheKaution
+  message: EVEN
+- channel: global
+  name: TwitchtheKaution
+  message: BETTER
+- channel: global
+  name: Pinkthoth
+  message: What can be better than that?
+- channel: global
+  name: TwitchtheKaution
+  message: me going bald wouldnt veen match up[
+- channel: global
+  name: TwitchtheKaution
+  message: even*
+- channel: global
+  name: Pinkthoth
+  message: Oh my
+- channel: global
+  name: TwitchtheKaution
+  message: beard growing stream
+- channel: global
+  name: TwitchtheKaution
+  message: wait what
+- channel: global
+  name: TwitchtheKaution
+  message: xD
+- channel: global
+  name: TwitchtheKaution
+  message: are you implying
+- channel: global
+  name: TwitchtheKaution
+  message: i shouldnt shave
+- channel: global
+  name: Pinkthoth
+  message: 'Yes'
+- channel: global
+  name: Pinkthoth
+  message: No one should, really
+- channel: global
+  name: TwitchtheKaution
+  message: thers that viking talk coming out
+- channel: global
+  name: Pinkthoth
+  message: lol
+- channel: global
+  name: TwitchtheKaution
+  message: ur finnish right?
+- channel: global
+  name: GDave
+  message: k, gonna get work done ahead of the awesome, cya x
+- channel: server
+  name: 
+  message: GDave has disconnected.
+- channel: global
+  name: Pinkthoth
+  message: Yeah
+- channel: global
+  name: TwitchtheKaution
+  message: sorry i cant speak finnish
+- channel: global
+  name: TwitchtheKaution
+  message: only norsk and swedish
+- channel: global
+  name: TwitchtheKaution
+  message: ":D"
+- channel: global
+  name: Pinkthoth
+  message: No worries, I wouldn't expect anyone who's not Finnish could :D
+- channel: global
+  name: Pinkthoth
+  message: Oh, du talar Svenska?
+- channel: global
+  name: TwitchtheKaution
+  message: the only thing i now
+- channel: global
+  name: TwitchtheKaution
+  message: Ja
+- channel: global
+  name: Pinkthoth
+  message: Interessant
+- channel: global
+  name: Pinkthoth
+  message: Varför?
+- channel: global
+  name: TwitchtheKaution
+  message: is that swedish and norway hate finland
+- channel: global
+  name: Pinkthoth
+  message: Idk, if they hate Finland, more like treat it like a little brother
+- channel: global
+  name: TwitchtheKaution
+  message: Jag spelade med Manga svenska Manniskor
+- channel: global
+  name: TwitchtheKaution
+  message: forgive my keyboard
+- channel: global
+  name: TwitchtheKaution
+  message: lol
+- channel: global
+  name: Pinkthoth
+  message: np :P
+- channel: global
+  name: Pinkthoth
+  message: We have to learn Swedish here
+- channel: global
+  name: Pinkthoth
+  message: In primary school
+- channel: global
+  name: TwitchtheKaution
+  message: really?
+- channel: server
+  name: 
+  message: Will of the... has joined the game.
+- channel: global
+  name: Pinkthoth
+  message: Yeah, Finland är en två språkig land
+- channel: global
+  name: Will of the...
+  message: lol
+- channel: global
+  name: Will of the...
+  message: you speak swedish?
+- channel: global
+  name: TwitchtheKaution
+  message: jag visste inte det
+- channel: global
+  name: Will of the...
+  message: Oo
+- channel: global
+  name: Pinkthoth
+  message: Jag måste :P
+- channel: global
+  name: Will of the...
+  message: Kaution aswell
+- channel: global
+  name: TwitchtheKaution
+  message: xD
+- channel: global
+  name: Pinkthoth
+  message: Alla finska människor måste lärä at tala Svenska
+- channel: global
+  name: Will of the...
+  message: you learn in school right
+- channel: global
+  name: Will of the...
+  message: yeah
+- channel: global
+  name: Will of the...
+  message: old colony style
+- channel: global
+  name: Pinkthoth
+  message: Yeah
+- channel: global
+  name: Will of the...
+  message: brutal
+- channel: global
+  name: Pinkthoth
+  message: But don't say that, it's haram here :P
+- channel: global
+  name: TwitchtheKaution
+  message: Lar Svenskar ocksa Finska?
+- channel: global
+  name: Will of the...
+  message: LOOOOL
+- channel: global
+  name: Pinkthoth
+  message: Fuck no :D
+- channel: global
+  name: TwitchtheKaution
+  message: i need to get new keyboardl ayout
+- channel: global
+  name: TwitchtheKaution
+  message: ";p;l"
+- channel: global
+  name: Will of the...
+  message: are you just google translating kaution?
+- channel: global
+  name: Will of the...
+  message: ":)"
+- channel: global
+  name: TwitchtheKaution
+  message: nah, its very basic
+- channel: global
+  name: TwitchtheKaution
+  message: i learned it from a few friends
+- channel: global
+  name: TwitchtheKaution
+  message: in rust
+- channel: global
+  name: TwitchtheKaution
+  message: loooong time ago
+- channel: global
+  name: Will of the...
+  message: hahaha
+- channel: global
+  name: Will of the...
+  message: SG boys
+- channel: global
+  name: Pinkthoth
+  message: I think there's more Finns in Sweden than there are Swedes in Finland,
+    but it's because of the long history of Swedish influence in Finland
+- channel: global
+  name: TwitchtheKaution
+  message: my first sentence in swedish was
+- channel: global
+  name: TwitchtheKaution
+  message: Knulla dit liv
+- channel: global
+  name: TwitchtheKaution
+  message: bitch
+- channel: global
+  name: TwitchtheKaution
+  message: xD
+- channel: global
+  name: Pinkthoth
+  message: Of course
+- channel: global
+  name: Will of the...
+  message: Kom no bøsser
+- channel: global
+  name: Will of the...
+  message: nu
+- channel: global
+  name: Pinkthoth
+  message: That's something you'll need in casual conversation
+- channel: global
+  name: TwitchtheKaution
+  message: 'yes'
+- channel: global
+  name: TwitchtheKaution
+  message: you do in rust
+- channel: global
+  name: TwitchtheKaution
+  message: Lol
+- channel: global
+  name: Will of the...
+  message: har i tænkt jer at spille?
+- channel: global
+  name: TwitchtheKaution
+  message: okay im lost there
+- channel: global
+  name: TwitchtheKaution
+  message: lol
+- channel: global
+  name: Will of the...
+  message: well its danish...
+- channel: global
+  name: TwitchtheKaution
+  message: that explains
+- channel: global
+  name: Will of the...
+  message: not exactly the same
+- channel: global
+  name: Will of the...
+  message: ":)"
+- channel: global
+  name: Pinkthoth
+  message: Can't understand potato Swedish, sorry :(
+- channel: global
+  name: TwitchtheKaution
+  message: do it does look similar
+- channel: global
+  name: Will of the...
+  message: LOOOL
+- channel: global
+  name: TwitchtheKaution
+  message: tho*
+- channel: global
+  name: Will of the...
+  message: its quite similar yeah
+- channel: global
+  name: Pinkthoth
+  message: Got that fance ae and all
+- channel: global
+  name: TwitchtheKaution
+  message: Danish is like Flemish
+- channel: global
+  name: Pinkthoth
+  message: Fancy*
+- channel: global
+  name: Will of the...
+  message: not as close as norwegian and danish is
+- channel: global
+  name: TwitchtheKaution
+  message: everyone knows it but theyll say Dutch / swedish is superior
+- channel: global
+  name: Will of the...
+  message: norwegian and danish is like 95% similar
+- channel: global
+  name: Will of the...
+  message: in writting
+- channel: global
+  name: Pinkthoth
+  message: Is that so?
+- channel: global
+  name: Will of the...
+  message: not in speaking tho
+- channel: global
+  name: Will of the...
+  message: 'yes'
+- channel: global
+  name: TwitchtheKaution
+  message: I found Norsk harder to understand than swedish
+- channel: global
+  name: Pinkthoth
+  message: What's with that Nynorsk and Bykmål stuff?
+- channel: global
+  name: Pinkthoth
+  message: Something like that
+- channel: global
+  name: Will of the...
+  message: old and new
+- channel: global
+  name: Will of the...
+  message: i dunno why they still have it
+- channel: global
+  name: Pinkthoth
+  message: Mmhm
+- channel: global
+  name: Will of the...
+  message: if you ever check labels
+- channel: global
+  name: Will of the...
+  message: on products
+- channel: global
+  name: Will of the...
+  message: DA/NO is often the same box
+- channel: global
+  name: Will of the...
+  message: with some words using /
+- channel: global
+  name: Will of the...
+  message: its pretty anoying
+- channel: global
+  name: Will of the...
+  message: when there is so many /
+- channel: global
+  name: Will of the...
+  message: XD
+- channel: global
+  name: Pinkthoth
+  message: ":)"
+- channel: global
+  name: Will of the...
+  message: makes it hard to read
+- channel: global
+  name: Will of the...
+  message: pretty absurd tbh you still learn swedish
+- channel: global
+  name: Pinkthoth
+  message: I think it was instituted in the 1970s actually
+- channel: global
+  name: Pinkthoth
+  message: Maybe 60s
+- channel: global
+  name: Pinkthoth
+  message: Part of creating that nordic identity
+- channel: global
+  name: Will of the...
+  message: I just dont really get it when Finland is quite big and modern
+- channel: global
+  name: Pinkthoth
+  message: Fostering nordic co-operation and stuff
+- channel: global
+  name: Will of the...
+  message: 'like i get it with Iceland '
+- channel: global
+  name: Will of the...
+  message: learning danish
+- channel: global
+  name: Will of the...
+  message: because they are tiny
+- channel: global
+  name: TwitchtheKaution
+  message: do you know the movie Klaus?
+- channel: global
+  name: TwitchtheKaution
+  message: ANimated christmas movie
+- channel: global
+  name: Will of the...
+  message: 'no'
+- channel: global
+  name: Pinkthoth
+  message: Yeah, but it's also a part of creating a more nordic identity for Finland.
+    The cold war period was a bit tumultuous for Finland.
+- channel: global
+  name: TwitchtheKaution
+  message: it was located in SMeerenberg?
+- channel: global
+  name: TwitchtheKaution
+  message: which apprently is a village existing in norway?
+- channel: global
+  name: Pinkthoth
+  message: Before WW2 Finland was considered a Baltic country, more than a Nordic
+    one
+- channel: global
+  name: Will of the...
+  message: yeah you are some weird place XD
+- channel: global
+  name: Will of the...
+  message: also lingual
+- channel: global
+  name: Pinkthoth
+  message: But when the other Baltics were subsumed into the USSR, we set our sights
+    to create a more Nordic indenity
+- channel: global
+  name: Will of the...
+  message: bassicly whore country
+- channel: global
+  name: Pinkthoth
+  message: Finland? Sure :P
+- channel: global
+  name: Will of the...
+  message: belongs to whatever is most practical
+- channel: global
+  name: Will of the...
+  message: ";)"
+- channel: global
+  name: Pinkthoth
+  message: 'Yes'
+- channel: global
+  name: Pinkthoth
+  message: That's what you get when you live next to a (global) superpower
+- channel: global
+  name: Will of the...
+  message: the weirdest people i have met are finish XX
+- channel: global
+  name: Will of the...
+  message: XD
+- channel: global
+  name: Pinkthoth
+  message: We joined the EU too, just to get some manouvering room from the Russians
+- channel: global
+  name: TwitchtheKaution
+  message: The Sami
+- channel: server
+  name: 
+  message: bµg has joined the game.
+- channel: global
+  name: TwitchtheKaution
+  message: that was ity
+- channel: global
+  name: TwitchtheKaution
+  message: fuck
+- channel: global
+  name: Will of the...
+  message: omg dont start with the Sami
+- channel: global
+  name: Will of the...
+  message: XD
+- channel: global
+  name: TwitchtheKaution
+  message: xD
+- channel: global
+  name: Pinkthoth
+  message: What's wrong with the Sami?
+- channel: global
+  name: Will of the...
+  message: we dont speak about that in scandinavia ;)
+- channel: global
+  name: TwitchtheKaution
+  message: why
+- channel: global
+  name: Will of the...
+  message: nothing wrong was ever done north
+- channel: global
+  name: Will of the...
+  message: joke obviously.. haha
+- channel: global
+  name: TwitchtheKaution
+  message: are they like the Gipsies of scandinavia?
+- channel: global
+  name: Will of the...
+  message: tbh Sami culture and people have nothing to do with denmark.. its a finish/swedish/norwegian
+    thing
+- channel: global
+  name: Pinkthoth
+  message: I've got no problems with the Sami, but the "indigenous" people thing is
+    a bit of a meme, when the population of Scandinavia has remained about the same
+    since the stone age
+- channel: global
+  name: Will of the...
+  message: so not part of our brutal past
+- channel: global
+  name: TwitchtheKaution
+  message: thats dfair
+- channel: global
+  name: Will of the...
+  message: but what they did was pretty disgusting
+- channel: global
+  name: TwitchtheKaution
+  message: the girl in the video was talking Sami, and it sounded very norsk to me,
+    so i was wondering if you guys knew of it
+- channel: global
+  name: Will of the...
+  message: especially the norwegians
+- channel: global
+  name: Pinkthoth
+  message: There's bunch of Sami languages
+- channel: global
+  name: Will of the...
+  message: Sami is completly different language
+- channel: global
+  name: Pinkthoth
+  message: Like the koltta (scolt I think in English?) has a lot of influences from
+    Russian
+- channel: global
+  name: bµg
+  message: and now you play
+- channel: global
+  name: Will of the...
+  message: 'In denmark our dark past '
+- channel: global
+  name: Will of the...
+  message: is Greenland
+- channel: global
+  name: Will of the...
+  message: not the sami
+- channel: global
+  name: bµg
+  message: '"past"?'
+- channel: global
+  name: Will of the...
+  message: yeah good point XD
+- channel: global
+  name: Pinkthoth
+  message: Yeah, well, everyone's country did fucked up shit in the past
+- channel: global
+  name: TwitchtheKaution
+  message: ofc
+- channel: global
+  name: Pinkthoth
+  message: The Russians were taking slaves from Finland till the 18th century
+- channel: global
+  name: bµg
+  message: some continue to do so
+- channel: server
+  name: 
+  message: TwitchtheKaution is now the admin.
+- channel: global
+  name: Pinkthoth
+  message: brb
+- channel: global
+  name: Will of the...
+  message: Sami people are very interesting tho
+- channel: global
+  name: bµg
+  message: gl hf
+- channel: global
+  name: Will of the...
+  message: glhf
+- channel: global
+  name: Pinkthoth
+  message: Yeah, I live with Sami people. Probably like 25% of the populace in my
+    small town is Sami
+- channel: global
+  name: TwitchtheKaution
+  message: really
+- channel: global
+  name: TwitchtheKaution
+  message: cool
+- channel: global
+  name: Pinkthoth
+  message: Yeah, I live in Lapland
+- channel: global
+  name: TwitchtheKaution
+  message: the picture i send you is that the clothign they still wear?
+- channel: global
+  name: TwitchtheKaution
+  message: or is that just auethenticx
+- channel: global
+  name: Pinkthoth
+  message: There's 3 Sami peoples here, the Inari sami, the skolt sami and the north
+    sami
+- channel: global
+  name: TwitchtheKaution
+  message: you speak sami?
+- channel: global
+  name: Pinkthoth
+  message: That's the gakti
+- channel: global
+  name: Pinkthoth
+  message: The suit
+- channel: global
+  name: Pinkthoth
+  message: They wear it on special occasion, like the independence day etc.
+- channel: global
+  name: TwitchtheKaution
+  message: oooh
+- channel: global
+  name: Pinkthoth
+  message: I don't speak any sami
+- channel: global
+  name: Pinkthoth
+  message: I'm a" settler colonialist", you see :P
+- channel: global
+  name: TwitchtheKaution
+  message: Right :P
+- channel: global
+  name: TwitchtheKaution
+  message: thats cool man
+- channel: global
+  name: TwitchtheKaution
+  message: some sort of nie background sotry
+- channel: global
+  name: Pinkthoth
+  message: Hehe, yeah. The Sami people I know are mostly pretty chill, some conflicts
+    of interest, but nothing major
+- channel: global
+  name: TwitchtheKaution
+  message: 'no'
+- channel: global
+  name: TwitchtheKaution
+  message: the ranger
+- channel: global
+  name: TwitchtheKaution
+  message: fs
+- channel: global
+  name: TwitchtheKaution
+  message: ffs
+- channel: global
+  name: Pinkthoth
+  message: I like how Widow always uses mines, they can be pretty effective
+- channel: global
+  name: TwitchtheKaution
+  message: they CAN
+- channel: global
+  name: TwitchtheKaution
+  message: but they wont
+- channel: global
+  name: TwitchtheKaution
+  message: well
+- channel: global
+  name: TwitchtheKaution
+  message: maybe
+- channel: global
+  name: TwitchtheKaution
+  message: but now he gave it away :p
+- channel: global
+  name: Pinkthoth
+  message: Yeah
+- channel: global
+  name: Pinkthoth
+  message: I think you should mine the corners first
+- channel: global
+  name: Pinkthoth
+  message: Because you get to mine those faster when the sd is closer
+- channel: global
+  name: Pinkthoth
+  message: Like mine the borders of the map in case the enemy comes flankinbg
+- channel: global
+  name: TwitchtheKaution
+  message: i always think widow plays too passsive
+- channel: global
+  name: TwitchtheKaution
+  message: amry at oil not doing anything
+- channel: global
+  name: Pinkthoth
+  message: 'True'
+- channel: global
+  name: Pinkthoth
+  message: Nice flanks though
+- channel: global
+  name: TwitchtheKaution
+  message: yeah he's fucked
+- channel: global
+  name: TwitchtheKaution
+  message: take WF
+- channel: global
+  name: TwitchtheKaution
+  message: nooo
+- channel: global
+  name: Pinkthoth
+  message: I mean, I can't beat bug
+- channel: global
+  name: TwitchtheKaution
+  message: same
+- channel: global
+  name: TwitchtheKaution
+  message: i mean
+- channel: global
+  name: TwitchtheKaution
+  message: its close sometimes
+- channel: global
+  name: Pinkthoth
+  message: He always has such a massive force in the beginning
+- channel: global
+  name: Pinkthoth
+  message: He just rushes my natural and I'm ded
+- channel: global
+  name: TwitchtheKaution
+  message: jezusa
+- channel: global
+  name: TwitchtheKaution
+  message: that artie
+- channel: global
+  name: bµg
+  message: gg
+- channel: server
+  name: 
+  message: bµg has disconnected.
+- channel: global
+  name: TwitchtheKaution
+  message: im not sure what was worth
+- channel: global
+  name: Will of the...
+  message: gg
+- channel: global
+  name: TwitchtheKaution
+  message: oh
+- channel: global
+  name: TwitchtheKaution
+  message: xD
+- channel: global
+  name: Pinkthoth
+  message: gg
+- channel: global
+  name: TwitchtheKaution
+  message: gg
+- channel: global
+  name: Will of the...
+  message: i played well
+- channel: global
+  name: Will of the...
+  message: i think
+- channel: global
+  name: Will of the...
+  message: not so often i think that
+- channel: global
+  name: Will of the...
+  message: XD
+- channel: global
+  name: TwitchtheKaution
+  message: wait
+- channel: global
+  name: TwitchtheKaution
+  message: bug surrenderd
+- channel: global
+  name: TwitchtheKaution
+  message: lol
+- channel: global
+  name: TwitchtheKaution
+  message: i th9ought Wid did
+- channel: global
+  name: Will of the...
+  message: what?
+- channel: global
+  name: Will of the...
+  message: i was killing so much shit
+- channel: global
+  name: Will of the...
+  message: was it even?
+- channel: global
+  name: TwitchtheKaution
+  message: he had a good chance to do more with the flanks i think
+- channel: global
+  name: Pinkthoth
+  message: No, I think you were pretty ahead
+- channel: global
+  name: TwitchtheKaution
+  message: ye true
+- channel: global
+  name: TwitchtheKaution
+  message: you were ahead
+- channel: global
+  name: TwitchtheKaution
+  message: also im not sure if you saw how big of a blob your 1 arty killed
+- channel: global
+  name: TwitchtheKaution
+  message: xD
+- channel: global
+  name: Will of the...
+  message: nah
+- channel: global
+  name: Will of the...
+  message: didnt
+- channel: global
+  name: TwitchtheKaution
+  message: hes Vet 2
+- channel: global
+  name: TwitchtheKaution
+  message: says eno9ugh
+- channel: server
+  name: 
+  message: Will of the... has disconnected.
+- channel: server
+  name: 
+  message: TwitchtheKaution (Spectator) has disconnected.
+- channel: server
+  name: 
+  message: Pinkthoth (Spectator) has disconnected.
