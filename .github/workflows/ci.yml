@@ -17,14 +17,13 @@ jobs:
       fail-fast: false
       matrix:
         ruby:
+        - '3.0'
         - '2.7'
         - '2.6'
         - '2.5'
-        - '2.4'
         - jruby
-        - '2.3'
         include:
-          - ruby: "2.6"
+          - ruby: "3.0"
             coverage: "true"
     env:
       COVERAGE: ${{matrix.coverage}}
