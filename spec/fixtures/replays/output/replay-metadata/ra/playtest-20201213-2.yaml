@@ -25,7 +25,7 @@ players:
     random: true
     chosen: ukraine
     actual: ukraine
-  team: 
+  team:
   is_bot: false
   is_winner: false
   outcome_time: '2021-01-06T12:49:46+00:00'
@@ -40,7 +40,7 @@ players:
     random: true
     chosen: france
     actual: france
-  team: 
+  team:
   is_bot: false
   is_winner: true
   outcome_time: '2021-01-06T12:49:46+00:00'

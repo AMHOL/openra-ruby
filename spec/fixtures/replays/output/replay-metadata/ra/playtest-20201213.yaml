@@ -16,7 +16,7 @@ game:
 players:
 - player_index: '141'
   name: opǝ͢nɹ͢ɐ͢͢
-  fingerprint: 
+  fingerprint:
   color: F80606
   spawn:
     random: true
@@ -25,13 +25,13 @@ players:
     random: true
     chosen: ukraine
     actual: ukraine
-  team: 
+  team:
   is_bot: false
   is_winner: false
   outcome_time: '2021-01-05T13:15:28+00:00'
 - player_index: '144'
   name: opǝ͢nɹ͢ɐ͢͢
-  fingerprint: 
+  fingerprint:
   color: 4719F8
   spawn:
     random: true
@@ -40,7 +40,7 @@ players:
     random: true
     chosen: ukraine
     actual: ukraine
-  team: 
+  team:
   is_bot: false
   is_winner: true
   outcome_time: '2021-01-05T13:15:28+00:00'

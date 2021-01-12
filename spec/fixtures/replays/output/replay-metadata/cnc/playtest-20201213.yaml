@@ -16,7 +16,7 @@ game:
 players:
 - player_index: '71'
   name: opǝ͢nɹ͢ɐ͢͢
-  fingerprint: 
+  fingerprint:
   color: F80606
   spawn:
     random: true
@@ -25,13 +25,13 @@ players:
     random: true
     chosen: nod
     actual: nod
-  team: 
+  team:
   is_bot: false
   is_winner: true
   outcome_time: '2021-01-05T13:20:05+00:00'
 - player_index: '78'
   name: opǝ͢nɹ͢ɐ͢͢
-  fingerprint: 
+  fingerprint:
   color: 192CF8
   spawn:
     random: true
@@ -40,7 +40,7 @@ players:
     random: true
     chosen: gdi
     actual: gdi
-  team: 
+  team:
   is_bot: false
   is_winner: false
   outcome_time: '2021-01-05T13:20:05+00:00'

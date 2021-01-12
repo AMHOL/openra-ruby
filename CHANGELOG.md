@@ -1,5 +1,9 @@
 ## Unreleased
 
+### Fixed
+
+* [maint] Fix chat spectator channel ([AMHOL](https://github.com/AMHOL))
+
 [Compare v4.0.1...HEAD](https://github.com/AMHOL/openra-ruby/compare/v4.0.1...HEAD)
 
 ## v4.0.1
