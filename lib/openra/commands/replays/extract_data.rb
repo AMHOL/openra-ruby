@@ -137,17 +137,29 @@ module Openra
                 message: utf8(order.target)
               }
             when 'Chat'
-              data[:chat] << {
-                channel: 'global',
-                name: utf8(client.name),
-                message: utf8(order.target)
-              }
-            when 'TeamChat'
-              data[:chat] << {
-                channel: client.team,
-                name: utf8(client.name),
-                message: utf8(order.target)
-              }
+              if order.extra_data.zero?
+                data[:chat] << {
+                  channel: 'global',
+                  name: utf8(client.name),
+                  message: utf8(order.target)
+                }
+              else
+                player = replay.player(client.index)
+
+                if player
+                  data[:chat] << {
+                    channel: player.team,
+                    name: utf8(client.name),
+                    message: utf8(order.target)
+                  }
+                else
+                  data[:chat] << {
+                    channel: 'spectators',
+                    name: utf8(client.name),
+                    message: utf8(order.target)
+                  }
+                end
+              end
             end
           end
 

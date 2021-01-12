@@ -32,7 +32,7 @@ clients:
 - index: '71'
   player_index: 3
   name: opǝ͢nɹ͢ɐ͢͢
-  fingerprint: 
+  fingerprint:
   preferred_color: F80606
   color: F80606
   spawn:
@@ -42,8 +42,8 @@ clients:
     random: true
     chosen: random
     actual: nod
-  ip: 
-  team: 
+  ip:
+  team:
   is_bot: false
   is_admin: true
   is_player: true
@@ -99,7 +99,7 @@ clients:
       x: 81
       y: 63
       layer: 0
-    extra_placement: 
+    extra_placement:
   - type: :nuke
     game_time:
       formatted: '00:00:36'
@@ -108,7 +108,7 @@ clients:
       x: 81
       y: 63
       layer: 0
-    extra_placement: 
+    extra_placement:
   - type: :ion_cannon
     game_time:
       formatted: '00:00:52'
@@ -117,11 +117,11 @@ clients:
       x: 81
       y: 63
       layer: 0
-    extra_placement: 
+    extra_placement:
 - index: '78'
   player_index: 4
   name: opǝ͢nɹ͢ɐ͢͢
-  fingerprint: 
+  fingerprint:
   preferred_color: 192CF8
   color: 192CF8
   spawn:
@@ -131,8 +131,8 @@ clients:
     random: true
     chosen: random
     actual: gdi
-  ip: 
-  team: 
+  ip:
+  team:
   is_bot: false
   is_admin: false
   is_player: true
@@ -142,29 +142,29 @@ clients:
   support_powers: []
 chat:
 - channel: server
-  name: 
+  name:
   message: |-
     TDGL2+ Balance Changes:
      Bike: Small firerate nerf
      Apache: Slight health increase (resists 1 more Bike/ST missile)
 - channel: server
-  name: 
+  name:
   message: 'Explored Map: Enabled'
 - channel: server
-  name: 
+  name:
   message: 'Debug Menu: Enabled'
 - channel: server
-  name: 
+  name:
   message: 'Stealth Deliveries: Enabled'
 - channel: server
-  name: 
+  name:
   message: 'Crates: Disabled'
 - channel: server
-  name: 
+  name:
   message: Welcome, have fun and good luck!
 - channel: server
-  name: 
+  name:
   message: This map contains custom rules. Game experience may change.
 - channel: server
-  name: 
+  name:
   message: opǝ͢nɹ͢ɐ͢͢ has disconnected.
