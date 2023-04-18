@@ -23,7 +23,7 @@ jobs:
         - '2.7'
         - jruby
         include:
-          - ruby: "3.0"
+          - ruby: "3.2"
             coverage: "true"
     env:
       COVERAGE: ${{matrix.coverage}}
