@@ -1,0 +1,2535 @@
+---
+mod: ra
+version: release-20230225
+server_name: Playdome.IO - Official 08
+file:
+  hash: 395be3a9ecac287c3bbb917f491b161ab3796a7c6d27fb1e6fb9f3d9e50b858a
+map:
+  name: A Gardens more gems fixed
+  hash: d1d9ea465bd3f43875c1537856fd8b7ab8485fbc
+game:
+  type: 4v4
+  start_time: '2023-03-27T22:59:43+00:00'
+  end_time: '2023-03-27T23:14:17+00:00'
+  duration:
+    formatted: '00:14:34'
+    msec: 874000
+  options:
+    explored_map: true
+    speed: fast
+    starting_cash: 5000
+    starting_units: none
+    fog_enabled: true
+    cheats_enabled: false
+    kill_bounty_enabled: true
+    allow_undeploy: true
+    crates_enabled: true
+    build_off_allies: true
+    restrict_build_radius: true
+    short_game: true
+    techlevel: unrestricted
+clients:
+- index: '48'
+  player_index: 3
+  name: Mickey Mouse
+  fingerprint: 
+  preferred_color: F25555
+  color: F25555
+  spawn:
+    random: false
+    point: '8'
+  faction:
+    random: false
+    chosen: ukraine
+    actual: ukraine
+  ip: 
+  team: '2'
+  is_bot: false
+  is_admin: true
+  is_player: true
+  is_winner: true
+  outcome_time: '2023-03-27T23:13:51+00:00'
+  build:
+  - structure: powr
+    game_time:
+      formatted: '00:00:09'
+      msec: 9960
+    placement:
+      x: 117
+      "y": 88
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:00:45'
+      msec: 45840
+    placement:
+      x: 114
+      "y": 85
+      layer: 0
+  - structure: weap
+    game_time:
+      formatted: '00:01:36'
+      msec: 96480
+    placement:
+      x: 97
+      "y": 79
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:02:13'
+      msec: 133320
+    placement:
+      x: 94
+      "y": 81
+      layer: 0
+  - structure: powr
+    game_time:
+      formatted: '00:02:23'
+      msec: 143280
+    placement:
+      x: 119
+      "y": 95
+      layer: 0
+  - structure: barr
+    game_time:
+      formatted: '00:02:37'
+      msec: 157440
+    placement:
+      x: 96
+      "y": 85
+      layer: 0
+  - structure: fix
+    game_time:
+      formatted: '00:03:10'
+      msec: 190080
+    placement:
+      x: 111
+      "y": 82
+      layer: 0
+  - structure: powr
+    game_time:
+      formatted: '00:03:22'
+      msec: 202680
+    placement:
+      x: 118
+      "y": 82
+      layer: 0
+  - structure: barr
+    game_time:
+      formatted: '00:03:40'
+      msec: 220680
+    placement:
+      x: 98
+      "y": 86
+      layer: 0
+  - structure: barr
+    game_time:
+      formatted: '00:04:01'
+      msec: 241200
+    placement:
+      x: 97
+      "y": 65
+      layer: 0
+  - structure: tsla
+    game_time:
+      formatted: '00:04:36'
+      msec: 276240
+    placement:
+      x: 120
+      "y": 82
+      layer: 0
+  - structure: barr
+    game_time:
+      formatted: '00:04:39'
+      msec: 279240
+    placement:
+      x: 120
+      "y": 84
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:05:35'
+      msec: 335160
+    placement:
+      x: 91
+      "y": 80
+      layer: 0
+  - structure: dome
+    game_time:
+      formatted: '00:06:32'
+      msec: 392640
+    placement:
+      x: 112
+      "y": 68
+      layer: 0
+  - structure: apwr
+    game_time:
+      formatted: '00:07:00'
+      msec: 420480
+    placement:
+      x: 106
+      "y": 82
+      layer: 0
+  - structure: afld.ukraine
+    game_time:
+      formatted: '00:07:15'
+      msec: 435720
+    placement:
+      x: 94
+      "y": 77
+      layer: 0
+  - structure: tsla
+    game_time:
+      formatted: '00:07:35'
+      msec: 455760
+    placement:
+      x: 85
+      "y": 81
+      layer: 0
+  - structure: afld.ukraine
+    game_time:
+      formatted: '00:07:38'
+      msec: 458520
+    placement:
+      x: 94
+      "y": 75
+      layer: 0
+  - structure: afld.ukraine
+    game_time:
+      formatted: '00:07:59'
+      msec: 479400
+    placement:
+      x: 91
+      "y": 74
+      layer: 0
+  - structure: apwr
+    game_time:
+      formatted: '00:08:15'
+      msec: 495000
+    placement:
+      x: 115
+      "y": 68
+      layer: 0
+  - structure: tsla
+    game_time:
+      formatted: '00:08:55'
+      msec: 535080
+    placement:
+      x: 33
+      "y": 39
+      layer: 0
+  - structure: stek
+    game_time:
+      formatted: '00:09:02'
+      msec: 542400
+    placement:
+      x: 101
+      "y": 81
+      layer: 0
+  - structure: iron
+    game_time:
+      formatted: '00:10:00'
+      msec: 600000
+    placement:
+      x: 106
+      "y": 73
+      layer: 0
+  - structure: apwr
+    game_time:
+      formatted: '00:10:02'
+      msec: 602280
+    placement:
+      x: 106
+      "y": 77
+      layer: 0
+  - structure: apwr
+    game_time:
+      formatted: '00:11:05'
+      msec: 665640
+    placement:
+      x: 65
+      "y": 95
+      layer: 0
+  - structure: mslo
+    game_time:
+      formatted: '00:11:13'
+      msec: 673800
+    placement:
+      x: 98
+      "y": 85
+      layer: 0
+  - structure: weap
+    game_time:
+      formatted: '00:11:57'
+      msec: 717600
+    placement:
+      x: 61
+      "y": 97
+      layer: 0
+  - structure: weap
+    game_time:
+      formatted: '00:13:12'
+      msec: 792960
+    placement:
+      x: 58
+      "y": 98
+      layer: 0
+  - structure: weap
+    game_time:
+      formatted: '00:14:08'
+      msec: 848640
+    placement:
+      x: 51
+      "y": 96
+      layer: 0
+  support_powers:
+  - type: :iron_curtain
+    game_time:
+      formatted: '00:12:14'
+      msec: 734280
+    placement:
+      x: 67
+      "y": 76
+      layer: 0
+    extra_placement: 
+  - type: :parabombs
+    game_time:
+      formatted: '00:12:36'
+      msec: 756720
+    placement:
+      x: 41
+      "y": 86
+      layer: 0
+    extra_placement: 
+  - type: :iron_curtain
+    game_time:
+      formatted: '00:14:26'
+      msec: 866280
+    placement:
+      x: 38
+      "y": 81
+      layer: 0
+    extra_placement: 
+- index: '77'
+  player_index: 5
+  name: bayraktar tb-2
+  fingerprint: 
+  preferred_color: 0CF222
+  color: 0CF222
+  spawn:
+    random: false
+    point: '1'
+  faction:
+    random: false
+    chosen: england
+    actual: england
+  ip: 
+  team: '1'
+  is_bot: false
+  is_admin: false
+  is_player: true
+  is_winner: false
+  outcome_time: '2023-03-27T23:12:47+00:00'
+  build:
+  - structure: powr
+    game_time:
+      formatted: '00:00:10'
+      msec: 10920
+    placement:
+      x: 11
+      "y": 34
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:00:46'
+      msec: 46080
+    placement:
+      x: 14
+      "y": 34
+      layer: 0
+  - structure: powr
+    game_time:
+      formatted: '00:00:58'
+      msec: 58440
+    placement:
+      x: 5
+      "y": 43
+      layer: 0
+  - structure: weap
+    game_time:
+      formatted: '00:01:48'
+      msec: 108720
+    placement:
+      x: 18
+      "y": 31
+      layer: 0
+  - structure: dome
+    game_time:
+      formatted: '00:02:38'
+      msec: 158400
+    placement:
+      x: 19
+      "y": 28
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:03:20'
+      msec: 200760
+    placement:
+      x: 6
+      "y": 47
+      layer: 0
+  - structure: apwr
+    game_time:
+      formatted: '00:03:46'
+      msec: 226200
+    placement:
+      x: 7
+      "y": 32
+      layer: 0
+  - structure: atek
+    game_time:
+      formatted: '00:04:25'
+      msec: 265560
+    placement:
+      x: 2
+      "y": 39
+      layer: 0
+  - structure: apwr
+    game_time:
+      formatted: '00:04:41'
+      msec: 281280
+    placement:
+      x: 5
+      "y": 28
+      layer: 0
+  - structure: hpad
+    game_time:
+      formatted: '00:05:06'
+      msec: 306480
+    placement:
+      x: 20
+      "y": 35
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:06:47'
+      msec: 407880
+    placement:
+      x: 32
+      "y": 49
+      layer: 0
+  - structure: mslo
+    game_time:
+      formatted: '00:06:57'
+      msec: 417240
+    placement:
+      x: 19
+      "y": 58
+      layer: 0
+  - structure: pdox
+    game_time:
+      formatted: '00:08:35'
+      msec: 515280
+    placement:
+      x: 12
+      "y": 82
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:08:38'
+      msec: 518280
+    placement:
+      x: 33
+      "y": 45
+      layer: 0
+  - structure: apwr
+    game_time:
+      formatted: '00:09:09'
+      msec: 549000
+    placement:
+      x: 6
+      "y": 24
+      layer: 0
+  - structure: agun
+    game_time:
+      formatted: '00:09:25'
+      msec: 565080
+    placement:
+      x: 9
+      "y": 24
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:09:51'
+      msec: 591120
+    placement:
+      x: 36
+      "y": 48
+      layer: 0
+  - structure: agun
+    game_time:
+      formatted: '00:09:58'
+      msec: 598560
+    placement:
+      x: 17
+      "y": 30
+      layer: 0
+  - structure: apwr
+    game_time:
+      formatted: '00:10:24'
+      msec: 624120
+    placement:
+      x: 16
+      "y": 26
+      layer: 0
+  - structure: agun
+    game_time:
+      formatted: '00:10:27'
+      msec: 627360
+    placement:
+      x: 21
+      "y": 30
+      layer: 0
+  - structure: hpad
+    game_time:
+      formatted: '00:10:38'
+      msec: 638040
+    placement:
+      x: 21
+      "y": 32
+      layer: 0
+  - structure: apwr
+    game_time:
+      formatted: '00:10:52'
+      msec: 652200
+    placement:
+      x: 8
+      "y": 43
+      layer: 0
+  - structure: agun
+    game_time:
+      formatted: '00:11:07'
+      msec: 667200
+    placement:
+      x: 33
+      "y": 82
+      layer: 0
+  - structure: hpad
+    game_time:
+      formatted: '00:11:20'
+      msec: 680640
+    placement:
+      x: 13
+      "y": 55
+      layer: 0
+  - structure: tent
+    game_time:
+      formatted: '00:11:56'
+      msec: 716160
+    placement:
+      x: 127
+      "y": 46
+      layer: 0
+  - structure: powr
+    game_time:
+      formatted: '00:12:28'
+      msec: 748560
+    placement:
+      x: 125
+      "y": 49
+      layer: 0
+  - structure: powr
+    game_time:
+      formatted: '00:13:14'
+      msec: 794880
+    placement:
+      x: 122
+      "y": 48
+      layer: 0
+  support_powers:
+  - type: :chronoshift
+    game_time:
+      formatted: '00:11:27'
+      msec: 687840
+    placement:
+      x: 126
+      "y": 35
+      layer: 0
+    extra_placement:
+      x: 8
+      "y": 39
+      layer: 0
+- index: '92'
+  player_index: 4
+  name: "$NWBO"
+  fingerprint: 
+  preferred_color: E50FF2
+  color: E50FF2
+  spawn:
+    random: false
+    point: '5'
+  faction:
+    random: false
+    chosen: france
+    actual: france
+  ip: 
+  team: '2'
+  is_bot: false
+  is_admin: false
+  is_player: true
+  is_winner: true
+  outcome_time: '2023-03-27T23:13:51+00:00'
+  build:
+  - structure: powr
+    game_time:
+      formatted: '00:00:11'
+      msec: 11400
+    placement:
+      x: 119
+      "y": 34
+      layer: 0
+  - structure: tent
+    game_time:
+      formatted: '00:00:26'
+      msec: 26520
+    placement:
+      x: 117
+      "y": 31
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:01:04'
+      msec: 64320
+    placement:
+      x: 120
+      "y": 27
+      layer: 0
+  - structure: powr
+    game_time:
+      formatted: '00:01:15'
+      msec: 75480
+    placement:
+      x: 120
+      "y": 43
+      layer: 0
+  - structure: tent
+    game_time:
+      formatted: '00:01:31'
+      msec: 91800
+    placement:
+      x: 119
+      "y": 47
+      layer: 0
+  - structure: hbox
+    game_time:
+      formatted: '00:01:49'
+      msec: 109920
+    placement:
+      x: 119
+      "y": 39
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:02:11'
+      msec: 131400
+    placement:
+      x: 118
+      "y": 51
+      layer: 0
+  - structure: weap
+    game_time:
+      formatted: '00:03:02'
+      msec: 182400
+    placement:
+      x: 114
+      "y": 54
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:03:48'
+      msec: 228240
+    placement:
+      x: 91
+      "y": 50
+      layer: 0
+  - structure: powr
+    game_time:
+      formatted: '00:04:06'
+      msec: 246120
+    placement:
+      x: 111
+      "y": 56
+      layer: 0
+  - structure: tent
+    game_time:
+      formatted: '00:04:21'
+      msec: 261840
+    placement:
+      x: 116
+      "y": 38
+      layer: 0
+  - structure: tent
+    game_time:
+      formatted: '00:04:42'
+      msec: 282120
+    placement:
+      x: 99
+      "y": 41
+      layer: 0
+  - structure: gun
+    game_time:
+      formatted: '00:04:45'
+      msec: 285480
+    placement:
+      x: 123
+      "y": 92
+      layer: 0
+  - structure: tent
+    game_time:
+      formatted: '00:05:01'
+      msec: 301320
+    placement:
+      x: 79
+      "y": 30
+      layer: 0
+  - structure: gun
+    game_time:
+      formatted: '00:05:24'
+      msec: 324840
+    placement:
+      x: 80
+      "y": 35
+      layer: 0
+  - structure: powr
+    game_time:
+      formatted: '00:05:54'
+      msec: 354000
+    placement:
+      x: 109
+      "y": 49
+      layer: 0
+  - structure: gun
+    game_time:
+      formatted: '00:06:18'
+      msec: 378120
+    placement:
+      x: 118
+      "y": 43
+      layer: 0
+  - structure: dome
+    game_time:
+      formatted: '00:06:33'
+      msec: 393840
+    placement:
+      x: 104
+      "y": 41
+      layer: 0
+  - structure: gun
+    game_time:
+      formatted: '00:06:42'
+      msec: 402840
+    placement:
+      x: 63
+      "y": 31
+      layer: 0
+  - structure: apwr
+    game_time:
+      formatted: '00:06:51'
+      msec: 411360
+    placement:
+      x: 112
+      "y": 49
+      layer: 0
+  - structure: hpad
+    game_time:
+      formatted: '00:07:05'
+      msec: 425520
+    placement:
+      x: 120
+      "y": 23
+      layer: 0
+  - structure: hpad
+    game_time:
+      formatted: '00:07:20'
+      msec: 440520
+    placement:
+      x: 122
+      "y": 23
+      layer: 0
+  - structure: hbox
+    game_time:
+      formatted: '00:07:32'
+      msec: 452880
+    placement:
+      x: 125
+      "y": 39
+      layer: 0
+  - structure: apwr
+    game_time:
+      formatted: '00:07:36'
+      msec: 456240
+    placement:
+      x: 104
+      "y": 46
+      layer: 0
+  - structure: agun
+    game_time:
+      formatted: '00:08:00'
+      msec: 480480
+    placement:
+      x: 53
+      "y": 30
+      layer: 0
+  - structure: fix
+    game_time:
+      formatted: '00:08:08'
+      msec: 488640
+    placement:
+      x: 108
+      "y": 58
+      layer: 0
+  - structure: apwr
+    game_time:
+      formatted: '00:08:28'
+      msec: 508200
+    placement:
+      x: 102
+      "y": 66
+      layer: 0
+  - structure: agun
+    game_time:
+      formatted: '00:08:31'
+      msec: 511920
+    placement:
+      x: 118
+      "y": 25
+      layer: 0
+  - structure: apwr
+    game_time:
+      formatted: '00:08:45'
+      msec: 525120
+    placement:
+      x: 123
+      "y": 34
+      layer: 0
+  - structure: agun
+    game_time:
+      formatted: '00:08:56'
+      msec: 536280
+    placement:
+      x: 125
+      "y": 32
+      layer: 0
+  - structure: agun
+    game_time:
+      formatted: '00:09:19'
+      msec: 559800
+    placement:
+      x: 100
+      "y": 40
+      layer: 0
+  - structure: weap
+    game_time:
+      formatted: '00:09:37'
+      msec: 577560
+    placement:
+      x: 88
+      "y": 32
+      layer: 0
+  - structure: agun
+    game_time:
+      formatted: '00:10:14'
+      msec: 614160
+    placement:
+      x: 89
+      "y": 53
+      layer: 0
+  - structure: weap
+    game_time:
+      formatted: '00:10:50'
+      msec: 650640
+    placement:
+      x: 68
+      "y": 25
+      layer: 0
+  - structure: agun
+    game_time:
+      formatted: '00:10:55'
+      msec: 655200
+    placement:
+      x: 82
+      "y": 45
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:11:27'
+      msec: 687240
+    placement:
+      x: 81
+      "y": 38
+      layer: 0
+  - structure: agun
+    game_time:
+      formatted: '00:11:47'
+      msec: 707640
+    placement:
+      x: 56
+      "y": 34
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:12:07'
+      msec: 727800
+    placement:
+      x: 57
+      "y": 30
+      layer: 0
+  - structure: apwr
+    game_time:
+      formatted: '00:12:59'
+      msec: 779400
+    placement:
+      x: 100
+      "y": 30
+      layer: 0
+  - structure: apwr
+    game_time:
+      formatted: '00:13:12'
+      msec: 792240
+    placement:
+      x: 101
+      "y": 36
+      layer: 0
+  - structure: apwr
+    game_time:
+      formatted: '00:13:33'
+      msec: 813360
+    placement:
+      x: 107
+      "y": 38
+      layer: 0
+  - structure: apwr
+    game_time:
+      formatted: '00:13:45'
+      msec: 825120
+    placement:
+      x: 121
+      "y": 51
+      layer: 0
+  - structure: apwr
+    game_time:
+      formatted: '00:13:55'
+      msec: 835920
+    placement:
+      x: 107
+      "y": 34
+      layer: 0
+  support_powers: []
+- index: '103'
+  player_index: 7
+  name: Romulus
+  fingerprint: 
+  preferred_color: 0F19F2
+  color: 0F19F2
+  spawn:
+    random: false
+    point: '7'
+  faction:
+    random: false
+    chosen: germany
+    actual: germany
+  ip: 
+  team: '2'
+  is_bot: false
+  is_admin: false
+  is_player: true
+  is_winner: true
+  outcome_time: '2023-03-27T23:13:51+00:00'
+  build:
+  - structure: powr
+    game_time:
+      formatted: '00:00:10'
+      msec: 10080
+    placement:
+      x: 106
+      "y": 68
+      layer: 0
+  - structure: tent
+    game_time:
+      formatted: '00:00:23'
+      msec: 23880
+    placement:
+      x: 99
+      "y": 75
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:00:58'
+      msec: 58320
+    placement:
+      x: 106
+      "y": 64
+      layer: 0
+  - structure: weap
+    game_time:
+      formatted: '00:01:48'
+      msec: 108360
+    placement:
+      x: 95
+      "y": 72
+      layer: 0
+  - structure: weap
+    game_time:
+      formatted: '00:01:48'
+      msec: 108600
+    placement:
+      x: 95
+      "y": 72
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:02:23'
+      msec: 143880
+    placement:
+      x: 109
+      "y": 66
+      layer: 0
+  - structure: powr
+    game_time:
+      formatted: '00:02:37'
+      msec: 157920
+    placement:
+      x: 108
+      "y": 72
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:03:13'
+      msec: 193440
+    placement:
+      x: 96
+      "y": 68
+      layer: 0
+  - structure: fix
+    game_time:
+      formatted: '00:04:01'
+      msec: 241080
+    placement:
+      x: 111
+      "y": 72
+      layer: 0
+  - structure: powr
+    game_time:
+      formatted: '00:04:26'
+      msec: 266160
+    placement:
+      x: 105
+      "y": 51
+      layer: 0
+  - structure: gun
+    game_time:
+      formatted: '00:04:32'
+      msec: 272520
+    placement:
+      x: 115
+      "y": 71
+      layer: 0
+  - structure: tent
+    game_time:
+      formatted: '00:04:48'
+      msec: 288960
+    placement:
+      x: 116
+      "y": 97
+      layer: 0
+  - structure: gun
+    game_time:
+      formatted: '00:05:09'
+      msec: 309360
+    placement:
+      x: 114
+      "y": 100
+      layer: 0
+  - structure: tent
+    game_time:
+      formatted: '00:05:21'
+      msec: 321000
+    placement:
+      x: 109
+      "y": 76
+      layer: 0
+  - structure: tent
+    game_time:
+      formatted: '00:05:38'
+      msec: 338880
+    placement:
+      x: 101
+      "y": 86
+      layer: 0
+  - structure: tent
+    game_time:
+      formatted: '00:05:53'
+      msec: 353400
+    placement:
+      x: 104
+      "y": 86
+      layer: 0
+  - structure: powr
+    game_time:
+      formatted: '00:06:01'
+      msec: 361920
+    placement:
+      x: 115
+      "y": 79
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:06:46'
+      msec: 406200
+    placement:
+      x: 75
+      "y": 95
+      layer: 0
+  - structure: hbox
+    game_time:
+      formatted: '00:07:14'
+      msec: 434400
+    placement:
+      x: 64
+      "y": 100
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:07:18'
+      msec: 438840
+    placement:
+      x: 68
+      "y": 96
+      layer: 0
+  - structure: powr
+    game_time:
+      formatted: '00:07:26'
+      msec: 446400
+    placement:
+      x: 115
+      "y": 74
+      layer: 0
+  - structure: gun
+    game_time:
+      formatted: '00:07:40'
+      msec: 460200
+    placement:
+      x: 53
+      "y": 32
+      layer: 0
+  - structure: hbox
+    game_time:
+      formatted: '00:08:03'
+      msec: 483240
+    placement:
+      x: 34
+      "y": 115
+      layer: 0
+  - structure: dome
+    game_time:
+      formatted: '00:08:14'
+      msec: 494040
+    placement:
+      x: 114
+      "y": 91
+      layer: 0
+  - structure: apwr
+    game_time:
+      formatted: '00:08:36'
+      msec: 516360
+    placement:
+      x: 124
+      "y": 87
+      layer: 0
+  - structure: agun
+    game_time:
+      formatted: '00:08:41'
+      msec: 521520
+    placement:
+      x: 31
+      "y": 34
+      layer: 0
+  - structure: agun
+    game_time:
+      formatted: '00:09:06'
+      msec: 546960
+    placement:
+      x: 24
+      "y": 28
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:09:26'
+      msec: 566640
+    placement:
+      x: 94
+      "y": 112
+      layer: 0
+  - structure: hbox
+    game_time:
+      formatted: '00:09:29'
+      msec: 569400
+    placement:
+      x: 93
+      "y": 114
+      layer: 0
+  - structure: apwr
+    game_time:
+      formatted: '00:09:50'
+      msec: 590880
+    placement:
+      x: 83
+      "y": 16
+      layer: 0
+  - structure: gun
+    game_time:
+      formatted: '00:10:10'
+      msec: 610440
+    placement:
+      x: 69
+      "y": 30
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:11:45'
+      msec: 705720
+    placement:
+      x: 33
+      "y": 117
+      layer: 0
+  - structure: hbox
+    game_time:
+      formatted: '00:11:47'
+      msec: 707520
+    placement:
+      x: 33
+      "y": 115
+      layer: 0
+  - structure: agun
+    game_time:
+      formatted: '00:12:11'
+      msec: 731040
+    placement:
+      x: 59
+      "y": 96
+      layer: 0
+  - structure: apwr
+    game_time:
+      formatted: '00:12:14'
+      msec: 734280
+    placement:
+      x: 40
+      "y": 120
+      layer: 0
+  - structure: hpad
+    game_time:
+      formatted: '00:12:28'
+      msec: 748080
+    placement:
+      x: 91
+      "y": 86
+      layer: 0
+  - structure: hpad
+    game_time:
+      formatted: '00:12:48'
+      msec: 768360
+    placement:
+      x: 62
+      "y": 103
+      layer: 0
+  - structure: agun
+    game_time:
+      formatted: '00:12:54'
+      msec: 774360
+    placement:
+      x: 65
+      "y": 93
+      layer: 0
+  - structure: hpad
+    game_time:
+      formatted: '00:13:01'
+      msec: 781560
+    placement:
+      x: 78
+      "y": 99
+      layer: 0
+  - structure: tent
+    game_time:
+      formatted: '00:13:17'
+      msec: 797400
+    placement:
+      x: 55
+      "y": 95
+      layer: 0
+  - structure: apwr
+    game_time:
+      formatted: '00:13:36'
+      msec: 816960
+    placement:
+      x: 40
+      "y": 114
+      layer: 0
+  support_powers: []
+- index: '112'
+  player_index: 6
+  name: Maunal
+  fingerprint: 
+  preferred_color: F2EC0C
+  color: F2EC0C
+  spawn:
+    random: false
+    point: '4'
+  faction:
+    random: false
+    chosen: england
+    actual: england
+  ip: 
+  team: '1'
+  is_bot: false
+  is_admin: false
+  is_player: true
+  is_winner: false
+  outcome_time: '2023-03-27T23:13:51+00:00'
+  build:
+  - structure: powr
+    game_time:
+      formatted: '00:00:12'
+      msec: 12240
+    placement:
+      x: 9
+      "y": 92
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:00:49'
+      msec: 49320
+    placement:
+      x: 12
+      "y": 95
+      layer: 0
+  - structure: tent
+    game_time:
+      formatted: '00:01:03'
+      msec: 63960
+    placement:
+      x: 7
+      "y": 83
+      layer: 0
+  - structure: pbox
+    game_time:
+      formatted: '00:01:32'
+      msec: 92040
+    placement:
+      x: 10
+      "y": 88
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:01:40'
+      msec: 100560
+    placement:
+      x: 33
+      "y": 69
+      layer: 0
+  - structure: powr
+    game_time:
+      formatted: '00:01:50'
+      msec: 110040
+    placement:
+      x: 12
+      "y": 89
+      layer: 0
+  - structure: pbox
+    game_time:
+      formatted: '00:02:00'
+      msec: 120120
+    placement:
+      x: 10
+      "y": 39
+      layer: 0
+  - structure: weap
+    game_time:
+      formatted: '00:02:40'
+      msec: 160560
+    placement:
+      x: 31
+      "y": 76
+      layer: 0
+  - structure: weap
+    game_time:
+      formatted: '00:03:33'
+      msec: 213000
+    placement:
+      x: 11
+      "y": 84
+      layer: 0
+  - structure: powr
+    game_time:
+      formatted: '00:03:42'
+      msec: 222840
+    placement:
+      x: 15
+      "y": 80
+      layer: 0
+  - structure: pbox
+    game_time:
+      formatted: '00:03:49'
+      msec: 229200
+    placement:
+      x: 14
+      "y": 100
+      layer: 0
+  - structure: fix
+    game_time:
+      formatted: '00:04:17'
+      msec: 257880
+    placement:
+      x: 13
+      "y": 77
+      layer: 0
+  - structure: pbox
+    game_time:
+      formatted: '00:04:21'
+      msec: 261720
+    placement:
+      x: 14
+      "y": 80
+      layer: 0
+  - structure: powr
+    game_time:
+      formatted: '00:04:27'
+      msec: 267480
+    placement:
+      x: 18
+      "y": 81
+      layer: 0
+  - structure: pbox
+    game_time:
+      formatted: '00:04:43'
+      msec: 283560
+    placement:
+      x: 20
+      "y": 77
+      layer: 0
+  - structure: dome
+    game_time:
+      formatted: '00:05:06'
+      msec: 306600
+    placement:
+      x: 15
+      "y": 72
+      layer: 0
+  - structure: apwr
+    game_time:
+      formatted: '00:05:32'
+      msec: 332040
+    placement:
+      x: 25
+      "y": 83
+      layer: 0
+  - structure: pbox
+    game_time:
+      formatted: '00:05:40'
+      msec: 340800
+    placement:
+      x: 37
+      "y": 94
+      layer: 0
+  - structure: hpad
+    game_time:
+      formatted: '00:05:48'
+      msec: 348240
+    placement:
+      x: 32
+      "y": 88
+      layer: 0
+  - structure: hpad
+    game_time:
+      formatted: '00:06:02'
+      msec: 362760
+    placement:
+      x: 31
+      "y": 91
+      layer: 0
+  - structure: hpad
+    game_time:
+      formatted: '00:06:18'
+      msec: 378120
+    placement:
+      x: 30
+      "y": 87
+      layer: 0
+  - structure: agun
+    game_time:
+      formatted: '00:06:30'
+      msec: 390960
+    placement:
+      x: 16
+      "y": 99
+      layer: 0
+  - structure: agun
+    game_time:
+      formatted: '00:06:49'
+      msec: 409800
+    placement:
+      x: 37
+      "y": 96
+      layer: 0
+  - structure: hpad
+    game_time:
+      formatted: '00:06:53'
+      msec: 413040
+    placement:
+      x: 28
+      "y": 87
+      layer: 0
+  - structure: hpad
+    game_time:
+      formatted: '00:07:06'
+      msec: 426480
+    placement:
+      x: 26
+      "y": 87
+      layer: 0
+  - structure: agun
+    game_time:
+      formatted: '00:07:20'
+      msec: 440760
+    placement:
+      x: 36
+      "y": 67
+      layer: 0
+  - structure: hpad
+    game_time:
+      formatted: '00:07:24'
+      msec: 444720
+    placement:
+      x: 23
+      "y": 80
+      layer: 0
+  - structure: apwr
+    game_time:
+      formatted: '00:07:42'
+      msec: 462480
+    placement:
+      x: 35
+      "y": 89
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:08:21'
+      msec: 501360
+    placement:
+      x: 35
+      "y": 84
+      layer: 0
+  - structure: atek
+    game_time:
+      formatted: '00:08:57'
+      msec: 537120
+    placement:
+      x: 31
+      "y": 83
+      layer: 0
+  - structure: agun
+    game_time:
+      formatted: '00:09:04'
+      msec: 544560
+    placement:
+      x: 43
+      "y": 69
+      layer: 0
+  - structure: apwr
+    game_time:
+      formatted: '00:09:15'
+      msec: 555600
+    placement:
+      x: 20
+      "y": 82
+      layer: 0
+  - structure: agun
+    game_time:
+      formatted: '00:09:34'
+      msec: 574560
+    placement:
+      x: 42
+      "y": 69
+      layer: 0
+  - structure: gap
+    game_time:
+      formatted: '00:09:55'
+      msec: 595440
+    placement:
+      x: 39
+      "y": 87
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:10:14'
+      msec: 614880
+    placement:
+      x: 41
+      "y": 68
+      layer: 0
+  - structure: apwr
+    game_time:
+      formatted: '00:10:32'
+      msec: 632520
+    placement:
+      x: 34
+      "y": 80
+      layer: 0
+  - structure: mslo
+    game_time:
+      formatted: '00:11:04'
+      msec: 664440
+    placement:
+      x: 18
+      "y": 80
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:11:11'
+      msec: 671880
+    placement:
+      x: 41
+      "y": 85
+      layer: 0
+  - structure: agun
+    game_time:
+      formatted: '00:13:02'
+      msec: 782640
+    placement:
+      x: 20
+      "y": 78
+      layer: 0
+  - structure: weap
+    game_time:
+      formatted: '00:13:12'
+      msec: 792360
+    placement:
+      x: 38
+      "y": 82
+      layer: 0
+  - structure: pbox
+    game_time:
+      formatted: '00:13:55'
+      msec: 835440
+    placement:
+      x: 41
+      "y": 80
+      layer: 0
+  - structure: fix
+    game_time:
+      formatted: '00:14:06'
+      msec: 846960
+    placement:
+      x: 15
+      "y": 91
+      layer: 0
+  - structure: gap
+    game_time:
+      formatted: '00:14:26'
+      msec: 866280
+    placement:
+      x: 34
+      "y": 86
+      layer: 0
+  - structure: fix
+    game_time:
+      formatted: '00:14:31'
+      msec: 871320
+    placement:
+      x: 31
+      "y": 94
+      layer: 0
+  support_powers: []
+- index: '114'
+  player_index: 8
+  name: corso
+  fingerprint: 
+  preferred_color: A3F2E6
+  color: A3F2E6
+  spawn:
+    random: false
+    point: '2'
+  faction:
+    random: false
+    chosen: russia
+    actual: russia
+  ip: 
+  team: '1'
+  is_bot: false
+  is_admin: false
+  is_player: true
+  is_winner: false
+  outcome_time: '2023-03-27T23:13:19+00:00'
+  build:
+  - structure: powr
+    game_time:
+      formatted: '00:00:14'
+      msec: 14040
+    placement:
+      x: 23
+      "y": 54
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:00:56'
+      msec: 56040
+    placement:
+      x: 30
+      "y": 56
+      layer: 0
+  - structure: barr
+    game_time:
+      formatted: '00:01:09'
+      msec: 69600
+    placement:
+      x: 24
+      "y": 59
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:01:45'
+      msec: 105480
+    placement:
+      x: 20
+      "y": 59
+      layer: 0
+  - structure: powr
+    game_time:
+      formatted: '00:01:54'
+      msec: 114360
+    placement:
+      x: 17
+      "y": 57
+      layer: 0
+  - structure: barr
+    game_time:
+      formatted: '00:02:12'
+      msec: 132360
+    placement:
+      x: 28
+      "y": 60
+      layer: 0
+  - structure: ftur
+    game_time:
+      formatted: '00:02:48'
+      msec: 168960
+    placement:
+      x: 33
+      "y": 54
+      layer: 0
+  - structure: weap
+    game_time:
+      formatted: '00:03:03'
+      msec: 183480
+    placement:
+      x: 19
+      "y": 55
+      layer: 0
+  - structure: ftur
+    game_time:
+      formatted: '00:03:22'
+      msec: 202680
+    placement:
+      x: 34
+      "y": 61
+      layer: 0
+  - structure: powr
+    game_time:
+      formatted: '00:03:57'
+      msec: 237720
+    placement:
+      x: 21
+      "y": 52
+      layer: 0
+  - structure: dome
+    game_time:
+      formatted: '00:04:47'
+      msec: 287280
+    placement:
+      x: 25
+      "y": 51
+      layer: 0
+  - structure: afld
+    game_time:
+      formatted: '00:05:27'
+      msec: 327720
+    placement:
+      x: 28
+      "y": 53
+      layer: 0
+  - structure: fix
+    game_time:
+      formatted: '00:06:56'
+      msec: 416160
+    placement:
+      x: 30
+      "y": 61
+      layer: 0
+  - structure: sam
+    game_time:
+      formatted: '00:07:02'
+      msec: 422640
+    placement:
+      x: 29
+      "y": 55
+      layer: 0
+  - structure: apwr
+    game_time:
+      formatted: '00:07:16'
+      msec: 436080
+    placement:
+      x: 15
+      "y": 53
+      layer: 0
+  - structure: weap
+    game_time:
+      formatted: '00:08:51'
+      msec: 531000
+    placement:
+      x: 17
+      "y": 69
+      layer: 0
+  support_powers: []
+- index: '125'
+  player_index: 9
+  name: CMDR Keen
+  fingerprint: 
+  preferred_color: 2B12F2
+  color: 8912F2
+  spawn:
+    random: false
+    point: '3'
+  faction:
+    random: false
+    chosen: russia
+    actual: russia
+  ip: 
+  team: '1'
+  is_bot: false
+  is_admin: false
+  is_player: true
+  is_winner: false
+  outcome_time: '2023-03-27T23:12:44+00:00'
+  build:
+  - structure: powr
+    game_time:
+      formatted: '00:00:12'
+      msec: 12240
+    placement:
+      x: 23
+      "y": 70
+      layer: 0
+  - structure: barr
+    game_time:
+      formatted: '00:00:27'
+      msec: 27600
+    placement:
+      x: 30
+      "y": 72
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:01:03'
+      msec: 63480
+    placement:
+      x: 30
+      "y": 67
+      layer: 0
+  - structure: ftur
+    game_time:
+      formatted: '00:01:32'
+      msec: 92400
+    placement:
+      x: 25
+      "y": 73
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:01:39'
+      msec: 99720
+    placement:
+      x: 22
+      "y": 65
+      layer: 0
+  - structure: weap
+    game_time:
+      formatted: '00:02:29'
+      msec: 149760
+    placement:
+      x: 26
+      "y": 76
+      layer: 0
+  - structure: powr
+    game_time:
+      formatted: '00:02:53'
+      msec: 173160
+    placement:
+      x: 24
+      "y": 76
+      layer: 0
+  - structure: powr
+    game_time:
+      formatted: '00:03:03'
+      msec: 183960
+    placement:
+      x: 26
+      "y": 69
+      layer: 0
+  - structure: fix
+    game_time:
+      formatted: '00:03:36'
+      msec: 216600
+    placement:
+      x: 28
+      "y": 79
+      layer: 0
+  - structure: dome
+    game_time:
+      formatted: '00:04:16'
+      msec: 256320
+    placement:
+      x: 21
+      "y": 75
+      layer: 0
+  - structure: powr
+    game_time:
+      formatted: '00:04:25'
+      msec: 265320
+    placement:
+      x: 20
+      "y": 70
+      layer: 0
+  - structure: powr
+    game_time:
+      formatted: '00:04:35'
+      msec: 275040
+    placement:
+      x: 18
+      "y": 74
+      layer: 0
+  - structure: tsla
+    game_time:
+      formatted: '00:04:59'
+      msec: 299400
+    placement:
+      x: 32
+      "y": 80
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:05:20'
+      msec: 320640
+    placement:
+      x: 9
+      "y": 74
+      layer: 0
+  - structure: powr
+    game_time:
+      formatted: '00:05:43'
+      msec: 343080
+    placement:
+      x: 26
+      "y": 66
+      layer: 0
+  - structure: sam
+    game_time:
+      formatted: '00:05:59'
+      msec: 359040
+    placement:
+      x: 35
+      "y": 73
+      layer: 0
+  - structure: stek
+    game_time:
+      formatted: '00:06:54'
+      msec: 414360
+    placement:
+      x: 13
+      "y": 68
+      layer: 0
+  - structure: powr
+    game_time:
+      formatted: '00:07:11'
+      msec: 431520
+    placement:
+      x: 28
+      "y": 65
+      layer: 0
+  - structure: tsla
+    game_time:
+      formatted: '00:07:29'
+      msec: 449880
+    placement:
+      x: 38
+      "y": 92
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:09:30'
+      msec: 570120
+    placement:
+      x: 38
+      "y": 92
+      layer: 0
+  - structure: mslo
+    game_time:
+      formatted: '00:09:40'
+      msec: 580080
+    placement:
+      x: 18
+      "y": 73
+      layer: 0
+  - structure: powr
+    game_time:
+      formatted: '00:09:43'
+      msec: 583080
+    placement:
+      x: 19
+      "y": 66
+      layer: 0
+  - structure: apwr
+    game_time:
+      formatted: '00:10:08'
+      msec: 608520
+    placement:
+      x: 12
+      "y": 72
+      layer: 0
+  - structure: iron
+    game_time:
+      formatted: '00:10:52'
+      msec: 652440
+    placement:
+      x: 10
+      "y": 81
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:10:55'
+      msec: 655800
+    placement:
+      x: 35
+      "y": 74
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:11:00'
+      msec: 660240
+    placement:
+      x: 35
+      "y": 75
+      layer: 0
+  - structure: tsla
+    game_time:
+      formatted: '00:11:31'
+      msec: 691440
+    placement:
+      x: 41
+      "y": 74
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:12:11'
+      msec: 731280
+    placement:
+      x: 43
+      "y": 90
+      layer: 0
+  - structure: sam
+    game_time:
+      formatted: '00:12:29'
+      msec: 749040
+    placement:
+      x: 39
+      "y": 78
+      layer: 0
+  support_powers: []
+- index: '124'
+  player_index: 10
+  name: Commander
+  fingerprint: 
+  preferred_color: C82020
+  color: F28827
+  spawn:
+    random: false
+    point: '6'
+  faction:
+    random: true
+    chosen: randomsoviet
+    actual: ukraine
+  ip: 
+  team: '2'
+  is_bot: false
+  is_admin: false
+  is_player: true
+  is_winner: true
+  outcome_time: '2023-03-27T23:13:51+00:00'
+  build:
+  - structure: powr
+    game_time:
+      formatted: '00:00:10'
+      msec: 10440
+    placement:
+      x: 105
+      "y": 58
+      layer: 0
+  - structure: barr
+    game_time:
+      formatted: '00:00:24'
+      msec: 24360
+    placement:
+      x: 98
+      "y": 51
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:00:58'
+      msec: 58920
+    placement:
+      x: 94
+      "y": 52
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:01:33'
+      msec: 93840
+    placement:
+      x: 93
+      "y": 47
+      layer: 0
+  - structure: powr
+    game_time:
+      formatted: '00:01:46'
+      msec: 106200
+    placement:
+      x: 96
+      "y": 43
+      layer: 0
+  - structure: weap
+    game_time:
+      formatted: '00:02:37'
+      msec: 157200
+    placement:
+      x: 97
+      "y": 46
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:03:12'
+      msec: 192840
+    placement:
+      x: 90
+      "y": 46
+      layer: 0
+  - structure: fix
+    game_time:
+      formatted: '00:03:46'
+      msec: 226200
+    placement:
+      x: 101
+      "y": 45
+      layer: 0
+  - structure: powr
+    game_time:
+      formatted: '00:04:04'
+      msec: 244800
+    placement:
+      x: 100
+      "y": 65
+      layer: 0
+  - structure: barr
+    game_time:
+      formatted: '00:04:19'
+      msec: 259080
+    placement:
+      x: 114
+      "y": 57
+      layer: 0
+  - structure: tsla
+    game_time:
+      formatted: '00:04:26'
+      msec: 266040
+    placement:
+      x: 117
+      "y": 52
+      layer: 0
+  - structure: barr
+    game_time:
+      formatted: '00:04:36'
+      msec: 276480
+    placement:
+      x: 102
+      "y": 62
+      layer: 0
+  - structure: powr
+    game_time:
+      formatted: '00:04:48'
+      msec: 288120
+    placement:
+      x: 108
+      "y": 53
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:05:26'
+      msec: 326880
+    placement:
+      x: 85
+      "y": 34
+      layer: 0
+  - structure: powr
+    game_time:
+      formatted: '00:05:36'
+      msec: 336840
+    placement:
+      x: 76
+      "y": 31
+      layer: 0
+  - structure: ftur
+    game_time:
+      formatted: '00:05:38'
+      msec: 338160
+    placement:
+      x: 74
+      "y": 30
+      layer: 0
+  - structure: barr
+    game_time:
+      formatted: '00:05:49'
+      msec: 349800
+    placement:
+      x: 73
+      "y": 31
+      layer: 0
+  - structure: ftur
+    game_time:
+      formatted: '00:05:55'
+      msec: 355560
+    placement:
+      x: 76
+      "y": 30
+      layer: 0
+  - structure: barr
+    game_time:
+      formatted: '00:06:02'
+      msec: 362160
+    placement:
+      x: 70
+      "y": 29
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:06:57'
+      msec: 417840
+    placement:
+      x: 57
+      "y": 30
+      layer: 0
+  - structure: powr
+    game_time:
+      formatted: '00:07:07'
+      msec: 427560
+    placement:
+      x: 55
+      "y": 30
+      layer: 0
+  - structure: tsla
+    game_time:
+      formatted: '00:07:08'
+      msec: 428400
+    placement:
+      x: 54
+      "y": 33
+      layer: 0
+  - structure: dome
+    game_time:
+      formatted: '00:07:42'
+      msec: 462360
+    placement:
+      x: 108
+      "y": 45
+      layer: 0
+  - structure: tsla
+    game_time:
+      formatted: '00:07:46'
+      msec: 466320
+    placement:
+      x: 53
+      "y": 31
+      layer: 0
+  - structure: powr
+    game_time:
+      formatted: '00:08:16'
+      msec: 496080
+    placement:
+      x: 56
+      "y": 26
+      layer: 0
+  - structure: afld.ukraine
+    game_time:
+      formatted: '00:08:33'
+      msec: 513240
+    placement:
+      x: 71
+      "y": 27
+      layer: 0
+  - structure: tsla
+    game_time:
+      formatted: '00:08:41'
+      msec: 521160
+    placement:
+      x: 33
+      "y": 40
+      layer: 0
+  - structure: afld.ukraine
+    game_time:
+      formatted: '00:08:51'
+      msec: 531960
+    placement:
+      x: 82
+      "y": 31
+      layer: 0
+  - structure: sam
+    game_time:
+      formatted: '00:09:04'
+      msec: 544440
+    placement:
+      x: 24
+      "y": 26
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:10:16'
+      msec: 616680
+    placement:
+      x: 78
+      "y": 35
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:10:50'
+      msec: 650760
+    placement:
+      x: 86
+      "y": 12
+      layer: 0
+  - structure: proc
+    game_time:
+      formatted: '00:11:26'
+      msec: 686400
+    placement:
+      x: 87
+      "y": 54
+      layer: 0
+  - structure: apwr
+    game_time:
+      formatted: '00:11:44'
+      msec: 704880
+    placement:
+      x: 61
+      "y": 25
+      layer: 0
+  - structure: stek
+    game_time:
+      formatted: '00:12:19'
+      msec: 739680
+    placement:
+      x: 92
+      "y": 36
+      layer: 0
+  - structure: tsla
+    game_time:
+      formatted: '00:12:22'
+      msec: 742680
+    placement:
+      x: 55
+      "y": 33
+      layer: 0
+  - structure: apwr
+    game_time:
+      formatted: '00:12:40'
+      msec: 760680
+    placement:
+      x: 88
+      "y": 40
+      layer: 0
+  - structure: apwr
+    game_time:
+      formatted: '00:12:56'
+      msec: 776040
+    placement:
+      x: 76
+      "y": 19
+      layer: 0
+  - structure: iron
+    game_time:
+      formatted: '00:12:58'
+      msec: 778080
+    placement:
+      x: 78
+      "y": 28
+      layer: 0
+  - structure: afld.ukraine
+    game_time:
+      formatted: '00:13:21'
+      msec: 801720
+    placement:
+      x: 64
+      "y": 28
+      layer: 0
+  - structure: afld.ukraine
+    game_time:
+      formatted: '00:14:19'
+      msec: 859680
+    placement:
+      x: 83
+      "y": 28
+      layer: 0
+  - structure: mslo
+    game_time:
+      formatted: '00:14:29'
+      msec: 869760
+    placement:
+      x: 88
+      "y": 85
+      layer: 0
+  - structure: afld.ukraine
+    game_time:
+      formatted: '00:14:36'
+      msec: 876000
+    placement:
+      x: 78
+      "y": 93
+      layer: 0
+  support_powers:
+  - type: :spy_plane
+    game_time:
+      formatted: '00:11:52'
+      msec: 712800
+    placement:
+      x: 22
+      "y": 67
+      layer: 0
+    extra_placement: 
+  - type: :parabombs
+    game_time:
+      formatted: '00:14:01'
+      msec: 841800
+    placement:
+      x: 18
+      "y": 78
+      layer: 0
+    extra_placement: 
+  - type: :paratroopers
+    game_time:
+      formatted: '00:14:24'
+      msec: 864240
+    placement:
+      x: 42
+      "y": 94
+      layer: 0
+    extra_placement: 
+chat:
+- channel: server
+  name: 
+  message: 'Explored Map: Enabled'
+- channel: server
+  name: 
+  message: 'Kill Bounties: Enabled'
+- channel: server
+  name: 
+  message: 'Reusable Engineers: Enabled'
+- channel: server
+  name: 
+  message: 'Game Speed: Fast'
+- channel: server
+  name: 
+  message: Welcome, have fun and good luck!
+- channel: global
+  name: Maunal
+  message: back
+- channel: global
+  name: Mickey Mouse
+  message: hf\
+- channel: global
+  name: Mickey Mouse
+  message: commander
+- channel: global
+  name: Mickey Mouse
+  message: ping
+- channel: global
+  name: Mickey Mouse
+  message: " "
+- channel: global
+  name: Mickey Mouse
+  message: " "
+- channel: global
+  name: Mickey Mouse
+  message: " "
+- channel: global
+  name: bayraktar tb-2
+  message: glhf
+- channel: global
+  name: Commander
+  message: I turn off youtube
+- channel: global
+  name: Mickey Mouse
+  message: "  "
+- channel: '2'
+  name: Mickey Mouse
+  message: remember to scout pls
+- channel: '1'
+  name: bayraktar tb-2
+  message: i skip barracks and go tech
+- channel: '1'
+  name: Maunal
+  message: sure
+- channel: '1'
+  name: bayraktar tb-2
+  message: will harrass with lt tanks
+- channel: '2'
+  name: Mickey Mouse
+  message: dont
+- channel: '2'
+  name: Mickey Mouse
+  message: gotoo far
+- channel: '2'
+  name: Mickey Mouse
+  message: back
+- channel: '1'
+  name: bayraktar tb-2
+  message: ehlp in north
+- channel: '1'
+  name: bayraktar tb-2
+  message: gps in 3
+- channel: '1'
+  name: bayraktar tb-2
+  message: chrono in 20s
+- channel: '1'
+  name: bayraktar tb-2
+  message: dang
+- channel: global
+  name: CMDR Keen
+  message: good game cheaters
+- channel: global
+  name: bayraktar tb-2
+  message: gg
+- channel: '2'
+  name: Commander
+  message: gg
+- channel: '1'
+  name: Maunal
+  message: GG
+- channel: global
+  name: Romulus
+  message: gg

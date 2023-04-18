@@ -9,6 +9,7 @@ module Openra
         attribute :server_name, Types::Strict::String.meta(from: 'ServerName')
         attribute :map_hash, Types::Strict::String.meta(from: 'Map')
         attribute :timestep, Types::Params::Integer.meta(from: 'Timestep')
+        attribute :net_frame_interval, Types::Params::Integer.meta(from: 'NetFrameInterval')
         attribute :order_latency, Types::Params::Integer.meta(
           from: 'OrderLatency'
         )
@@ -34,7 +35,11 @@ module Openra
       end
 
       def frametime_multiplier
-        timestep * 3
+        if timestep
+          timestep * 3
+        else
+          net_frame_interval * 40
+        end
       end
     end
   end

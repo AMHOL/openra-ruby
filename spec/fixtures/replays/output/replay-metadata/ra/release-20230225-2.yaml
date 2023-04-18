@@ -1,0 +1,136 @@
+---
+mod: ra
+version: release-20230225
+file:
+  hash: 395be3a9ecac287c3bbb917f491b161ab3796a7c6d27fb1e6fb9f3d9e50b858a
+map:
+  name: A Gardens more gems fixed
+  hash: d1d9ea465bd3f43875c1537856fd8b7ab8485fbc
+game:
+  type: 4v4
+  start_time: '2023-03-27T22:59:43+00:00'
+  end_time: '2023-03-27T23:14:17+00:00'
+  duration:
+    formatted: '00:14:34'
+    msec: 874000
+players:
+- player_index: '48'
+  name: Mickey Mouse
+  fingerprint: 
+  color: F25555
+  spawn:
+    random: false
+    point: '8'
+  faction:
+    random: false
+    chosen: ukraine
+    actual: ukraine
+  team: '2'
+  is_bot: false
+  is_winner: true
+  outcome_time: '2023-03-27T23:13:51+00:00'
+- player_index: '92'
+  name: "$NWBO"
+  fingerprint: 
+  color: E50FF2
+  spawn:
+    random: false
+    point: '5'
+  faction:
+    random: false
+    chosen: france
+    actual: france
+  team: '2'
+  is_bot: false
+  is_winner: true
+  outcome_time: '2023-03-27T23:13:51+00:00'
+- player_index: '77'
+  name: bayraktar tb-2
+  fingerprint: 
+  color: 0CF222
+  spawn:
+    random: false
+    point: '1'
+  faction:
+    random: false
+    chosen: england
+    actual: england
+  team: '1'
+  is_bot: false
+  is_winner: false
+  outcome_time: '2023-03-27T23:12:47+00:00'
+- player_index: '112'
+  name: Maunal
+  fingerprint: 
+  color: F2EC0C
+  spawn:
+    random: false
+    point: '4'
+  faction:
+    random: false
+    chosen: england
+    actual: england
+  team: '1'
+  is_bot: false
+  is_winner: false
+  outcome_time: '2023-03-27T23:13:51+00:00'
+- player_index: '103'
+  name: Romulus
+  fingerprint: 
+  color: 0F19F2
+  spawn:
+    random: false
+    point: '7'
+  faction:
+    random: false
+    chosen: germany
+    actual: germany
+  team: '2'
+  is_bot: false
+  is_winner: true
+  outcome_time: '2023-03-27T23:13:51+00:00'
+- player_index: '114'
+  name: corso
+  fingerprint: 
+  color: A3F2E6
+  spawn:
+    random: false
+    point: '2'
+  faction:
+    random: false
+    chosen: russia
+    actual: russia
+  team: '1'
+  is_bot: false
+  is_winner: false
+  outcome_time: '2023-03-27T23:13:19+00:00'
+- player_index: '125'
+  name: CMDR Keen
+  fingerprint: 
+  color: 8912F2
+  spawn:
+    random: false
+    point: '3'
+  faction:
+    random: false
+    chosen: russia
+    actual: russia
+  team: '1'
+  is_bot: false
+  is_winner: false
+  outcome_time: '2023-03-27T23:12:44+00:00'
+- player_index: '124'
+  name: Commander
+  fingerprint: 
+  color: F28827
+  spawn:
+    random: false
+    point: '6'
+  faction:
+    random: true
+    chosen: ukraine
+    actual: ukraine
+  team: '2'
+  is_bot: false
+  is_winner: true
+  outcome_time: '2023-03-27T23:13:51+00:00'
