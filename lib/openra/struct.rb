@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'dry/transformer/all'
+require 'dry-transformer'
 require 'openra/types'
 require 'dry-struct'
 require 'openra/struct/functions'
